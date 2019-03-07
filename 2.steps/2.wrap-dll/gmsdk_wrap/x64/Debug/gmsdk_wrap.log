@@ -1,0 +1,22 @@
+﻿  gmsdk_wrap.cpp
+c:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\gmsdk_wrap.cpp(56): warning C4005: “SWIGTEMPLATEDISAMBIGUATOR”: 宏重定义
+  c:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\gmsdk_wrap.cpp(50): note: 参见“SWIGTEMPLATEDISAMBIGUATOR”的前一个定义
+c:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\gmsdk_wrap.cpp(65): warning C4005: “SWIGINLINE”: 宏重定义
+  c:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\gmsdk_wrap.cpp(63): note: 参见“SWIGINLINE”的前一个定义
+c:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\gmsdk_wrap.cpp(75): warning C4005: “SWIGUNUSED”: 宏重定义
+  c:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\gmsdk_wrap.cpp(73): note: 参见“SWIGUNUSED”的前一个定义
+c:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\gmsdk_wrap.cpp(78): warning C4005: “SWIGUNUSED”: 宏重定义
+  c:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\gmsdk_wrap.cpp(75): note: 参见“SWIGUNUSED”的前一个定义
+c:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\gmsdk_wrap.cpp(80): warning C4005: “SWIGUNUSED”: 宏重定义
+  c:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\gmsdk_wrap.cpp(78): note: 参见“SWIGUNUSED”的前一个定义
+c:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\gmsdk_wrap.cpp(94): warning C4005: “SWIGUNUSEDPARM”: 宏重定义
+  c:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\gmsdk_wrap.cpp(92): note: 参见“SWIGUNUSEDPARM”的前一个定义
+c:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\gmsdk_wrap.cpp(122): warning C4005: “SWIGEXPORT”: 宏重定义
+  c:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\gmsdk_wrap.cpp(120): note: 参见“SWIGEXPORT”的前一个定义
+c:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\gmsdk_wrap.cpp(126): warning C4005: “SWIGEXPORT”: 宏重定义
+  c:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\gmsdk_wrap.cpp(122): note: 参见“SWIGEXPORT”的前一个定义
+c:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\gmsdk_wrap.cpp(128): warning C4005: “SWIGEXPORT”: 宏重定义
+  c:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\gmsdk_wrap.cpp(126): note: 参见“SWIGEXPORT”的前一个定义
+c:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\gmsdk_wrap.cpp(138): warning C4005: “SWIGSTDCALL”: 宏重定义
+  c:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\gmsdk_wrap.cpp(136): note: 参见“SWIGSTDCALL”的前一个定义
+c:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\gmsdk_wrap.cpp(11906): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "pch.h"”?

@@ -1,0 +1,6 @@
+﻿  gmsdk_wrap.cpp
+    正在创建库 C:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\x64\Release\gmsdk_wrap.lib 和对象 C:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\x64\Release\gmsdk_wrap.exp
+  正在生成代码
+  All 708 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  gmsdk_wrap.vcxproj -> C:\gitee\gmsdk\2.steps\2.wrap-dll\gmsdk_wrap\x64\Release\gmsdk_wrap.dll
