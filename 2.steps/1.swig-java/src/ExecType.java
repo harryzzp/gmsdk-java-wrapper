@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package io.skywalker.gmsdk;
+package io.ft.api.gm;
 
 public final class ExecType {
   public final static ExecType ExecType_Unknown = new ExecType("ExecType_Unknown", gmsdkJNI.ExecType_Unknown_get());

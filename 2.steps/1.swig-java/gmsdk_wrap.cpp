@@ -1094,28 +1094,28 @@ void SwigDirector_Strategy::swig_connect_director(JNIEnv *jenv, jobject jself, j
       "on_init", "()V", NULL 
     },
     {
-      "on_tick", "(Lio/skywalker/gmsdk/Tick;)V", NULL 
+      "on_tick", "(Lio/ft/api/gm/Tick;)V", NULL 
     },
     {
-      "on_bar", "(Lio/skywalker/gmsdk/Bar;)V", NULL 
+      "on_bar", "(Lio/ft/api/gm/Bar;)V", NULL 
     },
     {
-      "on_order_status", "(Lio/skywalker/gmsdk/Order;)V", NULL 
+      "on_order_status", "(Lio/ft/api/gm/Order;)V", NULL 
     },
     {
-      "on_execution_report", "(Lio/skywalker/gmsdk/ExecRpt;)V", NULL 
+      "on_execution_report", "(Lio/ft/api/gm/ExecRpt;)V", NULL 
     },
     {
-      "on_parameter", "(Lio/skywalker/gmsdk/Parameter;)V", NULL 
+      "on_parameter", "(Lio/ft/api/gm/Parameter;)V", NULL 
     },
     {
       "on_schedule", "(Ljava/lang/String;Ljava/lang/String;)V", NULL 
     },
     {
-      "on_backtest_finished", "(Lio/skywalker/gmsdk/Indicator;)V", NULL 
+      "on_backtest_finished", "(Lio/ft/api/gm/Indicator;)V", NULL 
     },
     {
-      "on_account_status", "(Lio/skywalker/gmsdk/AccountStatus;)V", NULL 
+      "on_account_status", "(Lio/ft/api/gm/AccountStatus;)V", NULL 
     },
     {
       "on_error", "(ILjava/lang/String;)V", NULL 
@@ -1141,7 +1141,7 @@ void SwigDirector_Strategy::swig_connect_director(JNIEnv *jenv, jobject jself, j
   
   if (swig_set_self(jenv, jself, swig_mem_own, weak_global)) {
     if (!baseclass) {
-      baseclass = jenv->FindClass("io/skywalker/gmsdk/Strategy");
+      baseclass = jenv->FindClass("io/ft/api/gm/Strategy");
       if (!baseclass) return;
       baseclass = (jclass) jenv->NewGlobalRef(baseclass);
     }
@@ -1167,7 +1167,7 @@ void SwigDirector_Strategy::swig_connect_director(JNIEnv *jenv, jobject jself, j
 extern "C" {
 #endif
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_DataSet_1status(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_DataSet_1status(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   DataSet *arg1 = (DataSet *) 0 ;
   int result;
@@ -1182,7 +1182,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_DataSet_1status(JNIEnv 
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_DataSet_1is_1end(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_io_ft_api_gm_gmsdkJNI_DataSet_1is_1end(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   DataSet *arg1 = (DataSet *) 0 ;
   bool result;
@@ -1197,7 +1197,7 @@ SWIGEXPORT jboolean JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_DataSet_1is_1end(JN
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_DataSet_1next(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_DataSet_1next(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   DataSet *arg1 = (DataSet *) 0 ;
   
   (void)jenv;
@@ -1208,7 +1208,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_DataSet_1next(JNIEnv *j
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_DataSet_1get_1integer(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_DataSet_1get_1integer(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   jint jresult = 0 ;
   DataSet *arg1 = (DataSet *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -1230,7 +1230,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_DataSet_1get_1integer(J
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_DataSet_1get_1long_1integer(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_DataSet_1get_1long_1integer(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   jlong jresult = 0 ;
   DataSet *arg1 = (DataSet *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -1252,7 +1252,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_DataSet_1get_1long_1in
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_DataSet_1get_1real(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_DataSet_1get_1real(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   jdouble jresult = 0 ;
   DataSet *arg1 = (DataSet *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -1274,7 +1274,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_DataSet_1get_1real(J
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_DataSet_1get_1string(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_DataSet_1get_1string(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   jstring jresult = 0 ;
   DataSet *arg1 = (DataSet *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -1296,7 +1296,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_DataSet_1get_1string
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_DataSet_1release(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_DataSet_1release(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   DataSet *arg1 = (DataSet *) 0 ;
   
   (void)jenv;
@@ -1307,7 +1307,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_DataSet_1release(JNIEnv
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_DataSet_1debug_1string(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_DataSet_1debug_1string(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   DataSet *arg1 = (DataSet *) 0 ;
   char *result = 0 ;
@@ -1322,7 +1322,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_DataSet_1debug_1stri
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1DataSet(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1DataSet(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   DataSet *arg1 = (DataSet *) 0 ;
   
   (void)jenv;
@@ -1332,7 +1332,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1DataSet(JNIEnv 
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1version(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1version(JNIEnv *jenv, jclass jcls) {
   jstring jresult = 0 ;
   char *result = 0 ;
   
@@ -1344,7 +1344,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1version(JNIEnv 
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_set_1token(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_set_1token(JNIEnv *jenv, jclass jcls, jstring jarg1) {
   char *arg1 = (char *) 0 ;
   
   (void)jenv;
@@ -1359,7 +1359,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_set_1token(JNIEnv *jenv
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_set_1serv_1addr(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_set_1serv_1addr(JNIEnv *jenv, jclass jcls, jstring jarg1) {
   char *arg1 = (char *) 0 ;
   
   (void)jenv;
@@ -1374,7 +1374,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_set_1serv_1addr(JNIEnv 
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_current(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_current(JNIEnv *jenv, jclass jcls, jstring jarg1) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   DataArray< Tick > *result = 0 ;
@@ -1393,7 +1393,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_current(JNIEnv *jenv, 
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1ticks_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jint jarg4, jstring jarg5, jboolean jarg6, jstring jarg7) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_history_1ticks_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jint jarg4, jstring jarg5, jboolean jarg6, jstring jarg7) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -1444,7 +1444,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1ticks_1_1SWIG
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1ticks_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jint jarg4, jstring jarg5, jboolean jarg6) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_history_1ticks_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jint jarg4, jstring jarg5, jboolean jarg6) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -1488,7 +1488,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1ticks_1_1SWIG
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1ticks_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jint jarg4, jstring jarg5) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_history_1ticks_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jint jarg4, jstring jarg5) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -1530,7 +1530,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1ticks_1_1SWIG
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1ticks_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jint jarg4) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_history_1ticks_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jint jarg4) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -1565,7 +1565,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1ticks_1_1SWIG
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1ticks_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_history_1ticks_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -1598,7 +1598,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1ticks_1_1SWIG
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1bars_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jint jarg5, jstring jarg6, jboolean jarg7, jstring jarg8) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_history_1bars_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jint jarg5, jstring jarg6, jboolean jarg7, jstring jarg8) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -1656,7 +1656,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1bars_1_1SWIG_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1bars_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jint jarg5, jstring jarg6, jboolean jarg7) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_history_1bars_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jint jarg5, jstring jarg6, jboolean jarg7) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -1707,7 +1707,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1bars_1_1SWIG_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1bars_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jint jarg5, jstring jarg6) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_history_1bars_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jint jarg5, jstring jarg6) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -1756,7 +1756,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1bars_1_1SWIG_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1bars_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jint jarg5) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_history_1bars_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jint jarg5) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -1798,7 +1798,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1bars_1_1SWIG_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1bars_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_history_1bars_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -1838,7 +1838,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1bars_1_1SWIG_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1ticks_1n_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2, jstring jarg3, jint jarg4, jstring jarg5, jboolean jarg6, jstring jarg7) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_history_1ticks_1n_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2, jstring jarg3, jint jarg4, jstring jarg5, jboolean jarg6, jstring jarg7) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   int arg2 ;
@@ -1884,7 +1884,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1ticks_1n_1_1S
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1ticks_1n_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2, jstring jarg3, jint jarg4, jstring jarg5, jboolean jarg6) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_history_1ticks_1n_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2, jstring jarg3, jint jarg4, jstring jarg5, jboolean jarg6) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   int arg2 ;
@@ -1923,7 +1923,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1ticks_1n_1_1S
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1ticks_1n_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2, jstring jarg3, jint jarg4, jstring jarg5) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_history_1ticks_1n_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2, jstring jarg3, jint jarg4, jstring jarg5) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   int arg2 ;
@@ -1960,7 +1960,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1ticks_1n_1_1S
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1ticks_1n_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2, jstring jarg3, jint jarg4) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_history_1ticks_1n_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2, jstring jarg3, jint jarg4) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   int arg2 ;
@@ -1990,7 +1990,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1ticks_1n_1_1S
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1ticks_1n_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2, jstring jarg3) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_history_1ticks_1n_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2, jstring jarg3) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   int arg2 ;
@@ -2018,7 +2018,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1ticks_1n_1_1S
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1ticks_1n_1_1SWIG_15(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_history_1ticks_1n_1_1SWIG_15(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   int arg2 ;
@@ -2039,7 +2039,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1ticks_1n_1_1S
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1bars_1n_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jint jarg3, jstring jarg4, jint jarg5, jstring jarg6, jboolean jarg7, jstring jarg8) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_history_1bars_1n_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jint jarg3, jstring jarg4, jint jarg5, jstring jarg6, jboolean jarg7, jstring jarg8) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -2092,7 +2092,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1bars_1n_1_1SW
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1bars_1n_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jint jarg3, jstring jarg4, jint jarg5, jstring jarg6, jboolean jarg7) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_history_1bars_1n_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jint jarg3, jstring jarg4, jint jarg5, jstring jarg6, jboolean jarg7) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -2138,7 +2138,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1bars_1n_1_1SW
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1bars_1n_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jint jarg3, jstring jarg4, jint jarg5, jstring jarg6) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_history_1bars_1n_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jint jarg3, jstring jarg4, jint jarg5, jstring jarg6) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -2182,7 +2182,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1bars_1n_1_1SW
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1bars_1n_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jint jarg3, jstring jarg4, jint jarg5) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_history_1bars_1n_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jint jarg3, jstring jarg4, jint jarg5) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -2219,7 +2219,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1bars_1n_1_1SW
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1bars_1n_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jint jarg3, jstring jarg4) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_history_1bars_1n_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jint jarg3, jstring jarg4) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -2254,7 +2254,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1bars_1n_1_1SW
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1bars_1n_1_1SWIG_15(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jint jarg3) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_history_1bars_1n_1_1SWIG_15(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jint jarg3) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -2282,7 +2282,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_history_1bars_1n_1_1SW
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1fundamentals_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jstring jarg5, jstring jarg6, jstring jarg7, jint jarg8) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1fundamentals_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jstring jarg5, jstring jarg6, jstring jarg7, jint jarg8) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -2345,7 +2345,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1fundamentals_1_1S
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1fundamentals_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jstring jarg5, jstring jarg6, jstring jarg7) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1fundamentals_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jstring jarg5, jstring jarg6, jstring jarg7) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -2406,7 +2406,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1fundamentals_1_1S
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1fundamentals_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jstring jarg5, jstring jarg6) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1fundamentals_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jstring jarg5, jstring jarg6) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -2460,7 +2460,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1fundamentals_1_1S
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1fundamentals_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jstring jarg5) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1fundamentals_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jstring jarg5) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -2507,7 +2507,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1fundamentals_1_1S
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1fundamentals_1n_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jint jarg5, jstring jarg6, jstring jarg7) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1fundamentals_1n_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jint jarg5, jstring jarg6, jstring jarg7) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -2563,7 +2563,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1fundamentals_1n_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1fundamentals_1n_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jint jarg5, jstring jarg6) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1fundamentals_1n_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jint jarg5, jstring jarg6) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -2612,7 +2612,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1fundamentals_1n_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1fundamentals_1n_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jint jarg5) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1fundamentals_1n_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jint jarg5) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -2654,7 +2654,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1fundamentals_1n_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1fundamentals_1n_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1fundamentals_1n_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -2694,7 +2694,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1fundamentals_1n_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1instruments_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1instruments_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -2727,7 +2727,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1instruments_1_1SW
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1instruments_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1instruments_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -2753,7 +2753,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1instruments_1_1SW
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1instruments_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1instruments_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jstring jarg1) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   DataSet *result = 0 ;
@@ -2772,7 +2772,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1instruments_1_1SW
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1instruments_1_1SWIG_13(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1instruments_1_1SWIG_13(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   DataSet *result = 0 ;
   
@@ -2784,7 +2784,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1instruments_1_1SW
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1history_1instruments_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1history_1instruments_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -2824,7 +2824,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1history_1instrume
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1history_1instruments_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1history_1instruments_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -2857,7 +2857,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1history_1instrume
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1instrumentinfos_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jstring jarg5) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1instrumentinfos_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4, jstring jarg5) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -2904,7 +2904,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1instrumentinfos_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1instrumentinfos_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1instrumentinfos_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3, jstring jarg4) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -2944,7 +2944,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1instrumentinfos_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1instrumentinfos_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1instrumentinfos_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -2977,7 +2977,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1instrumentinfos_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1instrumentinfos_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1instrumentinfos_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -3003,7 +3003,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1instrumentinfos_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1instrumentinfos_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1instrumentinfos_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jstring jarg1) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   DataSet *result = 0 ;
@@ -3022,7 +3022,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1instrumentinfos_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1instrumentinfos_1_1SWIG_15(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1instrumentinfos_1_1SWIG_15(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   DataSet *result = 0 ;
   
@@ -3034,7 +3034,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1instrumentinfos_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1constituents_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1constituents_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -3060,7 +3060,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1constituents_1_1S
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1constituents_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1constituents_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jstring jarg1) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   DataSet *result = 0 ;
@@ -3079,7 +3079,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1constituents_1_1S
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1industry(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1industry(JNIEnv *jenv, jclass jcls, jstring jarg1) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   DataArray< Symbol > *result = 0 ;
@@ -3098,7 +3098,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1industry(JNIEnv *
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1concept(JNIEnv *jenv, jclass jcls, jstring jarg1) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1concept(JNIEnv *jenv, jclass jcls, jstring jarg1) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   DataArray< Symbol > *result = 0 ;
@@ -3117,7 +3117,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1concept(JNIEnv *j
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1trading_1dates(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1trading_1dates(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -3150,7 +3150,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1trading_1dates(JN
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1previous_1trading_1date(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1previous_1trading_1date(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3) {
   jint jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -3183,7 +3183,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1previous_1trading_
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1next_1trading_1date(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1next_1trading_1date(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3) {
   jint jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -3216,7 +3216,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1next_1trading_1dat
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1dividend(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1dividend(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -3249,7 +3249,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1dividend(JNIEnv *
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1continuous_1contracts(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_get_1continuous_1contracts(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jstring jarg3) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -3282,7 +3282,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_get_1continuous_1contr
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_SUCCESS_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_SUCCESS_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3294,7 +3294,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_SUCCESS_1get(JNIEnv *je
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1INVALID_1TOKEN_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1INVALID_1TOKEN_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3306,7 +3306,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1INVALID_1TOKEN_1ge
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1CONNECT_1TERM_1SERV_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1CONNECT_1TERM_1SERV_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3318,7 +3318,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1CONNECT_1TERM_1SER
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1CONNECT_1HISTORY_1SERV_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1CONNECT_1HISTORY_1SERV_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3330,7 +3330,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1CONNECT_1HISTORY_1
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1QUERY_1SERVER_1ADDR_1ERROR_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1QUERY_1SERVER_1ADDR_1ERROR_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3342,7 +3342,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1QUERY_1SERVER_1ADD
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1PARSE_1MASSAGE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1PARSE_1MASSAGE_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3354,7 +3354,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1PARSE_1MASSAGE_1ge
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1PARSE_1NETWORK_1MASSAGE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1PARSE_1NETWORK_1MASSAGE_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3366,7 +3366,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1PARSE_1NETWORK_1MA
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1CALL_1TRADE_1SERVICE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1CALL_1TRADE_1SERVICE_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3378,7 +3378,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1CALL_1TRADE_1SERVI
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1CALL_1HISTORY_1SERVICE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1CALL_1HISTORY_1SERVICE_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3390,7 +3390,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1CALL_1HISTORY_1SER
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1CALL_1STRATEGY_1SERIVCE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1CALL_1STRATEGY_1SERIVCE_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3402,7 +3402,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1CALL_1STRATEGY_1SE
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1CALL_1RTCONFIG_1SERIVCE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1CALL_1RTCONFIG_1SERIVCE_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3414,7 +3414,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1CALL_1RTCONFIG_1SE
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1CALL_1FUNDMENTAL_1SERVICE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1CALL_1FUNDMENTAL_1SERVICE_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3426,7 +3426,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1CALL_1FUNDMENTAL_1
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1CALL_1BACKTEST_1SERVICE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1CALL_1BACKTEST_1SERVICE_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3438,7 +3438,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1CALL_1BACKTEST_1SE
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1CALL_1TRADEGW_1SERIVCE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1CALL_1TRADEGW_1SERIVCE_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3450,7 +3450,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1CALL_1TRADEGW_1SER
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1INVALID_1ACCOUNT_1ID_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1INVALID_1ACCOUNT_1ID_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3462,7 +3462,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1INVALID_1ACCOUNT_1
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1INVALID_1DATE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1INVALID_1DATE_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3474,7 +3474,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1INVALID_1DATE_1get
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1TD_1LIVE_1CONNECT_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1TD_1LIVE_1CONNECT_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3486,7 +3486,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1TD_1LIVE_1CONNECT_
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1TD_1LIVE_1CONNECT_1LOST_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1TD_1LIVE_1CONNECT_1LOST_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3498,7 +3498,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1TD_1LIVE_1CONNECT_
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1MD_1LIVE_1CONNECT_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1MD_1LIVE_1CONNECT_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3510,7 +3510,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1MD_1LIVE_1CONNECT_
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1MD_1LIVE_1CONNECT_1LOST_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1MD_1LIVE_1CONNECT_1LOST_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3522,7 +3522,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1MD_1LIVE_1CONNECT_
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1BT_1BEGIN_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1BT_1BEGIN_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3534,7 +3534,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1BT_1BEGIN_1get(JNI
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1BT_1INVALID_1TIMESPAN_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1BT_1INVALID_1TIMESPAN_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3546,7 +3546,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1BT_1INVALID_1TIMES
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1BT_1READ_1CACHE_1ERROR_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1BT_1READ_1CACHE_1ERROR_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3558,7 +3558,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1BT_1READ_1CACHE_1E
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1BT_1WRITE_1CACHE_1ERROR_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ERR_1BT_1WRITE_1CACHE_1ERROR_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -3570,7 +3570,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ERR_1BT_1WRITE_1CACHE_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_LEN_1ID_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_LEN_1ID_1get(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   unsigned int result;
   
@@ -3582,7 +3582,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_LEN_1ID_1get(JNIEnv *j
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_LEN_1NAME_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_LEN_1NAME_1get(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   unsigned int result;
   
@@ -3594,7 +3594,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_LEN_1NAME_1get(JNIEnv 
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_LEN_1SYMBOL_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_LEN_1SYMBOL_1get(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   unsigned int result;
   
@@ -3606,7 +3606,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_LEN_1SYMBOL_1get(JNIEn
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_LEN_1INFO_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_LEN_1INFO_1get(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   unsigned int result;
   
@@ -3618,7 +3618,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_LEN_1INFO_1get(JNIEnv 
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_LEN_1EXCHANGE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_LEN_1EXCHANGE_1get(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   unsigned int result;
   
@@ -3630,7 +3630,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_LEN_1EXCHANGE_1get(JNI
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_LEN_1ISO_1DATATIME_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_LEN_1ISO_1DATATIME_1get(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   unsigned int result;
   
@@ -3642,7 +3642,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_LEN_1ISO_1DATATIME_1ge
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_LEN_1FREQUENCY_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_LEN_1FREQUENCY_1get(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   unsigned int result;
   
@@ -3654,7 +3654,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_LEN_1FREQUENCY_1get(JN
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_DEPTH_1OF_1QUOTE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_DEPTH_1OF_1QUOTE_1get(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   unsigned int result;
   
@@ -3666,7 +3666,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_DEPTH_1OF_1QUOTE_1get(
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_MODE_1UNDEF_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_MODE_1UNDEF_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   StrategyMode result;
   
@@ -3678,7 +3678,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_MODE_1UNDEF_1get(JNIEnv
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_MODE_1LIVE_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_MODE_1LIVE_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   StrategyMode result;
   
@@ -3690,7 +3690,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_MODE_1LIVE_1get(JNIEnv 
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_MODE_1BACKTEST_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_MODE_1BACKTEST_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   StrategyMode result;
   
@@ -3702,7 +3702,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_MODE_1BACKTEST_1get(JNI
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1Unknown_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderStatus_1Unknown_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderStatus result;
   
@@ -3714,7 +3714,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1Unknown_1g
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1New_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderStatus_1New_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderStatus result;
   
@@ -3726,7 +3726,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1New_1get(J
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1PartiallyFilled_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderStatus_1PartiallyFilled_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderStatus result;
   
@@ -3738,7 +3738,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1PartiallyF
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1Filled_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderStatus_1Filled_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderStatus result;
   
@@ -3750,7 +3750,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1Filled_1ge
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1DoneForDay_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderStatus_1DoneForDay_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderStatus result;
   
@@ -3762,7 +3762,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1DoneForDay
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1Canceled_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderStatus_1Canceled_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderStatus result;
   
@@ -3774,7 +3774,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1Canceled_1
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1PendingCancel_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderStatus_1PendingCancel_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderStatus result;
   
@@ -3786,7 +3786,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1PendingCan
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1Stopped_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderStatus_1Stopped_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderStatus result;
   
@@ -3798,7 +3798,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1Stopped_1g
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1Rejected_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderStatus_1Rejected_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderStatus result;
   
@@ -3810,7 +3810,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1Rejected_1
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1Suspended_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderStatus_1Suspended_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderStatus result;
   
@@ -3822,7 +3822,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1Suspended_
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1PendingNew_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderStatus_1PendingNew_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderStatus result;
   
@@ -3834,7 +3834,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1PendingNew
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1Calculated_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderStatus_1Calculated_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderStatus result;
   
@@ -3846,7 +3846,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1Calculated
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1Expired_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderStatus_1Expired_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderStatus result;
   
@@ -3858,7 +3858,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1Expired_1g
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1AcceptedForBidding_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderStatus_1AcceptedForBidding_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderStatus result;
   
@@ -3870,7 +3870,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1AcceptedFo
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1PendingReplace_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderStatus_1PendingReplace_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderStatus result;
   
@@ -3882,7 +3882,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderStatus_1PendingRep
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1Unknown_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecType_1Unknown_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   ExecType result;
   
@@ -3894,7 +3894,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1Unknown_1get(
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1New_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecType_1New_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   ExecType result;
   
@@ -3906,7 +3906,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1New_1get(JNIE
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1DoneForDay_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecType_1DoneForDay_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   ExecType result;
   
@@ -3918,7 +3918,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1DoneForDay_1g
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1Canceled_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecType_1Canceled_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   ExecType result;
   
@@ -3930,7 +3930,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1Canceled_1get
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1PendingCancel_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecType_1PendingCancel_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   ExecType result;
   
@@ -3942,7 +3942,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1PendingCancel
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1Stopped_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecType_1Stopped_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   ExecType result;
   
@@ -3954,7 +3954,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1Stopped_1get(
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1Rejected_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecType_1Rejected_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   ExecType result;
   
@@ -3966,7 +3966,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1Rejected_1get
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1Suspended_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecType_1Suspended_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   ExecType result;
   
@@ -3978,7 +3978,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1Suspended_1ge
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1PendingNew_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecType_1PendingNew_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   ExecType result;
   
@@ -3990,7 +3990,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1PendingNew_1g
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1Calculated_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecType_1Calculated_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   ExecType result;
   
@@ -4002,7 +4002,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1Calculated_1g
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1Expired_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecType_1Expired_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   ExecType result;
   
@@ -4014,7 +4014,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1Expired_1get(
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1Restated_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecType_1Restated_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   ExecType result;
   
@@ -4026,7 +4026,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1Restated_1get
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1PendingReplace_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecType_1PendingReplace_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   ExecType result;
   
@@ -4038,7 +4038,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1PendingReplac
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1Trade_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecType_1Trade_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   ExecType result;
   
@@ -4050,7 +4050,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1Trade_1get(JN
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1TradeCorrect_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecType_1TradeCorrect_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   ExecType result;
   
@@ -4062,7 +4062,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1TradeCorrect_
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1TradeCancel_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecType_1TradeCancel_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   ExecType result;
   
@@ -4074,7 +4074,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1TradeCancel_1
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1OrderStatus_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecType_1OrderStatus_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   ExecType result;
   
@@ -4086,7 +4086,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1OrderStatus_1
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1CancelRejected_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecType_1CancelRejected_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   ExecType result;
   
@@ -4098,7 +4098,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecType_1CancelRejecte
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1Unknown_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderRejectReason_1Unknown_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderRejectReason result;
   
@@ -4110,7 +4110,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1Unkn
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1RiskRuleCheckFailed_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderRejectReason_1RiskRuleCheckFailed_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderRejectReason result;
   
@@ -4122,7 +4122,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1Risk
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1NoEnoughCash_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderRejectReason_1NoEnoughCash_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderRejectReason result;
   
@@ -4134,7 +4134,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1NoEn
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1NoEnoughPosition_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderRejectReason_1NoEnoughPosition_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderRejectReason result;
   
@@ -4146,7 +4146,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1NoEn
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1IllegalAccountId_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderRejectReason_1IllegalAccountId_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderRejectReason result;
   
@@ -4158,7 +4158,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1Ille
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1IllegalStrategyId_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderRejectReason_1IllegalStrategyId_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderRejectReason result;
   
@@ -4170,7 +4170,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1Ille
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1IllegalSymbol_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderRejectReason_1IllegalSymbol_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderRejectReason result;
   
@@ -4182,7 +4182,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1Ille
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1IllegalVolume_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderRejectReason_1IllegalVolume_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderRejectReason result;
   
@@ -4194,7 +4194,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1Ille
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1IllegalPrice_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderRejectReason_1IllegalPrice_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderRejectReason result;
   
@@ -4206,7 +4206,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1Ille
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1AccountDisabled_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderRejectReason_1AccountDisabled_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderRejectReason result;
   
@@ -4218,7 +4218,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1Acco
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1AccountDisconnected_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderRejectReason_1AccountDisconnected_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderRejectReason result;
   
@@ -4230,7 +4230,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1Acco
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1AccountLoggedout_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderRejectReason_1AccountLoggedout_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderRejectReason result;
   
@@ -4242,7 +4242,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1Acco
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1NotInTradingSession_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderRejectReason_1NotInTradingSession_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderRejectReason result;
   
@@ -4254,7 +4254,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1NotI
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1OrderTypeNotSupported_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderRejectReason_1OrderTypeNotSupported_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderRejectReason result;
   
@@ -4266,7 +4266,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1Orde
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1Throttle_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderRejectReason_1Throttle_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderRejectReason result;
   
@@ -4278,7 +4278,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1Thro
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1SymbolSusppended_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderRejectReason_1SymbolSusppended_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderRejectReason result;
   
@@ -4290,7 +4290,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1Symb
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1Internal_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderRejectReason_1Internal_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderRejectReason result;
   
@@ -4302,7 +4302,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderRejectReason_1Inte
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_CancelOrderRejectReason_1OrderFinalized_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_CancelOrderRejectReason_1OrderFinalized_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderRejectReason result;
   
@@ -4314,7 +4314,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_CancelOrderRejectReason
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_CancelOrderRejectReason_1UnknownOrder_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_CancelOrderRejectReason_1UnknownOrder_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderRejectReason result;
   
@@ -4326,7 +4326,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_CancelOrderRejectReason
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_CancelOrderRejectReason_1BrokerOption_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_CancelOrderRejectReason_1BrokerOption_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderRejectReason result;
   
@@ -4338,7 +4338,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_CancelOrderRejectReason
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_CancelOrderRejectReason_1AlreadyInPendingCancel_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_CancelOrderRejectReason_1AlreadyInPendingCancel_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderRejectReason result;
   
@@ -4350,7 +4350,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_CancelOrderRejectReason
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderSide_1Unknown_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderSide_1Unknown_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderSide result;
   
@@ -4362,7 +4362,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderSide_1Unknown_1get
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderSide_1Buy_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderSide_1Buy_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderSide result;
   
@@ -4374,7 +4374,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderSide_1Buy_1get(JNI
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderSide_1Sell_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderSide_1Sell_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderSide result;
   
@@ -4386,7 +4386,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderSide_1Sell_1get(JN
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderType_1Unknown_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderType_1Unknown_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderType result;
   
@@ -4398,7 +4398,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderType_1Unknown_1get
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderType_1Limit_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderType_1Limit_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderType result;
   
@@ -4410,7 +4410,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderType_1Limit_1get(J
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderType_1Market_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderType_1Market_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderType result;
   
@@ -4422,7 +4422,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderType_1Market_1get(
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderType_1Stop_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderType_1Stop_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderType result;
   
@@ -4434,7 +4434,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderType_1Stop_1get(JN
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderDuration_1Unknown_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderDuration_1Unknown_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderDuration result;
   
@@ -4446,7 +4446,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderDuration_1Unknown_
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderDuration_1FAK_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderDuration_1FAK_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderDuration result;
   
@@ -4458,7 +4458,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderDuration_1FAK_1get
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderDuration_1FOK_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderDuration_1FOK_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderDuration result;
   
@@ -4470,7 +4470,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderDuration_1FOK_1get
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderDuration_1GFD_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderDuration_1GFD_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderDuration result;
   
@@ -4482,7 +4482,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderDuration_1GFD_1get
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderDuration_1GFS_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderDuration_1GFS_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderDuration result;
   
@@ -4494,7 +4494,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderDuration_1GFS_1get
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderDuration_1GTD_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderDuration_1GTD_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderDuration result;
   
@@ -4506,7 +4506,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderDuration_1GTD_1get
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderDuration_1GTC_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderDuration_1GTC_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderDuration result;
   
@@ -4518,7 +4518,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderDuration_1GTC_1get
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderDuration_1GFA_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderDuration_1GFA_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderDuration result;
   
@@ -4530,7 +4530,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderDuration_1GFA_1get
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderQualifier_1Unknown_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderQualifier_1Unknown_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderQualifier result;
   
@@ -4542,7 +4542,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderQualifier_1Unknown
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderQualifier_1BOC_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderQualifier_1BOC_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderQualifier result;
   
@@ -4554,7 +4554,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderQualifier_1BOC_1ge
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderQualifier_1BOP_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderQualifier_1BOP_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderQualifier result;
   
@@ -4566,7 +4566,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderQualifier_1BOP_1ge
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderQualifier_1B5TC_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderQualifier_1B5TC_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderQualifier result;
   
@@ -4578,7 +4578,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderQualifier_1B5TC_1g
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderQualifier_1B5TL_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderQualifier_1B5TL_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   OrderQualifier result;
   
@@ -4590,7 +4590,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_OrderQualifier_1B5TL_1g
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_PositionSide_1Unknown_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_PositionSide_1Unknown_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   PositionSide result;
   
@@ -4602,7 +4602,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_PositionSide_1Unknown_1
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_PositionSide_1Long_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_PositionSide_1Long_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   PositionSide result;
   
@@ -4614,7 +4614,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_PositionSide_1Long_1get
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_PositionSide_1Short_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_PositionSide_1Short_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   PositionSide result;
   
@@ -4626,7 +4626,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_PositionSide_1Short_1ge
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_PositionEffect_1Unknown_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_PositionEffect_1Unknown_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   PositionEffect result;
   
@@ -4638,7 +4638,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_PositionEffect_1Unknown
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_PositionEffect_1Open_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_PositionEffect_1Open_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   PositionEffect result;
   
@@ -4650,7 +4650,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_PositionEffect_1Open_1g
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_PositionEffect_1Close_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_PositionEffect_1Close_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   PositionEffect result;
   
@@ -4662,7 +4662,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_PositionEffect_1Close_1
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_PositionEffect_1CloseToday_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_PositionEffect_1CloseToday_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   PositionEffect result;
   
@@ -4674,7 +4674,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_PositionEffect_1CloseTo
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_PositionEffect_1CloseYesterday_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_PositionEffect_1CloseYesterday_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   PositionEffect result;
   
@@ -4686,7 +4686,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_PositionEffect_1CloseYe
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_CashPositionChangeReason_1Unknown_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_CashPositionChangeReason_1Unknown_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   CashPositionChangeReason result;
   
@@ -4698,7 +4698,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_CashPositionChangeReaso
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_CashPositionChangeReason_1Trade_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_CashPositionChangeReason_1Trade_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   CashPositionChangeReason result;
   
@@ -4710,7 +4710,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_CashPositionChangeReaso
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_CashPositionChangeReason_1Inout_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_CashPositionChangeReason_1Inout_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   CashPositionChangeReason result;
   
@@ -4722,7 +4722,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_CashPositionChangeReaso
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_CashPositionChangeReason_1Dividend_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_CashPositionChangeReason_1Dividend_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   CashPositionChangeReason result;
   
@@ -4734,7 +4734,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_CashPositionChangeReaso
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_State_1UNKNOWN_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_State_1UNKNOWN_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   AccountState result;
   
@@ -4746,7 +4746,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_State_1UNKNOWN_1get(JNI
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_State_1CONNECTING_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_State_1CONNECTING_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   AccountState result;
   
@@ -4758,7 +4758,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_State_1CONNECTING_1get(
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_State_1CONNECTED_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_State_1CONNECTED_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   AccountState result;
   
@@ -4770,7 +4770,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_State_1CONNECTED_1get(J
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_State_1LOGGEDIN_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_State_1LOGGEDIN_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   AccountState result;
   
@@ -4782,7 +4782,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_State_1LOGGEDIN_1get(JN
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_State_1DISCONNECTING_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_State_1DISCONNECTING_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   AccountState result;
   
@@ -4794,7 +4794,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_State_1DISCONNECTING_1g
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_State_1DISCONNECTED_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_State_1DISCONNECTED_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   AccountState result;
   
@@ -4806,7 +4806,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_State_1DISCONNECTED_1ge
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_State_1ERROR_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_State_1ERROR_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   AccountState result;
   
@@ -4818,7 +4818,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_State_1ERROR_1get(JNIEn
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1symbol_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1symbol_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Bar *arg1 = (Bar *) 0 ;
   char *arg2 ;
   
@@ -4844,7 +4844,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1symbol_1set(JNIEnv
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1symbol_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1symbol_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Bar *arg1 = (Bar *) 0 ;
   char *result = 0 ;
@@ -4859,7 +4859,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1symbol_1get(JNI
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1bob_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1bob_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Bar *arg1 = (Bar *) 0 ;
   double arg2 ;
   
@@ -4872,7 +4872,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1bob_1set(JNIEnv *j
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1bob_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1bob_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Bar *arg1 = (Bar *) 0 ;
   double result;
@@ -4887,7 +4887,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1bob_1get(JNIEnv
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1eob_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1eob_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Bar *arg1 = (Bar *) 0 ;
   double arg2 ;
   
@@ -4900,7 +4900,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1eob_1set(JNIEnv *j
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1eob_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1eob_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Bar *arg1 = (Bar *) 0 ;
   double result;
@@ -4915,7 +4915,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1eob_1get(JNIEnv
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1open_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1open_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
   Bar *arg1 = (Bar *) 0 ;
   float arg2 ;
   
@@ -4928,7 +4928,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1open_1set(JNIEnv *
 }
 
 
-SWIGEXPORT jfloat JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1open_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jfloat JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1open_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jfloat jresult = 0 ;
   Bar *arg1 = (Bar *) 0 ;
   float result;
@@ -4943,7 +4943,7 @@ SWIGEXPORT jfloat JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1open_1get(JNIEnv
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1close_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1close_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
   Bar *arg1 = (Bar *) 0 ;
   float arg2 ;
   
@@ -4956,7 +4956,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1close_1set(JNIEnv 
 }
 
 
-SWIGEXPORT jfloat JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1close_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jfloat JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1close_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jfloat jresult = 0 ;
   Bar *arg1 = (Bar *) 0 ;
   float result;
@@ -4971,7 +4971,7 @@ SWIGEXPORT jfloat JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1close_1get(JNIEn
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1high_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1high_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
   Bar *arg1 = (Bar *) 0 ;
   float arg2 ;
   
@@ -4984,7 +4984,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1high_1set(JNIEnv *
 }
 
 
-SWIGEXPORT jfloat JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1high_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jfloat JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1high_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jfloat jresult = 0 ;
   Bar *arg1 = (Bar *) 0 ;
   float result;
@@ -4999,7 +4999,7 @@ SWIGEXPORT jfloat JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1high_1get(JNIEnv
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1low_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1low_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
   Bar *arg1 = (Bar *) 0 ;
   float arg2 ;
   
@@ -5012,7 +5012,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1low_1set(JNIEnv *j
 }
 
 
-SWIGEXPORT jfloat JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1low_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jfloat JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1low_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jfloat jresult = 0 ;
   Bar *arg1 = (Bar *) 0 ;
   float result;
@@ -5027,7 +5027,7 @@ SWIGEXPORT jfloat JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1low_1get(JNIEnv 
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1volume_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1volume_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Bar *arg1 = (Bar *) 0 ;
   double arg2 ;
   
@@ -5040,7 +5040,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1volume_1set(JNIEnv
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1volume_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1volume_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Bar *arg1 = (Bar *) 0 ;
   double result;
@@ -5055,7 +5055,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1volume_1get(JNI
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1amount_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1amount_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Bar *arg1 = (Bar *) 0 ;
   double arg2 ;
   
@@ -5068,7 +5068,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1amount_1set(JNIEnv
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1amount_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1amount_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Bar *arg1 = (Bar *) 0 ;
   double result;
@@ -5083,7 +5083,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1amount_1get(JNI
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1pre_1close_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1pre_1close_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
   Bar *arg1 = (Bar *) 0 ;
   float arg2 ;
   
@@ -5096,7 +5096,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1pre_1close_1set(JN
 }
 
 
-SWIGEXPORT jfloat JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1pre_1close_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jfloat JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1pre_1close_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jfloat jresult = 0 ;
   Bar *arg1 = (Bar *) 0 ;
   float result;
@@ -5111,7 +5111,7 @@ SWIGEXPORT jfloat JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1pre_1close_1get(
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1position_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1position_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Bar *arg1 = (Bar *) 0 ;
   long long arg2 ;
   
@@ -5124,7 +5124,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1position_1set(JNIE
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1position_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1position_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Bar *arg1 = (Bar *) 0 ;
   long long result;
@@ -5139,7 +5139,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1position_1get(JNI
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1frequency_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1frequency_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Bar *arg1 = (Bar *) 0 ;
   char *arg2 ;
   
@@ -5165,7 +5165,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1frequency_1set(JNI
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1frequency_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Bar_1frequency_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Bar *arg1 = (Bar *) 0 ;
   char *result = 0 ;
@@ -5180,7 +5180,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Bar_1frequency_1get(
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1Bar(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_new_1Bar(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   Bar *result = 0 ;
   
@@ -5192,7 +5192,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1Bar(JNIEnv *jenv,
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1Bar(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1Bar(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   Bar *arg1 = (Bar *) 0 ;
   
   (void)jenv;
@@ -5202,7 +5202,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1Bar(JNIEnv *jen
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Quote_1bid_1price_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Quote_1bid_1price_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
   Quote *arg1 = (Quote *) 0 ;
   float arg2 ;
   
@@ -5215,7 +5215,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Quote_1bid_1price_1set(
 }
 
 
-SWIGEXPORT jfloat JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Quote_1bid_1price_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jfloat JNICALL Java_io_ft_api_gm_gmsdkJNI_Quote_1bid_1price_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jfloat jresult = 0 ;
   Quote *arg1 = (Quote *) 0 ;
   float result;
@@ -5230,7 +5230,7 @@ SWIGEXPORT jfloat JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Quote_1bid_1price_1ge
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Quote_1bid_1volume_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Quote_1bid_1volume_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Quote *arg1 = (Quote *) 0 ;
   long long arg2 ;
   
@@ -5243,7 +5243,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Quote_1bid_1volume_1set
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Quote_1bid_1volume_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Quote_1bid_1volume_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Quote *arg1 = (Quote *) 0 ;
   long long result;
@@ -5258,7 +5258,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Quote_1bid_1volume_1ge
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Quote_1ask_1price_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Quote_1ask_1price_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
   Quote *arg1 = (Quote *) 0 ;
   float arg2 ;
   
@@ -5271,7 +5271,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Quote_1ask_1price_1set(
 }
 
 
-SWIGEXPORT jfloat JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Quote_1ask_1price_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jfloat JNICALL Java_io_ft_api_gm_gmsdkJNI_Quote_1ask_1price_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jfloat jresult = 0 ;
   Quote *arg1 = (Quote *) 0 ;
   float result;
@@ -5286,7 +5286,7 @@ SWIGEXPORT jfloat JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Quote_1ask_1price_1ge
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Quote_1ask_1volume_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Quote_1ask_1volume_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Quote *arg1 = (Quote *) 0 ;
   long long arg2 ;
   
@@ -5299,7 +5299,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Quote_1ask_1volume_1set
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Quote_1ask_1volume_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Quote_1ask_1volume_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Quote *arg1 = (Quote *) 0 ;
   long long result;
@@ -5314,7 +5314,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Quote_1ask_1volume_1ge
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1Quote(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_new_1Quote(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   Quote *result = 0 ;
   
@@ -5326,7 +5326,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1Quote(JNIEnv *jen
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1Quote(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1Quote(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   Quote *arg1 = (Quote *) 0 ;
   
   (void)jenv;
@@ -5336,7 +5336,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1Quote(JNIEnv *j
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1symbol_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1symbol_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Tick *arg1 = (Tick *) 0 ;
   char *arg2 ;
   
@@ -5362,7 +5362,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1symbol_1set(JNIEn
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1symbol_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1symbol_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Tick *arg1 = (Tick *) 0 ;
   char *result = 0 ;
@@ -5377,7 +5377,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1symbol_1get(JN
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1created_1at_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1created_1at_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Tick *arg1 = (Tick *) 0 ;
   double arg2 ;
   
@@ -5390,7 +5390,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1created_1at_1set(
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1created_1at_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1created_1at_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Tick *arg1 = (Tick *) 0 ;
   double result;
@@ -5405,7 +5405,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1created_1at_1g
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1price_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1price_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
   Tick *arg1 = (Tick *) 0 ;
   float arg2 ;
   
@@ -5418,7 +5418,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1price_1set(JNIEnv
 }
 
 
-SWIGEXPORT jfloat JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1price_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jfloat JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1price_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jfloat jresult = 0 ;
   Tick *arg1 = (Tick *) 0 ;
   float result;
@@ -5433,7 +5433,7 @@ SWIGEXPORT jfloat JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1price_1get(JNIE
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1open_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1open_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
   Tick *arg1 = (Tick *) 0 ;
   float arg2 ;
   
@@ -5446,7 +5446,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1open_1set(JNIEnv 
 }
 
 
-SWIGEXPORT jfloat JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1open_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jfloat JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1open_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jfloat jresult = 0 ;
   Tick *arg1 = (Tick *) 0 ;
   float result;
@@ -5461,7 +5461,7 @@ SWIGEXPORT jfloat JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1open_1get(JNIEn
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1high_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1high_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
   Tick *arg1 = (Tick *) 0 ;
   float arg2 ;
   
@@ -5474,7 +5474,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1high_1set(JNIEnv 
 }
 
 
-SWIGEXPORT jfloat JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1high_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jfloat JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1high_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jfloat jresult = 0 ;
   Tick *arg1 = (Tick *) 0 ;
   float result;
@@ -5489,7 +5489,7 @@ SWIGEXPORT jfloat JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1high_1get(JNIEn
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1low_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1low_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
   Tick *arg1 = (Tick *) 0 ;
   float arg2 ;
   
@@ -5502,7 +5502,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1low_1set(JNIEnv *
 }
 
 
-SWIGEXPORT jfloat JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1low_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jfloat JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1low_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jfloat jresult = 0 ;
   Tick *arg1 = (Tick *) 0 ;
   float result;
@@ -5517,7 +5517,7 @@ SWIGEXPORT jfloat JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1low_1get(JNIEnv
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1cum_1volume_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1cum_1volume_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Tick *arg1 = (Tick *) 0 ;
   double arg2 ;
   
@@ -5530,7 +5530,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1cum_1volume_1set(
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1cum_1volume_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1cum_1volume_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Tick *arg1 = (Tick *) 0 ;
   double result;
@@ -5545,7 +5545,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1cum_1volume_1g
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1cum_1amount_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1cum_1amount_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Tick *arg1 = (Tick *) 0 ;
   double arg2 ;
   
@@ -5558,7 +5558,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1cum_1amount_1set(
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1cum_1amount_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1cum_1amount_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Tick *arg1 = (Tick *) 0 ;
   double result;
@@ -5573,7 +5573,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1cum_1amount_1g
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1cum_1position_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1cum_1position_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Tick *arg1 = (Tick *) 0 ;
   long long arg2 ;
   
@@ -5586,7 +5586,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1cum_1position_1se
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1cum_1position_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1cum_1position_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Tick *arg1 = (Tick *) 0 ;
   long long result;
@@ -5601,7 +5601,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1cum_1position_1g
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1last_1amount_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1last_1amount_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Tick *arg1 = (Tick *) 0 ;
   double arg2 ;
   
@@ -5614,7 +5614,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1last_1amount_1set
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1last_1amount_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1last_1amount_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Tick *arg1 = (Tick *) 0 ;
   double result;
@@ -5629,7 +5629,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1last_1amount_1
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1last_1volume_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1last_1volume_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   Tick *arg1 = (Tick *) 0 ;
   int arg2 ;
   
@@ -5642,7 +5642,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1last_1volume_1set
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1last_1volume_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1last_1volume_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Tick *arg1 = (Tick *) 0 ;
   int result;
@@ -5657,7 +5657,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1last_1volume_1get
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1trade_1type_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1trade_1type_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   Tick *arg1 = (Tick *) 0 ;
   int arg2 ;
   
@@ -5670,7 +5670,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1trade_1type_1set(
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1trade_1type_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1trade_1type_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Tick *arg1 = (Tick *) 0 ;
   int result;
@@ -5685,7 +5685,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1trade_1type_1get(
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1quotes_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1quotes_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   Tick *arg1 = (Tick *) 0 ;
   Quote *arg2 ;
   
@@ -5704,7 +5704,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1quotes_1set(JNIEn
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1quotes_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1quotes_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Tick *arg1 = (Tick *) 0 ;
   Quote *result = 0 ;
@@ -5719,7 +5719,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Tick_1quotes_1get(JNIE
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1Tick(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_new_1Tick(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   Tick *result = 0 ;
   
@@ -5731,7 +5731,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1Tick(JNIEnv *jenv
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1Tick(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1Tick(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   Tick *arg1 = (Tick *) 0 ;
   
   (void)jenv;
@@ -5741,7 +5741,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1Tick(JNIEnv *je
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1strategy_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1strategy_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Order *arg1 = (Order *) 0 ;
   char *arg2 ;
   
@@ -5767,7 +5767,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1strategy_1id_1se
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1strategy_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1strategy_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   char *result = 0 ;
@@ -5782,7 +5782,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1strategy_1id_
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1account_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1account_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Order *arg1 = (Order *) 0 ;
   char *arg2 ;
   
@@ -5808,7 +5808,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1account_1id_1set
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1account_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1account_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   char *result = 0 ;
@@ -5823,7 +5823,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1account_1id_1
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1account_1name_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1account_1name_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Order *arg1 = (Order *) 0 ;
   char *arg2 ;
   
@@ -5849,7 +5849,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1account_1name_1s
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1account_1name_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1account_1name_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   char *result = 0 ;
@@ -5864,7 +5864,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1account_1name
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1cl_1ord_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1cl_1ord_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Order *arg1 = (Order *) 0 ;
   char *arg2 ;
   
@@ -5890,7 +5890,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1cl_1ord_1id_1set
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1cl_1ord_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1cl_1ord_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   char *result = 0 ;
@@ -5905,7 +5905,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1cl_1ord_1id_1
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1order_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Order *arg1 = (Order *) 0 ;
   char *arg2 ;
   
@@ -5931,7 +5931,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1id_1set(J
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1order_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   char *result = 0 ;
@@ -5946,7 +5946,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1id_1ge
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1ex_1ord_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1ex_1ord_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Order *arg1 = (Order *) 0 ;
   char *arg2 ;
   
@@ -5972,7 +5972,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1ex_1ord_1id_1set
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1ex_1ord_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1ex_1ord_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   char *result = 0 ;
@@ -5987,7 +5987,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1ex_1ord_1id_1
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1symbol_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1symbol_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Order *arg1 = (Order *) 0 ;
   char *arg2 ;
   
@@ -6013,7 +6013,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1symbol_1set(JNIE
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1symbol_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1symbol_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   char *result = 0 ;
@@ -6028,7 +6028,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1symbol_1get(J
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1side_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1side_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   Order *arg1 = (Order *) 0 ;
   int arg2 ;
   
@@ -6041,7 +6041,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1side_1set(JNIEnv
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1side_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1side_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   int result;
@@ -6056,7 +6056,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1side_1get(JNIEnv
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1position_1effect_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1position_1effect_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   Order *arg1 = (Order *) 0 ;
   int arg2 ;
   
@@ -6069,7 +6069,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1position_1effect
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1position_1effect_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1position_1effect_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   int result;
@@ -6084,7 +6084,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1position_1effect
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1position_1side_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1position_1side_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   Order *arg1 = (Order *) 0 ;
   int arg2 ;
   
@@ -6097,7 +6097,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1position_1side_1
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1position_1side_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1position_1side_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   int result;
@@ -6112,7 +6112,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1position_1side_1
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1type_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1order_1type_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   Order *arg1 = (Order *) 0 ;
   int arg2 ;
   
@@ -6125,7 +6125,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1type_1set
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1type_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1order_1type_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   int result;
@@ -6140,7 +6140,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1type_1get
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1duration_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1order_1duration_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   Order *arg1 = (Order *) 0 ;
   int arg2 ;
   
@@ -6153,7 +6153,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1duration_
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1duration_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1order_1duration_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   int result;
@@ -6168,7 +6168,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1duration_
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1qualifier_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1order_1qualifier_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   Order *arg1 = (Order *) 0 ;
   int arg2 ;
   
@@ -6181,7 +6181,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1qualifier
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1qualifier_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1order_1qualifier_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   int result;
@@ -6196,7 +6196,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1qualifier
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1src_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1order_1src_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   Order *arg1 = (Order *) 0 ;
   int arg2 ;
   
@@ -6209,7 +6209,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1src_1set(
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1src_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1order_1src_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   int result;
@@ -6224,7 +6224,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1src_1get(
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1status_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1status_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   Order *arg1 = (Order *) 0 ;
   int arg2 ;
   
@@ -6237,7 +6237,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1status_1set(JNIE
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1status_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1status_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   int result;
@@ -6252,7 +6252,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1status_1get(JNIE
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1ord_1rej_1reason_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1ord_1rej_1reason_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   Order *arg1 = (Order *) 0 ;
   int arg2 ;
   
@@ -6265,7 +6265,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1ord_1rej_1reason
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1ord_1rej_1reason_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1ord_1rej_1reason_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   int result;
@@ -6280,7 +6280,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1ord_1rej_1reason
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1ord_1rej_1reason_1detail_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1ord_1rej_1reason_1detail_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Order *arg1 = (Order *) 0 ;
   char *arg2 ;
   
@@ -6306,7 +6306,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1ord_1rej_1reason
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1ord_1rej_1reason_1detail_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1ord_1rej_1reason_1detail_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   char *result = 0 ;
@@ -6321,7 +6321,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1ord_1rej_1rea
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1price_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1price_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Order *arg1 = (Order *) 0 ;
   double arg2 ;
   
@@ -6334,7 +6334,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1price_1set(JNIEn
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1price_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1price_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   double result;
@@ -6349,7 +6349,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1price_1get(JN
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1stop_1price_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1stop_1price_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Order *arg1 = (Order *) 0 ;
   double arg2 ;
   
@@ -6362,7 +6362,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1stop_1price_1set
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1stop_1price_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1stop_1price_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   double result;
@@ -6377,7 +6377,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1stop_1price_1
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1style_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1order_1style_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   Order *arg1 = (Order *) 0 ;
   int arg2 ;
   
@@ -6390,7 +6390,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1style_1se
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1style_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1order_1style_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   int result;
@@ -6405,7 +6405,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1order_1style_1ge
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1volume_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1volume_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Order *arg1 = (Order *) 0 ;
   long long arg2 ;
   
@@ -6418,7 +6418,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1volume_1set(JNIE
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1volume_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1volume_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   long long result;
@@ -6433,7 +6433,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1volume_1get(JNI
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1value_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1value_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Order *arg1 = (Order *) 0 ;
   double arg2 ;
   
@@ -6446,7 +6446,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1value_1set(JNIEn
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1value_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1value_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   double result;
@@ -6461,7 +6461,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1value_1get(JN
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1percent_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1percent_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Order *arg1 = (Order *) 0 ;
   double arg2 ;
   
@@ -6474,7 +6474,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1percent_1set(JNI
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1percent_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1percent_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   double result;
@@ -6489,7 +6489,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1percent_1get(
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1target_1volume_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1target_1volume_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Order *arg1 = (Order *) 0 ;
   long long arg2 ;
   
@@ -6502,7 +6502,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1target_1volume_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1target_1volume_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1target_1volume_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   long long result;
@@ -6517,7 +6517,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1target_1volume_
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1target_1value_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1target_1value_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Order *arg1 = (Order *) 0 ;
   double arg2 ;
   
@@ -6530,7 +6530,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1target_1value_1s
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1target_1value_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1target_1value_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   double result;
@@ -6545,7 +6545,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1target_1value
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1target_1percent_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1target_1percent_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Order *arg1 = (Order *) 0 ;
   double arg2 ;
   
@@ -6558,7 +6558,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1target_1percent_
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1target_1percent_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1target_1percent_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   double result;
@@ -6573,7 +6573,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1target_1perce
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1filled_1volume_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1filled_1volume_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Order *arg1 = (Order *) 0 ;
   long long arg2 ;
   
@@ -6586,7 +6586,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1filled_1volume_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1filled_1volume_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1filled_1volume_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   long long result;
@@ -6601,7 +6601,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1filled_1volume_
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1filled_1vwap_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1filled_1vwap_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Order *arg1 = (Order *) 0 ;
   double arg2 ;
   
@@ -6614,7 +6614,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1filled_1vwap_1se
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1filled_1vwap_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1filled_1vwap_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   double result;
@@ -6629,7 +6629,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1filled_1vwap_
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1filled_1amount_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1filled_1amount_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Order *arg1 = (Order *) 0 ;
   double arg2 ;
   
@@ -6642,7 +6642,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1filled_1amount_1
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1filled_1amount_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1filled_1amount_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   double result;
@@ -6657,7 +6657,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1filled_1amoun
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1filled_1commission_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1filled_1commission_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Order *arg1 = (Order *) 0 ;
   double arg2 ;
   
@@ -6670,7 +6670,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1filled_1commissi
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1filled_1commission_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1filled_1commission_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   double result;
@@ -6685,7 +6685,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1filled_1commi
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1created_1at_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1created_1at_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Order *arg1 = (Order *) 0 ;
   long long arg2 ;
   
@@ -6698,7 +6698,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1created_1at_1set
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1created_1at_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1created_1at_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   long long result;
@@ -6713,7 +6713,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1created_1at_1ge
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1updated_1at_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1updated_1at_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Order *arg1 = (Order *) 0 ;
   long long arg2 ;
   
@@ -6726,7 +6726,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1updated_1at_1set
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1updated_1at_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Order_1updated_1at_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Order *arg1 = (Order *) 0 ;
   long long result;
@@ -6741,7 +6741,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Order_1updated_1at_1ge
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1Order(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_new_1Order(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   Order *result = 0 ;
   
@@ -6753,7 +6753,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1Order(JNIEnv *jen
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1Order(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1Order(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   Order *arg1 = (Order *) 0 ;
   
   (void)jenv;
@@ -6763,7 +6763,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1Order(JNIEnv *j
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1strategy_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1strategy_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   char *arg2 ;
   
@@ -6789,7 +6789,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1strategy_1id_1
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1strategy_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1strategy_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   char *result = 0 ;
@@ -6804,7 +6804,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1strategy_1i
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1account_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1account_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   char *arg2 ;
   
@@ -6830,7 +6830,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1account_1id_1s
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1account_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1account_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   char *result = 0 ;
@@ -6845,7 +6845,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1account_1id
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1account_1name_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1account_1name_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   char *arg2 ;
   
@@ -6871,7 +6871,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1account_1name_
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1account_1name_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1account_1name_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   char *result = 0 ;
@@ -6886,7 +6886,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1account_1na
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1cl_1ord_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1cl_1ord_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   char *arg2 ;
   
@@ -6912,7 +6912,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1cl_1ord_1id_1s
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1cl_1ord_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1cl_1ord_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   char *result = 0 ;
@@ -6927,7 +6927,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1cl_1ord_1id
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1order_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1order_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   char *arg2 ;
   
@@ -6953,7 +6953,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1order_1id_1set
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1order_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1order_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   char *result = 0 ;
@@ -6968,7 +6968,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1order_1id_1
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1exec_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1exec_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   char *arg2 ;
   
@@ -6994,7 +6994,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1exec_1id_1set(
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1exec_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1exec_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   char *result = 0 ;
@@ -7009,7 +7009,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1exec_1id_1g
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1symbol_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1symbol_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   char *arg2 ;
   
@@ -7035,7 +7035,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1symbol_1set(JN
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1symbol_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1symbol_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   char *result = 0 ;
@@ -7050,7 +7050,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1symbol_1get
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1position_1effect_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1position_1effect_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   int arg2 ;
   
@@ -7063,7 +7063,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1position_1effe
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1position_1effect_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1position_1effect_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   int result;
@@ -7078,7 +7078,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1position_1effe
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1side_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1side_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   int arg2 ;
   
@@ -7091,7 +7091,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1side_1set(JNIE
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1side_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1side_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   int result;
@@ -7106,7 +7106,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1side_1get(JNIE
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1ord_1rej_1reason_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1ord_1rej_1reason_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   int arg2 ;
   
@@ -7119,7 +7119,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1ord_1rej_1reas
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1ord_1rej_1reason_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1ord_1rej_1reason_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   int result;
@@ -7134,7 +7134,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1ord_1rej_1reas
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1ord_1rej_1reason_1detail_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1ord_1rej_1reason_1detail_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   char *arg2 ;
   
@@ -7160,7 +7160,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1ord_1rej_1reas
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1ord_1rej_1reason_1detail_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1ord_1rej_1reason_1detail_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   char *result = 0 ;
@@ -7175,7 +7175,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1ord_1rej_1r
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1exec_1type_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1exec_1type_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   int arg2 ;
   
@@ -7188,7 +7188,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1exec_1type_1se
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1exec_1type_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1exec_1type_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   int result;
@@ -7203,7 +7203,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1exec_1type_1ge
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1price_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1price_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   double arg2 ;
   
@@ -7216,7 +7216,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1price_1set(JNI
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1price_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1price_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   double result;
@@ -7231,7 +7231,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1price_1get(
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1volume_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1volume_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   long long arg2 ;
   
@@ -7244,7 +7244,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1volume_1set(JN
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1volume_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1volume_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   long long result;
@@ -7259,7 +7259,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1volume_1get(J
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1amount_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1amount_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   double arg2 ;
   
@@ -7272,7 +7272,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1amount_1set(JN
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1amount_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1amount_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   double result;
@@ -7287,7 +7287,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1amount_1get
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1commission_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1commission_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   double arg2 ;
   
@@ -7300,7 +7300,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1commission_1se
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1commission_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1commission_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   double result;
@@ -7315,7 +7315,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1commission_
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1cost_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1cost_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   double arg2 ;
   
@@ -7328,7 +7328,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1cost_1set(JNIE
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1cost_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1cost_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   double result;
@@ -7343,7 +7343,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1cost_1get(J
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1created_1at_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1created_1at_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   long long arg2 ;
   
@@ -7356,7 +7356,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1created_1at_1s
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1created_1at_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRpt_1created_1at_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   long long result;
@@ -7371,7 +7371,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_ExecRpt_1created_1at_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1ExecRpt(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_new_1ExecRpt(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   ExecRpt *result = 0 ;
   
@@ -7383,7 +7383,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1ExecRpt(JNIEnv *j
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1ExecRpt(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1ExecRpt(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   ExecRpt *arg1 = (ExecRpt *) 0 ;
   
   (void)jenv;
@@ -7393,7 +7393,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1ExecRpt(JNIEnv 
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1account_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1account_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Cash *arg1 = (Cash *) 0 ;
   char *arg2 ;
   
@@ -7419,7 +7419,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1account_1id_1set(
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1account_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1account_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Cash *arg1 = (Cash *) 0 ;
   char *result = 0 ;
@@ -7434,7 +7434,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1account_1id_1g
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1account_1name_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1account_1name_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Cash *arg1 = (Cash *) 0 ;
   char *arg2 ;
   
@@ -7460,7 +7460,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1account_1name_1se
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1account_1name_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1account_1name_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Cash *arg1 = (Cash *) 0 ;
   char *result = 0 ;
@@ -7475,7 +7475,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1account_1name_
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1currency_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1currency_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   Cash *arg1 = (Cash *) 0 ;
   int arg2 ;
   
@@ -7488,7 +7488,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1currency_1set(JNI
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1currency_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1currency_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Cash *arg1 = (Cash *) 0 ;
   int result;
@@ -7503,7 +7503,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1currency_1get(JNI
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1nav_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1nav_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Cash *arg1 = (Cash *) 0 ;
   double arg2 ;
   
@@ -7516,7 +7516,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1nav_1set(JNIEnv *
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1nav_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1nav_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Cash *arg1 = (Cash *) 0 ;
   double result;
@@ -7531,7 +7531,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1nav_1get(JNIEn
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1pnl_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1pnl_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Cash *arg1 = (Cash *) 0 ;
   double arg2 ;
   
@@ -7544,7 +7544,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1pnl_1set(JNIEnv *
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1pnl_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1pnl_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Cash *arg1 = (Cash *) 0 ;
   double result;
@@ -7559,7 +7559,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1pnl_1get(JNIEn
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1fpnl_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1fpnl_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Cash *arg1 = (Cash *) 0 ;
   double arg2 ;
   
@@ -7572,7 +7572,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1fpnl_1set(JNIEnv 
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1fpnl_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1fpnl_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Cash *arg1 = (Cash *) 0 ;
   double result;
@@ -7587,7 +7587,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1fpnl_1get(JNIE
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1frozen_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1frozen_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Cash *arg1 = (Cash *) 0 ;
   double arg2 ;
   
@@ -7600,7 +7600,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1frozen_1set(JNIEn
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1frozen_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1frozen_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Cash *arg1 = (Cash *) 0 ;
   double result;
@@ -7615,7 +7615,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1frozen_1get(JN
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1order_1frozen_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1order_1frozen_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Cash *arg1 = (Cash *) 0 ;
   double arg2 ;
   
@@ -7628,7 +7628,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1order_1frozen_1se
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1order_1frozen_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1order_1frozen_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Cash *arg1 = (Cash *) 0 ;
   double result;
@@ -7643,7 +7643,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1order_1frozen_
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1available_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1available_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Cash *arg1 = (Cash *) 0 ;
   double arg2 ;
   
@@ -7656,7 +7656,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1available_1set(JN
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1available_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1available_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Cash *arg1 = (Cash *) 0 ;
   double result;
@@ -7671,7 +7671,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1available_1get
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1balance_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1balance_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Cash *arg1 = (Cash *) 0 ;
   double arg2 ;
   
@@ -7684,7 +7684,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1balance_1set(JNIE
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1balance_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1balance_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Cash *arg1 = (Cash *) 0 ;
   double result;
@@ -7699,7 +7699,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1balance_1get(J
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1cum_1inout_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1cum_1inout_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Cash *arg1 = (Cash *) 0 ;
   double arg2 ;
   
@@ -7712,7 +7712,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1cum_1inout_1set(J
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1cum_1inout_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1cum_1inout_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Cash *arg1 = (Cash *) 0 ;
   double result;
@@ -7727,7 +7727,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1cum_1inout_1ge
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1cum_1trade_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1cum_1trade_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Cash *arg1 = (Cash *) 0 ;
   double arg2 ;
   
@@ -7740,7 +7740,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1cum_1trade_1set(J
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1cum_1trade_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1cum_1trade_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Cash *arg1 = (Cash *) 0 ;
   double result;
@@ -7755,7 +7755,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1cum_1trade_1ge
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1cum_1pnl_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1cum_1pnl_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Cash *arg1 = (Cash *) 0 ;
   double arg2 ;
   
@@ -7768,7 +7768,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1cum_1pnl_1set(JNI
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1cum_1pnl_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1cum_1pnl_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Cash *arg1 = (Cash *) 0 ;
   double result;
@@ -7783,7 +7783,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1cum_1pnl_1get(
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1cum_1commission_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1cum_1commission_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Cash *arg1 = (Cash *) 0 ;
   double arg2 ;
   
@@ -7796,7 +7796,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1cum_1commission_1
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1cum_1commission_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1cum_1commission_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Cash *arg1 = (Cash *) 0 ;
   double result;
@@ -7811,7 +7811,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1cum_1commissio
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1last_1trade_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1last_1trade_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Cash *arg1 = (Cash *) 0 ;
   double arg2 ;
   
@@ -7824,7 +7824,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1last_1trade_1set(
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1last_1trade_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1last_1trade_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Cash *arg1 = (Cash *) 0 ;
   double result;
@@ -7839,7 +7839,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1last_1trade_1g
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1last_1pnl_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1last_1pnl_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Cash *arg1 = (Cash *) 0 ;
   double arg2 ;
   
@@ -7852,7 +7852,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1last_1pnl_1set(JN
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1last_1pnl_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1last_1pnl_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Cash *arg1 = (Cash *) 0 ;
   double result;
@@ -7867,7 +7867,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1last_1pnl_1get
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1last_1commission_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1last_1commission_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Cash *arg1 = (Cash *) 0 ;
   double arg2 ;
   
@@ -7880,7 +7880,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1last_1commission_
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1last_1commission_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1last_1commission_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Cash *arg1 = (Cash *) 0 ;
   double result;
@@ -7895,7 +7895,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1last_1commissi
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1last_1inout_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1last_1inout_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Cash *arg1 = (Cash *) 0 ;
   double arg2 ;
   
@@ -7908,7 +7908,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1last_1inout_1set(
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1last_1inout_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1last_1inout_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Cash *arg1 = (Cash *) 0 ;
   double result;
@@ -7923,7 +7923,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1last_1inout_1g
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1change_1reason_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1change_1reason_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   Cash *arg1 = (Cash *) 0 ;
   int arg2 ;
   
@@ -7936,7 +7936,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1change_1reason_1s
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1change_1reason_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1change_1reason_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Cash *arg1 = (Cash *) 0 ;
   int result;
@@ -7951,7 +7951,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1change_1reason_1g
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1change_1event_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1change_1event_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Cash *arg1 = (Cash *) 0 ;
   char *arg2 ;
   
@@ -7977,7 +7977,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1change_1event_1id
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1change_1event_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1change_1event_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Cash *arg1 = (Cash *) 0 ;
   char *result = 0 ;
@@ -7992,7 +7992,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1change_1event_
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1created_1at_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1created_1at_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Cash *arg1 = (Cash *) 0 ;
   long long arg2 ;
   
@@ -8005,7 +8005,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1created_1at_1set(
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1created_1at_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1created_1at_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Cash *arg1 = (Cash *) 0 ;
   long long result;
@@ -8020,7 +8020,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1created_1at_1get
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1updated_1at_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1updated_1at_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Cash *arg1 = (Cash *) 0 ;
   long long arg2 ;
   
@@ -8033,7 +8033,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1updated_1at_1set(
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1updated_1at_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Cash_1updated_1at_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Cash *arg1 = (Cash *) 0 ;
   long long result;
@@ -8048,7 +8048,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Cash_1updated_1at_1get
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1Cash(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_new_1Cash(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   Cash *result = 0 ;
   
@@ -8060,7 +8060,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1Cash(JNIEnv *jenv
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1Cash(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1Cash(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   Cash *arg1 = (Cash *) 0 ;
   
   (void)jenv;
@@ -8070,7 +8070,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1Cash(JNIEnv *je
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1account_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1account_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Position *arg1 = (Position *) 0 ;
   char *arg2 ;
   
@@ -8096,7 +8096,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1account_1id_1
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1account_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1account_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   char *result = 0 ;
@@ -8111,7 +8111,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1account_1i
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1account_1name_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1account_1name_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Position *arg1 = (Position *) 0 ;
   char *arg2 ;
   
@@ -8137,7 +8137,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1account_1name
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1account_1name_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1account_1name_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   char *result = 0 ;
@@ -8152,7 +8152,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1account_1n
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1symbol_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1symbol_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Position *arg1 = (Position *) 0 ;
   char *arg2 ;
   
@@ -8178,7 +8178,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1symbol_1set(J
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1symbol_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1symbol_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   char *result = 0 ;
@@ -8193,7 +8193,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1symbol_1ge
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1side_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1side_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   Position *arg1 = (Position *) 0 ;
   int arg2 ;
   
@@ -8206,7 +8206,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1side_1set(JNI
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1side_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1side_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   int result;
@@ -8221,7 +8221,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1side_1get(JNI
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1volume_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1volume_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Position *arg1 = (Position *) 0 ;
   long long arg2 ;
   
@@ -8234,7 +8234,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1volume_1set(J
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1volume_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1volume_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   long long result;
@@ -8249,7 +8249,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1volume_1get(
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1volume_1today_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1volume_1today_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Position *arg1 = (Position *) 0 ;
   long long arg2 ;
   
@@ -8262,7 +8262,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1volume_1today
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1volume_1today_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1volume_1today_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   long long result;
@@ -8277,7 +8277,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1volume_1toda
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1vwap_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1vwap_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Position *arg1 = (Position *) 0 ;
   double arg2 ;
   
@@ -8290,7 +8290,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1vwap_1set(JNI
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1vwap_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1vwap_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   double result;
@@ -8305,7 +8305,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1vwap_1get(
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1amount_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1amount_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Position *arg1 = (Position *) 0 ;
   double arg2 ;
   
@@ -8318,7 +8318,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1amount_1set(J
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1amount_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1amount_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   double result;
@@ -8333,7 +8333,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1amount_1ge
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1price_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1price_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Position *arg1 = (Position *) 0 ;
   double arg2 ;
   
@@ -8346,7 +8346,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1price_1set(JN
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1price_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1price_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   double result;
@@ -8361,7 +8361,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1price_1get
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1fpnl_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1fpnl_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Position *arg1 = (Position *) 0 ;
   double arg2 ;
   
@@ -8374,7 +8374,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1fpnl_1set(JNI
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1fpnl_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1fpnl_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   double result;
@@ -8389,7 +8389,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1fpnl_1get(
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1cost_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1cost_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Position *arg1 = (Position *) 0 ;
   double arg2 ;
   
@@ -8402,7 +8402,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1cost_1set(JNI
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1cost_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1cost_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   double result;
@@ -8417,7 +8417,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1cost_1get(
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1order_1frozen_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1order_1frozen_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Position *arg1 = (Position *) 0 ;
   long long arg2 ;
   
@@ -8430,7 +8430,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1order_1frozen
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1order_1frozen_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1order_1frozen_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   long long result;
@@ -8445,7 +8445,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1order_1froze
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1order_1frozen_1today_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1order_1frozen_1today_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Position *arg1 = (Position *) 0 ;
   long long arg2 ;
   
@@ -8458,7 +8458,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1order_1frozen
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1order_1frozen_1today_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1order_1frozen_1today_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   long long result;
@@ -8473,7 +8473,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1order_1froze
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1available_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1available_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Position *arg1 = (Position *) 0 ;
   long long arg2 ;
   
@@ -8486,7 +8486,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1available_1se
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1available_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1available_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   long long result;
@@ -8501,7 +8501,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1available_1g
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1available_1today_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1available_1today_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Position *arg1 = (Position *) 0 ;
   long long arg2 ;
   
@@ -8514,7 +8514,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1available_1to
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1available_1today_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1available_1today_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   long long result;
@@ -8529,7 +8529,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1available_1t
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1last_1price_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1last_1price_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Position *arg1 = (Position *) 0 ;
   double arg2 ;
   
@@ -8542,7 +8542,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1last_1price_1
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1last_1price_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1last_1price_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   double result;
@@ -8557,7 +8557,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1last_1pric
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1last_1volume_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1last_1volume_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Position *arg1 = (Position *) 0 ;
   long long arg2 ;
   
@@ -8570,7 +8570,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1last_1volume_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1last_1volume_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1last_1volume_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   long long result;
@@ -8585,7 +8585,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1last_1volume
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1last_1inout_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1last_1inout_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Position *arg1 = (Position *) 0 ;
   long long arg2 ;
   
@@ -8598,7 +8598,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1last_1inout_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1last_1inout_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1last_1inout_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   long long result;
@@ -8613,7 +8613,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1last_1inout_
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1change_1reason_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1change_1reason_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   Position *arg1 = (Position *) 0 ;
   int arg2 ;
   
@@ -8626,7 +8626,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1change_1reaso
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1change_1reason_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1change_1reason_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   int result;
@@ -8641,7 +8641,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1change_1reaso
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1change_1event_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1change_1event_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Position *arg1 = (Position *) 0 ;
   char *arg2 ;
   
@@ -8667,7 +8667,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1change_1event
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1change_1event_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1change_1event_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   char *result = 0 ;
@@ -8682,7 +8682,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1change_1ev
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1has_1dividend_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1has_1dividend_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   Position *arg1 = (Position *) 0 ;
   int arg2 ;
   
@@ -8695,7 +8695,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1has_1dividend
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1has_1dividend_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1has_1dividend_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   int result;
@@ -8710,7 +8710,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1has_1dividend
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1created_1at_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1created_1at_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Position *arg1 = (Position *) 0 ;
   long long arg2 ;
   
@@ -8723,7 +8723,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1created_1at_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1created_1at_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1created_1at_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   long long result;
@@ -8738,7 +8738,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1created_1at_
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1updated_1at_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1updated_1at_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Position *arg1 = (Position *) 0 ;
   long long arg2 ;
   
@@ -8751,7 +8751,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1updated_1at_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1updated_1at_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Position_1updated_1at_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Position *arg1 = (Position *) 0 ;
   long long result;
@@ -8766,7 +8766,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Position_1updated_1at_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1Position(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_new_1Position(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   Position *result = 0 ;
   
@@ -8778,7 +8778,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1Position(JNIEnv *
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1Position(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1Position(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   Position *arg1 = (Position *) 0 ;
   
   (void)jenv;
@@ -8788,7 +8788,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1Position(JNIEnv
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Account_1account_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Account_1account_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Account *arg1 = (Account *) 0 ;
   char *arg2 ;
   
@@ -8814,7 +8814,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Account_1account_1id_1s
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Account_1account_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Account_1account_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Account *arg1 = (Account *) 0 ;
   char *result = 0 ;
@@ -8829,7 +8829,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Account_1account_1id
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Account_1account_1name_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Account_1account_1name_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Account *arg1 = (Account *) 0 ;
   char *arg2 ;
   
@@ -8855,7 +8855,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Account_1account_1name_
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Account_1account_1name_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Account_1account_1name_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Account *arg1 = (Account *) 0 ;
   char *result = 0 ;
@@ -8870,7 +8870,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Account_1account_1na
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Account_1title_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Account_1title_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Account *arg1 = (Account *) 0 ;
   char *arg2 ;
   
@@ -8896,7 +8896,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Account_1title_1set(JNI
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Account_1title_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Account_1title_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Account *arg1 = (Account *) 0 ;
   char *result = 0 ;
@@ -8911,7 +8911,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Account_1title_1get(
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Account_1intro_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Account_1intro_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Account *arg1 = (Account *) 0 ;
   char *arg2 ;
   
@@ -8937,7 +8937,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Account_1intro_1set(JNI
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Account_1intro_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Account_1intro_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Account *arg1 = (Account *) 0 ;
   char *result = 0 ;
@@ -8952,7 +8952,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Account_1intro_1get(
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Account_1comment_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Account_1comment_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Account *arg1 = (Account *) 0 ;
   char *arg2 ;
   
@@ -8978,7 +8978,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Account_1comment_1set(J
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Account_1comment_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Account_1comment_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Account *arg1 = (Account *) 0 ;
   char *result = 0 ;
@@ -8993,7 +8993,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Account_1comment_1ge
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1Account(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_new_1Account(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   Account *result = 0 ;
   
@@ -9005,7 +9005,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1Account(JNIEnv *j
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1Account(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1Account(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   Account *arg1 = (Account *) 0 ;
   
   (void)jenv;
@@ -9015,7 +9015,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1Account(JNIEnv 
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_AccountStatus_1account_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_AccountStatus_1account_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   AccountStatus *arg1 = (AccountStatus *) 0 ;
   char *arg2 ;
   
@@ -9041,7 +9041,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_AccountStatus_1account_
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_AccountStatus_1account_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_AccountStatus_1account_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   AccountStatus *arg1 = (AccountStatus *) 0 ;
   char *result = 0 ;
@@ -9056,7 +9056,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_AccountStatus_1accou
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_AccountStatus_1account_1name_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_AccountStatus_1account_1name_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   AccountStatus *arg1 = (AccountStatus *) 0 ;
   char *arg2 ;
   
@@ -9082,7 +9082,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_AccountStatus_1account_
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_AccountStatus_1account_1name_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_AccountStatus_1account_1name_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   AccountStatus *arg1 = (AccountStatus *) 0 ;
   char *result = 0 ;
@@ -9097,7 +9097,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_AccountStatus_1accou
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_AccountStatus_1state_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_AccountStatus_1state_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   AccountStatus *arg1 = (AccountStatus *) 0 ;
   int arg2 ;
   
@@ -9110,7 +9110,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_AccountStatus_1state_1s
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_AccountStatus_1state_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_AccountStatus_1state_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   AccountStatus *arg1 = (AccountStatus *) 0 ;
   int result;
@@ -9125,7 +9125,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_AccountStatus_1state_1g
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_AccountStatus_1error_1code_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_AccountStatus_1error_1code_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   AccountStatus *arg1 = (AccountStatus *) 0 ;
   int arg2 ;
   
@@ -9138,7 +9138,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_AccountStatus_1error_1c
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_AccountStatus_1error_1code_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_AccountStatus_1error_1code_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   AccountStatus *arg1 = (AccountStatus *) 0 ;
   int result;
@@ -9153,7 +9153,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_AccountStatus_1error_1c
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_AccountStatus_1error_1msg_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_AccountStatus_1error_1msg_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   AccountStatus *arg1 = (AccountStatus *) 0 ;
   char *arg2 ;
   
@@ -9179,7 +9179,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_AccountStatus_1error_1m
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_AccountStatus_1error_1msg_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_AccountStatus_1error_1msg_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   AccountStatus *arg1 = (AccountStatus *) 0 ;
   char *result = 0 ;
@@ -9194,7 +9194,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_AccountStatus_1error
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1AccountStatus(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_new_1AccountStatus(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   AccountStatus *result = 0 ;
   
@@ -9206,7 +9206,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1AccountStatus(JNI
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1AccountStatus(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1AccountStatus(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   AccountStatus *arg1 = (AccountStatus *) 0 ;
   
   (void)jenv;
@@ -9216,7 +9216,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1AccountStatus(J
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1key_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Parameter_1key_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Parameter *arg1 = (Parameter *) 0 ;
   char *arg2 ;
   
@@ -9242,7 +9242,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1key_1set(JNI
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1key_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Parameter_1key_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Parameter *arg1 = (Parameter *) 0 ;
   char *result = 0 ;
@@ -9257,7 +9257,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1key_1get(
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1value_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Parameter_1value_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Parameter *arg1 = (Parameter *) 0 ;
   double arg2 ;
   
@@ -9270,7 +9270,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1value_1set(J
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1value_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Parameter_1value_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Parameter *arg1 = (Parameter *) 0 ;
   double result;
@@ -9285,7 +9285,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1value_1ge
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1min_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Parameter_1min_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Parameter *arg1 = (Parameter *) 0 ;
   double arg2 ;
   
@@ -9298,7 +9298,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1min_1set(JNI
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1min_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Parameter_1min_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Parameter *arg1 = (Parameter *) 0 ;
   double result;
@@ -9313,7 +9313,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1min_1get(
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1max_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Parameter_1max_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Parameter *arg1 = (Parameter *) 0 ;
   double arg2 ;
   
@@ -9326,7 +9326,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1max_1set(JNI
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1max_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Parameter_1max_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Parameter *arg1 = (Parameter *) 0 ;
   double result;
@@ -9341,7 +9341,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1max_1get(
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1name_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Parameter_1name_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Parameter *arg1 = (Parameter *) 0 ;
   char *arg2 ;
   
@@ -9367,7 +9367,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1name_1set(JN
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1name_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Parameter_1name_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Parameter *arg1 = (Parameter *) 0 ;
   char *result = 0 ;
@@ -9382,7 +9382,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1name_1get
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1intro_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Parameter_1intro_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Parameter *arg1 = (Parameter *) 0 ;
   char *arg2 ;
   
@@ -9408,7 +9408,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1intro_1set(J
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1intro_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Parameter_1intro_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Parameter *arg1 = (Parameter *) 0 ;
   char *result = 0 ;
@@ -9423,7 +9423,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1intro_1ge
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1group_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Parameter_1group_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Parameter *arg1 = (Parameter *) 0 ;
   char *arg2 ;
   
@@ -9449,7 +9449,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1group_1set(J
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1group_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Parameter_1group_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Parameter *arg1 = (Parameter *) 0 ;
   char *result = 0 ;
@@ -9464,7 +9464,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1group_1ge
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1readonly_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Parameter_1readonly_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2) {
   Parameter *arg1 = (Parameter *) 0 ;
   bool arg2 ;
   
@@ -9477,7 +9477,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1readonly_1se
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1readonly_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_io_ft_api_gm_gmsdkJNI_Parameter_1readonly_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   Parameter *arg1 = (Parameter *) 0 ;
   bool result;
@@ -9492,7 +9492,7 @@ SWIGEXPORT jboolean JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Parameter_1readonly
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1Parameter(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_new_1Parameter(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   Parameter *result = 0 ;
   
@@ -9504,7 +9504,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1Parameter(JNIEnv 
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1Parameter(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1Parameter(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   Parameter *arg1 = (Parameter *) 0 ;
   
   (void)jenv;
@@ -9514,7 +9514,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1Parameter(JNIEn
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1account_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1account_1id_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Indicator *arg1 = (Indicator *) 0 ;
   char *arg2 ;
   
@@ -9540,7 +9540,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1account_1id_
 }
 
 
-SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1account_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1account_1id_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   Indicator *arg1 = (Indicator *) 0 ;
   char *result = 0 ;
@@ -9555,7 +9555,7 @@ SWIGEXPORT jstring JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1account_1
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1pnl_1ratio_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1pnl_1ratio_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Indicator *arg1 = (Indicator *) 0 ;
   double arg2 ;
   
@@ -9568,7 +9568,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1pnl_1ratio_1
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1pnl_1ratio_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1pnl_1ratio_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Indicator *arg1 = (Indicator *) 0 ;
   double result;
@@ -9583,7 +9583,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1pnl_1rati
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1pnl_1ratio_1annual_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1pnl_1ratio_1annual_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Indicator *arg1 = (Indicator *) 0 ;
   double arg2 ;
   
@@ -9596,7 +9596,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1pnl_1ratio_1
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1pnl_1ratio_1annual_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1pnl_1ratio_1annual_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Indicator *arg1 = (Indicator *) 0 ;
   double result;
@@ -9611,7 +9611,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1pnl_1rati
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1sharp_1ratio_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1sharp_1ratio_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Indicator *arg1 = (Indicator *) 0 ;
   double arg2 ;
   
@@ -9624,7 +9624,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1sharp_1ratio
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1sharp_1ratio_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1sharp_1ratio_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Indicator *arg1 = (Indicator *) 0 ;
   double result;
@@ -9639,7 +9639,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1sharp_1ra
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1max_1drawdown_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1max_1drawdown_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Indicator *arg1 = (Indicator *) 0 ;
   double arg2 ;
   
@@ -9652,7 +9652,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1max_1drawdow
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1max_1drawdown_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1max_1drawdown_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Indicator *arg1 = (Indicator *) 0 ;
   double result;
@@ -9667,7 +9667,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1max_1draw
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1risk_1ratio_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1risk_1ratio_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Indicator *arg1 = (Indicator *) 0 ;
   double arg2 ;
   
@@ -9680,7 +9680,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1risk_1ratio_
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1risk_1ratio_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1risk_1ratio_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Indicator *arg1 = (Indicator *) 0 ;
   double result;
@@ -9695,7 +9695,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1risk_1rat
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1open_1count_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1open_1count_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   Indicator *arg1 = (Indicator *) 0 ;
   int arg2 ;
   
@@ -9708,7 +9708,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1open_1count_
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1open_1count_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1open_1count_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Indicator *arg1 = (Indicator *) 0 ;
   int result;
@@ -9723,7 +9723,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1open_1count_
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1close_1count_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1close_1count_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   Indicator *arg1 = (Indicator *) 0 ;
   int arg2 ;
   
@@ -9736,7 +9736,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1close_1count
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1close_1count_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1close_1count_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Indicator *arg1 = (Indicator *) 0 ;
   int result;
@@ -9751,7 +9751,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1close_1count
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1win_1count_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1win_1count_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   Indicator *arg1 = (Indicator *) 0 ;
   int arg2 ;
   
@@ -9764,7 +9764,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1win_1count_1
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1win_1count_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1win_1count_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Indicator *arg1 = (Indicator *) 0 ;
   int result;
@@ -9779,7 +9779,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1win_1count_1
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1lose_1count_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1lose_1count_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   Indicator *arg1 = (Indicator *) 0 ;
   int arg2 ;
   
@@ -9792,7 +9792,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1lose_1count_
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1lose_1count_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1lose_1count_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Indicator *arg1 = (Indicator *) 0 ;
   int result;
@@ -9807,7 +9807,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1lose_1count_
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1win_1ratio_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1win_1ratio_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Indicator *arg1 = (Indicator *) 0 ;
   double arg2 ;
   
@@ -9820,7 +9820,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1win_1ratio_1
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1win_1ratio_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1win_1ratio_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   Indicator *arg1 = (Indicator *) 0 ;
   double result;
@@ -9835,7 +9835,7 @@ SWIGEXPORT jdouble JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1win_1rati
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1created_1at_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1created_1at_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Indicator *arg1 = (Indicator *) 0 ;
   long long arg2 ;
   
@@ -9848,7 +9848,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1created_1at_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1created_1at_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1created_1at_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Indicator *arg1 = (Indicator *) 0 ;
   long long result;
@@ -9863,7 +9863,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1created_1at
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1updated_1at_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1updated_1at_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   Indicator *arg1 = (Indicator *) 0 ;
   long long arg2 ;
   
@@ -9876,7 +9876,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1updated_1at_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1updated_1at_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Indicator_1updated_1at_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Indicator *arg1 = (Indicator *) 0 ;
   long long result;
@@ -9891,7 +9891,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Indicator_1updated_1at
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1Indicator(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_new_1Indicator(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   Indicator *result = 0 ;
   
@@ -9903,7 +9903,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1Indicator(JNIEnv 
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1Indicator(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1Indicator(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   Indicator *arg1 = (Indicator *) 0 ;
   
   (void)jenv;
@@ -9913,7 +9913,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1Indicator(JNIEn
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1Strategy_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jint jarg3) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_new_1Strategy_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jstring jarg1, jstring jarg2, jint jarg3) {
   jlong jresult = 0 ;
   char *arg1 = (char *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -9941,7 +9941,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1Strategy_1_1SWIG_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1Strategy_1_1SWIG_11(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_new_1Strategy_1_1SWIG_11(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   Strategy *result = 0 ;
   
@@ -9953,7 +9953,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_new_1Strategy_1_1SWIG_
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1Strategy(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1Strategy(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   Strategy *arg1 = (Strategy *) 0 ;
   
   (void)jenv;
@@ -9963,7 +9963,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_delete_1Strategy(JNIEnv
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1run(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1run(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   int result;
@@ -9978,7 +9978,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1run(JNIEnv *j
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1stop(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1stop(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   Strategy *arg1 = (Strategy *) 0 ;
   
   (void)jenv;
@@ -9989,7 +9989,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1stop(JNIEnv *
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1strategy_1id(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1set_1strategy_1id(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -10007,7 +10007,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1strategy
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1token(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1set_1token(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
   
@@ -10025,7 +10025,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1token(JN
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1mode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1set_1mode(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   Strategy *arg1 = (Strategy *) 0 ;
   int arg2 ;
   
@@ -10038,7 +10038,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1mode(JNI
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1schedule(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1schedule(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3) {
   jint jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10067,7 +10067,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1schedule(JNIE
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1now(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1now(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   long long result;
@@ -10082,7 +10082,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1now(JNIEnv *
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1backtest_1config_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3, jdouble jarg4, jdouble jarg5, jdouble jarg6, jdouble jarg7, jint jarg8, jint jarg9) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1set_1backtest_1config_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3, jdouble jarg4, jdouble jarg5, jdouble jarg6, jdouble jarg7, jint jarg8, jint jarg9) {
   jint jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10123,7 +10123,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1backtest
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1backtest_1config_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3, jdouble jarg4, jdouble jarg5, jdouble jarg6, jdouble jarg7, jint jarg8) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1set_1backtest_1config_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3, jdouble jarg4, jdouble jarg5, jdouble jarg6, jdouble jarg7, jint jarg8) {
   jint jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10162,7 +10162,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1backtest
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1backtest_1config_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3, jdouble jarg4, jdouble jarg5, jdouble jarg6, jdouble jarg7) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1set_1backtest_1config_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3, jdouble jarg4, jdouble jarg5, jdouble jarg6, jdouble jarg7) {
   jint jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10199,7 +10199,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1backtest
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1backtest_1config_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3, jdouble jarg4, jdouble jarg5, jdouble jarg6) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1set_1backtest_1config_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3, jdouble jarg4, jdouble jarg5, jdouble jarg6) {
   jint jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10234,7 +10234,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1backtest
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1backtest_1config_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3, jdouble jarg4, jdouble jarg5) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1set_1backtest_1config_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3, jdouble jarg4, jdouble jarg5) {
   jint jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10267,7 +10267,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1backtest
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1backtest_1config_1_1SWIG_15(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3, jdouble jarg4) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1set_1backtest_1config_1_1SWIG_15(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3, jdouble jarg4) {
   jint jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10298,7 +10298,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1backtest
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1backtest_1config_1_1SWIG_16(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1set_1backtest_1config_1_1SWIG_16(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3) {
   jint jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10327,7 +10327,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1backtest
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1subscribe_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3, jboolean jarg4) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1subscribe_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3, jboolean jarg4) {
   jint jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10358,7 +10358,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1subscribe_1_1
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1subscribe_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1subscribe_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3) {
   jint jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10387,7 +10387,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1subscribe_1_1
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1unsubscribe(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1unsubscribe(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3) {
   jint jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10416,7 +10416,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1unsubscribe(J
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1accounts(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1get_1accounts(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   DataArray< Account > *result = 0 ;
@@ -10431,7 +10431,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1account
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1volume_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jint jarg3, jint jarg4, jint jarg5, jint jarg6, jdouble jarg7, jstring jarg8) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1volume_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jint jarg3, jint jarg4, jint jarg5, jint jarg6, jdouble jarg7, jstring jarg8) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10470,7 +10470,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1volum
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1volume_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jint jarg3, jint jarg4, jint jarg5, jint jarg6, jdouble jarg7) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1volume_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jint jarg3, jint jarg4, jint jarg5, jint jarg6, jdouble jarg7) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10502,7 +10502,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1volum
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1volume_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jint jarg3, jint jarg4, jint jarg5, jint jarg6) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1volume_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jint jarg3, jint jarg4, jint jarg5, jint jarg6) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10532,7 +10532,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1volum
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1value_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5, jint jarg6, jdouble jarg7, jstring jarg8) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1value_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5, jint jarg6, jdouble jarg7, jstring jarg8) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10571,7 +10571,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1value
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1value_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5, jint jarg6, jdouble jarg7) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1value_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5, jint jarg6, jdouble jarg7) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10603,7 +10603,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1value
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1value_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5, jint jarg6) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1value_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5, jint jarg6) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10633,7 +10633,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1value
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1percent_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5, jint jarg6, jdouble jarg7, jstring jarg8) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1percent_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5, jint jarg6, jdouble jarg7, jstring jarg8) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10672,7 +10672,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1perce
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1percent_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5, jint jarg6, jdouble jarg7) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1percent_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5, jint jarg6, jdouble jarg7) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10704,7 +10704,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1perce
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1percent_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5, jint jarg6) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1percent_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5, jint jarg6) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10734,7 +10734,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1perce
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1target_1volume_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jint jarg3, jint jarg4, jint jarg5, jdouble jarg6, jstring jarg7) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1target_1volume_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jint jarg3, jint jarg4, jint jarg5, jdouble jarg6, jstring jarg7) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10771,7 +10771,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1targe
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1target_1volume_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jint jarg3, jint jarg4, jint jarg5, jdouble jarg6) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1target_1volume_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jint jarg3, jint jarg4, jint jarg5, jdouble jarg6) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10801,7 +10801,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1targe
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1target_1volume_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jint jarg3, jint jarg4, jint jarg5) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1target_1volume_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jint jarg3, jint jarg4, jint jarg5) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10829,7 +10829,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1targe
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1target_1value_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5, jdouble jarg6, jstring jarg7) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1target_1value_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5, jdouble jarg6, jstring jarg7) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10866,7 +10866,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1targe
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1target_1value_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5, jdouble jarg6) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1target_1value_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5, jdouble jarg6) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10896,7 +10896,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1targe
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1target_1value_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1target_1value_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10924,7 +10924,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1targe
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1target_1percent_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5, jdouble jarg6, jstring jarg7) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1target_1percent_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5, jdouble jarg6, jstring jarg7) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10961,7 +10961,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1targe
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1target_1percent_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5, jdouble jarg6) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1target_1percent_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5, jdouble jarg6) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -10991,7 +10991,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1targe
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1target_1percent_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1target_1percent_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jdouble jarg3, jint jarg4, jint jarg5) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -11019,7 +11019,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1targe
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1close_1all(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1close_1all(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   DataArray< Order > *result = 0 ;
@@ -11034,7 +11034,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1close
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1cancel_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1cancel_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3) {
   jint jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -11063,7 +11063,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1cancel
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1cancel_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1cancel_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   jint jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -11085,7 +11085,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1cancel
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1cancel_1all(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1cancel_1all(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   int result;
@@ -11100,7 +11100,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1order_1cancel
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1orders_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1get_1orders_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -11122,7 +11122,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1orders_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1orders_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1get_1orders_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   DataArray< Order > *result = 0 ;
@@ -11137,7 +11137,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1orders_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1unfinished_1orders_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1get_1unfinished_1orders_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -11159,7 +11159,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1unfinis
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1unfinished_1orders_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1get_1unfinished_1orders_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   DataArray< Order > *result = 0 ;
@@ -11174,7 +11174,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1unfinis
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1execution_1reports_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1get_1execution_1reports_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -11196,7 +11196,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1executi
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1execution_1reports_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1get_1execution_1reports_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   DataArray< ExecRpt > *result = 0 ;
@@ -11211,7 +11211,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1executi
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1cash_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1get_1cash_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -11233,7 +11233,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1cash_1_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1cash_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1get_1cash_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   DataArray< Cash > *result = 0 ;
@@ -11248,7 +11248,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1cash_1_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1position_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1get_1position_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -11270,7 +11270,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1positio
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1position_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1get_1position_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   DataArray< Position > *result = 0 ;
@@ -11285,7 +11285,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1positio
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1add_1parameters(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jint jarg3) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1add_1parameters(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jint jarg3) {
   jint jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   Parameter *arg2 = (Parameter *) 0 ;
@@ -11305,7 +11305,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1add_1paramete
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1del_1parameters(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1del_1parameters(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   jint jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -11327,7 +11327,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1del_1paramete
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1parameters(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jint jarg3) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1set_1parameters(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jint jarg3) {
   jint jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   Parameter *arg2 = (Parameter *) 0 ;
@@ -11347,7 +11347,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1paramete
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1parameters(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1get_1parameters(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   DataArray< Parameter > *result = 0 ;
@@ -11362,7 +11362,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1paramet
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1symbols(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1set_1symbols(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2) {
   jint jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -11384,7 +11384,7 @@ SWIGEXPORT jint JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1set_1symbols(
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1symbols(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1get_1symbols(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
   DataArray< Symbol > *result = 0 ;
@@ -11399,7 +11399,7 @@ SWIGEXPORT jlong JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1get_1symbols
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1init(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1init(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   Strategy *arg1 = (Strategy *) 0 ;
   
   (void)jenv;
@@ -11410,7 +11410,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1init(JNIE
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1initSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1initSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   Strategy *arg1 = (Strategy *) 0 ;
   
   (void)jenv;
@@ -11421,7 +11421,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1initSwigE
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1tick(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1tick(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   Strategy *arg1 = (Strategy *) 0 ;
   Tick *arg2 = (Tick *) 0 ;
   
@@ -11435,7 +11435,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1tick(JNIE
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1tickSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1tickSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   Strategy *arg1 = (Strategy *) 0 ;
   Tick *arg2 = (Tick *) 0 ;
   
@@ -11449,7 +11449,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1tickSwigE
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1bar(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1bar(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   Strategy *arg1 = (Strategy *) 0 ;
   Bar *arg2 = (Bar *) 0 ;
   
@@ -11463,7 +11463,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1bar(JNIEn
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1barSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1barSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   Strategy *arg1 = (Strategy *) 0 ;
   Bar *arg2 = (Bar *) 0 ;
   
@@ -11477,7 +11477,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1barSwigEx
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1order_1status(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1order_1status(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   Strategy *arg1 = (Strategy *) 0 ;
   Order *arg2 = (Order *) 0 ;
   
@@ -11491,7 +11491,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1order_1st
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1order_1statusSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1order_1statusSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   Strategy *arg1 = (Strategy *) 0 ;
   Order *arg2 = (Order *) 0 ;
   
@@ -11505,7 +11505,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1order_1st
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1execution_1report(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1execution_1report(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   Strategy *arg1 = (Strategy *) 0 ;
   ExecRpt *arg2 = (ExecRpt *) 0 ;
   
@@ -11519,7 +11519,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1execution
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1execution_1reportSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1execution_1reportSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   Strategy *arg1 = (Strategy *) 0 ;
   ExecRpt *arg2 = (ExecRpt *) 0 ;
   
@@ -11533,7 +11533,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1execution
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1parameter(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1parameter(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   Strategy *arg1 = (Strategy *) 0 ;
   Parameter *arg2 = (Parameter *) 0 ;
   
@@ -11547,7 +11547,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1parameter
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1parameterSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1parameterSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   Strategy *arg1 = (Strategy *) 0 ;
   Parameter *arg2 = (Parameter *) 0 ;
   
@@ -11561,7 +11561,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1parameter
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1schedule(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1schedule(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3) {
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
   char *arg3 = (char *) 0 ;
@@ -11586,7 +11586,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1schedule(
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1scheduleSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1scheduleSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3) {
   Strategy *arg1 = (Strategy *) 0 ;
   char *arg2 = (char *) 0 ;
   char *arg3 = (char *) 0 ;
@@ -11611,7 +11611,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1scheduleS
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1backtest_1finished(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1backtest_1finished(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   Strategy *arg1 = (Strategy *) 0 ;
   Indicator *arg2 = (Indicator *) 0 ;
   
@@ -11625,7 +11625,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1backtest_
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1backtest_1finishedSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1backtest_1finishedSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   Strategy *arg1 = (Strategy *) 0 ;
   Indicator *arg2 = (Indicator *) 0 ;
   
@@ -11639,7 +11639,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1backtest_
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1account_1status(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1account_1status(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   Strategy *arg1 = (Strategy *) 0 ;
   AccountStatus *arg2 = (AccountStatus *) 0 ;
   
@@ -11653,7 +11653,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1account_1
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1account_1statusSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1account_1statusSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   Strategy *arg1 = (Strategy *) 0 ;
   AccountStatus *arg2 = (AccountStatus *) 0 ;
   
@@ -11667,7 +11667,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1account_1
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1error(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jstring jarg3) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1error(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jstring jarg3) {
   Strategy *arg1 = (Strategy *) 0 ;
   int arg2 ;
   char *arg3 = (char *) 0 ;
@@ -11687,7 +11687,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1error(JNI
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1errorSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jstring jarg3) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1errorSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jstring jarg3) {
   Strategy *arg1 = (Strategy *) 0 ;
   int arg2 ;
   char *arg3 = (char *) 0 ;
@@ -11707,7 +11707,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1errorSwig
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1stop(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1stop(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   Strategy *arg1 = (Strategy *) 0 ;
   
   (void)jenv;
@@ -11718,7 +11718,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1stop(JNIE
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1stopSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1stopSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   Strategy *arg1 = (Strategy *) 0 ;
   
   (void)jenv;
@@ -11729,7 +11729,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1stopSwigE
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1market_1data_1connected(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1market_1data_1connected(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   Strategy *arg1 = (Strategy *) 0 ;
   
   (void)jenv;
@@ -11740,7 +11740,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1market_1d
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1market_1data_1connectedSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1market_1data_1connectedSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   Strategy *arg1 = (Strategy *) 0 ;
   
   (void)jenv;
@@ -11751,7 +11751,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1market_1d
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1trade_1data_1connected(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1trade_1data_1connected(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   Strategy *arg1 = (Strategy *) 0 ;
   
   (void)jenv;
@@ -11762,7 +11762,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1trade_1da
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1trade_1data_1connectedSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1trade_1data_1connectedSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   Strategy *arg1 = (Strategy *) 0 ;
   
   (void)jenv;
@@ -11773,7 +11773,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1trade_1da
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1market_1data_1disconnected(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1market_1data_1disconnected(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   Strategy *arg1 = (Strategy *) 0 ;
   
   (void)jenv;
@@ -11784,7 +11784,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1market_1d
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1market_1data_1disconnectedSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1market_1data_1disconnectedSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   Strategy *arg1 = (Strategy *) 0 ;
   
   (void)jenv;
@@ -11795,7 +11795,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1market_1d
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1trade_1data_1disconnected(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1trade_1data_1disconnected(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   Strategy *arg1 = (Strategy *) 0 ;
   
   (void)jenv;
@@ -11806,7 +11806,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1trade_1da
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1trade_1data_1disconnectedSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1on_1trade_1data_1disconnectedSwigExplicitStrategy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   Strategy *arg1 = (Strategy *) 0 ;
   
   (void)jenv;
@@ -11817,7 +11817,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1on_1trade_1da
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1director_1connect(JNIEnv *jenv, jclass jcls, jobject jself, jlong objarg, jboolean jswig_mem_own, jboolean jweak_global) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1director_1connect(JNIEnv *jenv, jclass jcls, jobject jself, jlong objarg, jboolean jswig_mem_own, jboolean jweak_global) {
   Strategy *obj = *((Strategy **)&objarg);
   (void)jcls;
   SwigDirector_Strategy *director = dynamic_cast<SwigDirector_Strategy *>(obj);
@@ -11827,7 +11827,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1director_1con
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1change_1ownership(JNIEnv *jenv, jclass jcls, jobject jself, jlong objarg, jboolean jtake_or_release) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1change_1ownership(JNIEnv *jenv, jclass jcls, jobject jself, jlong objarg, jboolean jtake_or_release) {
   Strategy *obj = *((Strategy **)&objarg);
   SwigDirector_Strategy *director = dynamic_cast<SwigDirector_Strategy *>(obj);
   (void)jcls;
@@ -11837,7 +11837,7 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_Strategy_1change_1owner
 }
 
 
-SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_swig_1module_1init(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_swig_1module_1init(JNIEnv *jenv, jclass jcls) {
   int i;
   
   static struct {
@@ -11845,49 +11845,49 @@ SWIGEXPORT void JNICALL Java_io_skywalker_gmsdk_gmsdkJNI_swig_1module_1init(JNIE
     const char *signature;
   } methods[15] = {
     {
-      "SwigDirector_Strategy_on_init", "(Lio/skywalker/gmsdk/Strategy;)V" 
+      "SwigDirector_Strategy_on_init", "(Lio/ft/api/gm/Strategy;)V" 
     },
     {
-      "SwigDirector_Strategy_on_tick", "(Lio/skywalker/gmsdk/Strategy;J)V" 
+      "SwigDirector_Strategy_on_tick", "(Lio/ft/api/gm/Strategy;J)V" 
     },
     {
-      "SwigDirector_Strategy_on_bar", "(Lio/skywalker/gmsdk/Strategy;J)V" 
+      "SwigDirector_Strategy_on_bar", "(Lio/ft/api/gm/Strategy;J)V" 
     },
     {
-      "SwigDirector_Strategy_on_order_status", "(Lio/skywalker/gmsdk/Strategy;J)V" 
+      "SwigDirector_Strategy_on_order_status", "(Lio/ft/api/gm/Strategy;J)V" 
     },
     {
-      "SwigDirector_Strategy_on_execution_report", "(Lio/skywalker/gmsdk/Strategy;J)V" 
+      "SwigDirector_Strategy_on_execution_report", "(Lio/ft/api/gm/Strategy;J)V" 
     },
     {
-      "SwigDirector_Strategy_on_parameter", "(Lio/skywalker/gmsdk/Strategy;J)V" 
+      "SwigDirector_Strategy_on_parameter", "(Lio/ft/api/gm/Strategy;J)V" 
     },
     {
-      "SwigDirector_Strategy_on_schedule", "(Lio/skywalker/gmsdk/Strategy;Ljava/lang/String;Ljava/lang/String;)V" 
+      "SwigDirector_Strategy_on_schedule", "(Lio/ft/api/gm/Strategy;Ljava/lang/String;Ljava/lang/String;)V" 
     },
     {
-      "SwigDirector_Strategy_on_backtest_finished", "(Lio/skywalker/gmsdk/Strategy;J)V" 
+      "SwigDirector_Strategy_on_backtest_finished", "(Lio/ft/api/gm/Strategy;J)V" 
     },
     {
-      "SwigDirector_Strategy_on_account_status", "(Lio/skywalker/gmsdk/Strategy;J)V" 
+      "SwigDirector_Strategy_on_account_status", "(Lio/ft/api/gm/Strategy;J)V" 
     },
     {
-      "SwigDirector_Strategy_on_error", "(Lio/skywalker/gmsdk/Strategy;ILjava/lang/String;)V" 
+      "SwigDirector_Strategy_on_error", "(Lio/ft/api/gm/Strategy;ILjava/lang/String;)V" 
     },
     {
-      "SwigDirector_Strategy_on_stop", "(Lio/skywalker/gmsdk/Strategy;)V" 
+      "SwigDirector_Strategy_on_stop", "(Lio/ft/api/gm/Strategy;)V" 
     },
     {
-      "SwigDirector_Strategy_on_market_data_connected", "(Lio/skywalker/gmsdk/Strategy;)V" 
+      "SwigDirector_Strategy_on_market_data_connected", "(Lio/ft/api/gm/Strategy;)V" 
     },
     {
-      "SwigDirector_Strategy_on_trade_data_connected", "(Lio/skywalker/gmsdk/Strategy;)V" 
+      "SwigDirector_Strategy_on_trade_data_connected", "(Lio/ft/api/gm/Strategy;)V" 
     },
     {
-      "SwigDirector_Strategy_on_market_data_disconnected", "(Lio/skywalker/gmsdk/Strategy;)V" 
+      "SwigDirector_Strategy_on_market_data_disconnected", "(Lio/ft/api/gm/Strategy;)V" 
     },
     {
-      "SwigDirector_Strategy_on_trade_data_disconnected", "(Lio/skywalker/gmsdk/Strategy;)V" 
+      "SwigDirector_Strategy_on_trade_data_disconnected", "(Lio/ft/api/gm/Strategy;)V" 
     }
   };
   Swig::jclass_gmsdkJNI = (jclass) jenv->NewGlobalRef(jcls);

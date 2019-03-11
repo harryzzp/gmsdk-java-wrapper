@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package io.skywalker.gmsdk;
+package io.ft.api.gm;
 
 public class gmsdkJNI {
   public final static native int DataSet_status(long jarg1, DataSet jarg1_);

@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package io.skywalker.gmsdk;
+package io.ft.api.gm;
 
 public class SWIGTYPE_p_DataArrayT_char_aLEN_SYMBOLA_t {
   private transient long swigCPtr;

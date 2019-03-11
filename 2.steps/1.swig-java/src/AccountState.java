@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package io.skywalker.gmsdk;
+package io.ft.api.gm;
 
 public final class AccountState {
   public final static AccountState State_UNKNOWN = new AccountState("State_UNKNOWN", gmsdkJNI.State_UNKNOWN_get());

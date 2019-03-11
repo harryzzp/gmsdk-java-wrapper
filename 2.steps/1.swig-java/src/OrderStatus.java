@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package io.skywalker.gmsdk;
+package io.ft.api.gm;
 
 public final class OrderStatus {
   public final static OrderStatus OrderStatus_Unknown = new OrderStatus("OrderStatus_Unknown", gmsdkJNI.OrderStatus_Unknown_get());

@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package io.skywalker.gmsdk;
+package io.ft.api.gm;
 
 public final class StrategyMode {
   public final static StrategyMode MODE_UNDEF = new StrategyMode("MODE_UNDEF", gmsdkJNI.MODE_UNDEF_get());

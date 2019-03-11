@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package io.skywalker.gmsdk;
+package io.ft.api.gm;
 
 public final class OrderType {
   public final static OrderType OrderType_Unknown = new OrderType("OrderType_Unknown", gmsdkJNI.OrderType_Unknown_get());

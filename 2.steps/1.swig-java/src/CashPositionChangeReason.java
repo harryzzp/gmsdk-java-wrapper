@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package io.skywalker.gmsdk;
+package io.ft.api.gm;
 
 public final class CashPositionChangeReason {
   public final static CashPositionChangeReason CashPositionChangeReason_Unknown = new CashPositionChangeReason("CashPositionChangeReason_Unknown", gmsdkJNI.CashPositionChangeReason_Unknown_get());

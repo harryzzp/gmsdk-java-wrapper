@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package io.skywalker.gmsdk;
+package io.ft.api.gm;
 
 public final class OrderRejectReason {
   public final static OrderRejectReason OrderRejectReason_Unknown = new OrderRejectReason("OrderRejectReason_Unknown", gmsdkJNI.OrderRejectReason_Unknown_get());

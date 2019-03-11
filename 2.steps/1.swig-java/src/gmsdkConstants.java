@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package io.skywalker.gmsdk;
+package io.ft.api.gm;
 
 public interface gmsdkConstants {
   public final static int SUCCESS = gmsdkJNI.SUCCESS_get();

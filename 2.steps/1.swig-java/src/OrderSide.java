@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package io.skywalker.gmsdk;
+package io.ft.api.gm;
 
 public final class OrderSide {
   public final static OrderSide OrderSide_Unknown = new OrderSide("OrderSide_Unknown", gmsdkJNI.OrderSide_Unknown_get());

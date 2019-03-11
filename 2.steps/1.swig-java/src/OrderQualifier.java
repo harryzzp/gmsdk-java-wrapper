@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package io.skywalker.gmsdk;
+package io.ft.api.gm;
 
 public final class OrderQualifier {
   public final static OrderQualifier OrderQualifier_Unknown = new OrderQualifier("OrderQualifier_Unknown", gmsdkJNI.OrderQualifier_Unknown_get());

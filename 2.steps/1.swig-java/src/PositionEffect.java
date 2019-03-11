@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package io.skywalker.gmsdk;
+package io.ft.api.gm;
 
 public final class PositionEffect {
   public final static PositionEffect PositionEffect_Unknown = new PositionEffect("PositionEffect_Unknown", gmsdkJNI.PositionEffect_Unknown_get());
