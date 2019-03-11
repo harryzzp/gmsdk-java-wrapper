@@ -50,7 +50,7 @@
 ```
 5. 在1.swig-java目录打开PowerShell，运行SWIG生成Java文件到预先创建的src目录
 ```PowerShell
-swig -c++ -java -package io.skywalker.gmsdk -outdir ./src -o gmsdk_wrap.cpp gmsdk.i
+swig -c++ -java -package io.ft.api.gm -outdir ./src -o gmsdk_wrap.cpp gmsdk.i
 ```
 6. 同时生成gmsdk_wrap.h和gmsdk_wrap.cpp文件，SWIG命令说明如下
 ```
