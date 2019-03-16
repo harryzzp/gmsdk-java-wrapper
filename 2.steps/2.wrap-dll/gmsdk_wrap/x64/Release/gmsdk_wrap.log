@@ -1,8 +1,8 @@
 ﻿  gmsdk_wrap.cpp
     正在创建库 C:\github\gmsdk-java-wrapper\2.steps\2.wrap-dll\gmsdk_wrap\x64\Release\gmsdk_wrap.lib 和对象 C:\github\gmsdk-java-wrapper\2.steps\2.wrap-dll\gmsdk_wrap\x64\Release\gmsdk_wrap.exp
   正在生成代码
-  707 of 708 functions (99.9%) were compiled, the rest were copied from previous compilation.
-    617 functions were new in current compilation
+  60 of 768 functions ( 7.8%) were compiled, the rest were copied from previous compilation.
+    60 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   已完成代码的生成
   gmsdk_wrap.vcxproj -> C:\github\gmsdk-java-wrapper\2.steps\2.wrap-dll\gmsdk_wrap\x64\Release\gmsdk_wrap.dll
