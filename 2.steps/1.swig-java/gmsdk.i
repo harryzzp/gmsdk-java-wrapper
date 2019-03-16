@@ -11,3 +11,16 @@
 %include "error.h"
 %include "gmdef.h"
 %include "strategy.h"
+
+/* 初始化 template class */
+/* 参考用例：%template(doubleList) List<double>; */
+%template(AccountDataArray) DataArray<Account>;
+%template(BarDataArray) DataArray<Bar>;
+%template(CashDataArray) DataArray<Cash>;
+%template(ExecRptDataArray) DataArray<ExecRpt>;
+%template(OrderDataArray) DataArray<Order>;
+%template(ParameterDataArray) DataArray<Parameter>;
+%template(PositionDataArray) DataArray<Position>;
+%template(SymbolDataArray) DataArray<Symbol>;
+%template(TickDataArray) DataArray<Tick>;
+%template(TradingDateDataArray) DataArray<TradingDate>;

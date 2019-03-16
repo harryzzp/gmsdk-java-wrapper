@@ -11837,6 +11837,836 @@ SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1change_1ownership(J
 }
 
 
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_AccountDataArray_1status(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  DataArray< Account > *arg1 = (DataArray< Account > *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Account > **)&jarg1; 
+  result = (int)(arg1)->status();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_AccountDataArray_1data(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  DataArray< Account > *arg1 = (DataArray< Account > *) 0 ;
+  Account *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Account > **)&jarg1; 
+  result = (Account *)(arg1)->data();
+  *(Account **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_AccountDataArray_1count(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  DataArray< Account > *arg1 = (DataArray< Account > *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Account > **)&jarg1; 
+  result = (int)(arg1)->count();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_AccountDataArray_1at(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  DataArray< Account > *arg1 = (DataArray< Account > *) 0 ;
+  int arg2 ;
+  Account *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Account > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  result = (Account *) &(arg1)->at(arg2);
+  *(Account **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_AccountDataArray_1release(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  DataArray< Account > *arg1 = (DataArray< Account > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Account > **)&jarg1; 
+  (arg1)->release();
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1AccountDataArray(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  DataArray< Account > *arg1 = (DataArray< Account > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(DataArray< Account > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_BarDataArray_1status(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  DataArray< Bar > *arg1 = (DataArray< Bar > *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Bar > **)&jarg1; 
+  result = (int)(arg1)->status();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_BarDataArray_1data(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  DataArray< Bar > *arg1 = (DataArray< Bar > *) 0 ;
+  Bar *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Bar > **)&jarg1; 
+  result = (Bar *)(arg1)->data();
+  *(Bar **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_BarDataArray_1count(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  DataArray< Bar > *arg1 = (DataArray< Bar > *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Bar > **)&jarg1; 
+  result = (int)(arg1)->count();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_BarDataArray_1at(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  DataArray< Bar > *arg1 = (DataArray< Bar > *) 0 ;
+  int arg2 ;
+  Bar *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Bar > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  result = (Bar *) &(arg1)->at(arg2);
+  *(Bar **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_BarDataArray_1release(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  DataArray< Bar > *arg1 = (DataArray< Bar > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Bar > **)&jarg1; 
+  (arg1)->release();
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1BarDataArray(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  DataArray< Bar > *arg1 = (DataArray< Bar > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(DataArray< Bar > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_CashDataArray_1status(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  DataArray< Cash > *arg1 = (DataArray< Cash > *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Cash > **)&jarg1; 
+  result = (int)(arg1)->status();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_CashDataArray_1data(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  DataArray< Cash > *arg1 = (DataArray< Cash > *) 0 ;
+  Cash *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Cash > **)&jarg1; 
+  result = (Cash *)(arg1)->data();
+  *(Cash **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_CashDataArray_1count(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  DataArray< Cash > *arg1 = (DataArray< Cash > *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Cash > **)&jarg1; 
+  result = (int)(arg1)->count();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_CashDataArray_1at(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  DataArray< Cash > *arg1 = (DataArray< Cash > *) 0 ;
+  int arg2 ;
+  Cash *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Cash > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  result = (Cash *) &(arg1)->at(arg2);
+  *(Cash **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_CashDataArray_1release(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  DataArray< Cash > *arg1 = (DataArray< Cash > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Cash > **)&jarg1; 
+  (arg1)->release();
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1CashDataArray(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  DataArray< Cash > *arg1 = (DataArray< Cash > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(DataArray< Cash > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRptDataArray_1status(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  DataArray< ExecRpt > *arg1 = (DataArray< ExecRpt > *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< ExecRpt > **)&jarg1; 
+  result = (int)(arg1)->status();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRptDataArray_1data(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  DataArray< ExecRpt > *arg1 = (DataArray< ExecRpt > *) 0 ;
+  ExecRpt *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< ExecRpt > **)&jarg1; 
+  result = (ExecRpt *)(arg1)->data();
+  *(ExecRpt **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRptDataArray_1count(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  DataArray< ExecRpt > *arg1 = (DataArray< ExecRpt > *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< ExecRpt > **)&jarg1; 
+  result = (int)(arg1)->count();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRptDataArray_1at(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  DataArray< ExecRpt > *arg1 = (DataArray< ExecRpt > *) 0 ;
+  int arg2 ;
+  ExecRpt *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< ExecRpt > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  result = (ExecRpt *) &(arg1)->at(arg2);
+  *(ExecRpt **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_ExecRptDataArray_1release(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  DataArray< ExecRpt > *arg1 = (DataArray< ExecRpt > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< ExecRpt > **)&jarg1; 
+  (arg1)->release();
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1ExecRptDataArray(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  DataArray< ExecRpt > *arg1 = (DataArray< ExecRpt > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(DataArray< ExecRpt > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderDataArray_1status(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  DataArray< Order > *arg1 = (DataArray< Order > *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Order > **)&jarg1; 
+  result = (int)(arg1)->status();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderDataArray_1data(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  DataArray< Order > *arg1 = (DataArray< Order > *) 0 ;
+  Order *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Order > **)&jarg1; 
+  result = (Order *)(arg1)->data();
+  *(Order **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderDataArray_1count(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  DataArray< Order > *arg1 = (DataArray< Order > *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Order > **)&jarg1; 
+  result = (int)(arg1)->count();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderDataArray_1at(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  DataArray< Order > *arg1 = (DataArray< Order > *) 0 ;
+  int arg2 ;
+  Order *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Order > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  result = (Order *) &(arg1)->at(arg2);
+  *(Order **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_OrderDataArray_1release(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  DataArray< Order > *arg1 = (DataArray< Order > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Order > **)&jarg1; 
+  (arg1)->release();
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1OrderDataArray(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  DataArray< Order > *arg1 = (DataArray< Order > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(DataArray< Order > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ParameterDataArray_1status(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  DataArray< Parameter > *arg1 = (DataArray< Parameter > *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Parameter > **)&jarg1; 
+  result = (int)(arg1)->status();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_ParameterDataArray_1data(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  DataArray< Parameter > *arg1 = (DataArray< Parameter > *) 0 ;
+  Parameter *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Parameter > **)&jarg1; 
+  result = (Parameter *)(arg1)->data();
+  *(Parameter **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_ParameterDataArray_1count(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  DataArray< Parameter > *arg1 = (DataArray< Parameter > *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Parameter > **)&jarg1; 
+  result = (int)(arg1)->count();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_ParameterDataArray_1at(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  DataArray< Parameter > *arg1 = (DataArray< Parameter > *) 0 ;
+  int arg2 ;
+  Parameter *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Parameter > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  result = (Parameter *) &(arg1)->at(arg2);
+  *(Parameter **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_ParameterDataArray_1release(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  DataArray< Parameter > *arg1 = (DataArray< Parameter > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Parameter > **)&jarg1; 
+  (arg1)->release();
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1ParameterDataArray(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  DataArray< Parameter > *arg1 = (DataArray< Parameter > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(DataArray< Parameter > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_PositionDataArray_1status(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  DataArray< Position > *arg1 = (DataArray< Position > *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Position > **)&jarg1; 
+  result = (int)(arg1)->status();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_PositionDataArray_1data(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  DataArray< Position > *arg1 = (DataArray< Position > *) 0 ;
+  Position *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Position > **)&jarg1; 
+  result = (Position *)(arg1)->data();
+  *(Position **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_PositionDataArray_1count(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  DataArray< Position > *arg1 = (DataArray< Position > *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Position > **)&jarg1; 
+  result = (int)(arg1)->count();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_PositionDataArray_1at(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  DataArray< Position > *arg1 = (DataArray< Position > *) 0 ;
+  int arg2 ;
+  Position *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Position > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  result = (Position *) &(arg1)->at(arg2);
+  *(Position **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_PositionDataArray_1release(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  DataArray< Position > *arg1 = (DataArray< Position > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Position > **)&jarg1; 
+  (arg1)->release();
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1PositionDataArray(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  DataArray< Position > *arg1 = (DataArray< Position > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(DataArray< Position > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_SymbolDataArray_1status(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  DataArray< Symbol > *arg1 = (DataArray< Symbol > *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Symbol > **)&jarg1; 
+  result = (int)(arg1)->status();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_SymbolDataArray_1data(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  DataArray< Symbol > *arg1 = (DataArray< Symbol > *) 0 ;
+  char (*result)[LEN_SYMBOL] = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Symbol > **)&jarg1; 
+  result = (char (*)[LEN_SYMBOL])(arg1)->data();
+  *(char (**)[LEN_SYMBOL])&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_SymbolDataArray_1count(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  DataArray< Symbol > *arg1 = (DataArray< Symbol > *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Symbol > **)&jarg1; 
+  result = (int)(arg1)->count();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_SymbolDataArray_1at(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  DataArray< Symbol > *arg1 = (DataArray< Symbol > *) 0 ;
+  int arg2 ;
+  char (*result)[LEN_SYMBOL] = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Symbol > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  result = (char (*)[LEN_SYMBOL]) &(arg1)->at(arg2);
+  *(char (**)[LEN_SYMBOL])&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_SymbolDataArray_1release(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  DataArray< Symbol > *arg1 = (DataArray< Symbol > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Symbol > **)&jarg1; 
+  (arg1)->release();
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1SymbolDataArray(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  DataArray< Symbol > *arg1 = (DataArray< Symbol > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(DataArray< Symbol > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_TickDataArray_1status(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  DataArray< Tick > *arg1 = (DataArray< Tick > *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Tick > **)&jarg1; 
+  result = (int)(arg1)->status();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_TickDataArray_1data(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  DataArray< Tick > *arg1 = (DataArray< Tick > *) 0 ;
+  Tick *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Tick > **)&jarg1; 
+  result = (Tick *)(arg1)->data();
+  *(Tick **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_TickDataArray_1count(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  DataArray< Tick > *arg1 = (DataArray< Tick > *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Tick > **)&jarg1; 
+  result = (int)(arg1)->count();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_TickDataArray_1at(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  DataArray< Tick > *arg1 = (DataArray< Tick > *) 0 ;
+  int arg2 ;
+  Tick *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Tick > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  result = (Tick *) &(arg1)->at(arg2);
+  *(Tick **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_TickDataArray_1release(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  DataArray< Tick > *arg1 = (DataArray< Tick > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< Tick > **)&jarg1; 
+  (arg1)->release();
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1TickDataArray(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  DataArray< Tick > *arg1 = (DataArray< Tick > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(DataArray< Tick > **)&jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_TradingDateDataArray_1status(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  DataArray< TradingDate > *arg1 = (DataArray< TradingDate > *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< TradingDate > **)&jarg1; 
+  result = (int)(arg1)->status();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_TradingDateDataArray_1data(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  DataArray< TradingDate > *arg1 = (DataArray< TradingDate > *) 0 ;
+  char (*result)[LEN_ISO_DATATIME] = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< TradingDate > **)&jarg1; 
+  result = (char (*)[LEN_ISO_DATATIME])(arg1)->data();
+  *(char (**)[LEN_ISO_DATATIME])&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_TradingDateDataArray_1count(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  DataArray< TradingDate > *arg1 = (DataArray< TradingDate > *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< TradingDate > **)&jarg1; 
+  result = (int)(arg1)->count();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_TradingDateDataArray_1at(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  DataArray< TradingDate > *arg1 = (DataArray< TradingDate > *) 0 ;
+  int arg2 ;
+  char (*result)[LEN_ISO_DATATIME] = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< TradingDate > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  result = (char (*)[LEN_ISO_DATATIME]) &(arg1)->at(arg2);
+  *(char (**)[LEN_ISO_DATATIME])&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_TradingDateDataArray_1release(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  DataArray< TradingDate > *arg1 = (DataArray< TradingDate > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(DataArray< TradingDate > **)&jarg1; 
+  (arg1)->release();
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_delete_1TradingDateDataArray(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  DataArray< TradingDate > *arg1 = (DataArray< TradingDate > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(DataArray< TradingDate > **)&jarg1; 
+  delete arg1;
+}
+
+
 SWIGEXPORT void JNICALL Java_io_ft_api_gm_gmsdkJNI_swig_1module_1init(JNIEnv *jenv, jclass jcls) {
   int i;
   

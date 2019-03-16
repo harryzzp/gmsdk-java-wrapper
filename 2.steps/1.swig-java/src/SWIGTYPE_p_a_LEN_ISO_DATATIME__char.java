@@ -8,18 +8,18 @@
 
 package io.ft.api.gm;
 
-public class SWIGTYPE_p_DataArrayT_ExecRpt_t {
+public class SWIGTYPE_p_a_LEN_ISO_DATATIME__char {
   private transient long swigCPtr;
 
-  protected SWIGTYPE_p_DataArrayT_ExecRpt_t(long cPtr, @SuppressWarnings("unused") boolean futureUse) {
+  protected SWIGTYPE_p_a_LEN_ISO_DATATIME__char(long cPtr, @SuppressWarnings("unused") boolean futureUse) {
     swigCPtr = cPtr;
   }
 
-  protected SWIGTYPE_p_DataArrayT_ExecRpt_t() {
+  protected SWIGTYPE_p_a_LEN_ISO_DATATIME__char() {
     swigCPtr = 0;
   }
 
-  protected static long getCPtr(SWIGTYPE_p_DataArrayT_ExecRpt_t obj) {
+  protected static long getCPtr(SWIGTYPE_p_a_LEN_ISO_DATATIME__char obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 }

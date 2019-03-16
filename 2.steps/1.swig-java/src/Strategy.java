@@ -128,9 +128,9 @@ public class Strategy {
     return gmsdkJNI.Strategy_unsubscribe(swigCPtr, this, symbols, frequency);
   }
 
-  public SWIGTYPE_p_DataArrayT_Account_t get_accounts() {
+  public AccountDataArray get_accounts() {
     long cPtr = gmsdkJNI.Strategy_get_accounts(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Account_t(cPtr, false);
+    return (cPtr == 0) ? null : new AccountDataArray(cPtr, false);
   }
 
   public Order order_volume(String symbol, int volume, int side, int order_type, int position_effect, double price, String account) {
@@ -205,9 +205,9 @@ public class Strategy {
     return new Order(gmsdkJNI.Strategy_order_target_percent__SWIG_2(swigCPtr, this, symbol, percent, position_side, order_type), true);
   }
 
-  public SWIGTYPE_p_DataArrayT_Order_t order_close_all() {
+  public OrderDataArray order_close_all() {
     long cPtr = gmsdkJNI.Strategy_order_close_all(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Order_t(cPtr, false);
+    return (cPtr == 0) ? null : new OrderDataArray(cPtr, false);
   }
 
   public int order_cancel(String cl_ord_id, String account) {
@@ -222,54 +222,54 @@ public class Strategy {
     return gmsdkJNI.Strategy_order_cancel_all(swigCPtr, this);
   }
 
-  public SWIGTYPE_p_DataArrayT_Order_t get_orders(String account) {
+  public OrderDataArray get_orders(String account) {
     long cPtr = gmsdkJNI.Strategy_get_orders__SWIG_0(swigCPtr, this, account);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Order_t(cPtr, false);
+    return (cPtr == 0) ? null : new OrderDataArray(cPtr, false);
   }
 
-  public SWIGTYPE_p_DataArrayT_Order_t get_orders() {
+  public OrderDataArray get_orders() {
     long cPtr = gmsdkJNI.Strategy_get_orders__SWIG_1(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Order_t(cPtr, false);
+    return (cPtr == 0) ? null : new OrderDataArray(cPtr, false);
   }
 
-  public SWIGTYPE_p_DataArrayT_Order_t get_unfinished_orders(String account) {
+  public OrderDataArray get_unfinished_orders(String account) {
     long cPtr = gmsdkJNI.Strategy_get_unfinished_orders__SWIG_0(swigCPtr, this, account);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Order_t(cPtr, false);
+    return (cPtr == 0) ? null : new OrderDataArray(cPtr, false);
   }
 
-  public SWIGTYPE_p_DataArrayT_Order_t get_unfinished_orders() {
+  public OrderDataArray get_unfinished_orders() {
     long cPtr = gmsdkJNI.Strategy_get_unfinished_orders__SWIG_1(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Order_t(cPtr, false);
+    return (cPtr == 0) ? null : new OrderDataArray(cPtr, false);
   }
 
-  public SWIGTYPE_p_DataArrayT_ExecRpt_t get_execution_reports(String account) {
+  public ExecRptDataArray get_execution_reports(String account) {
     long cPtr = gmsdkJNI.Strategy_get_execution_reports__SWIG_0(swigCPtr, this, account);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_ExecRpt_t(cPtr, false);
+    return (cPtr == 0) ? null : new ExecRptDataArray(cPtr, false);
   }
 
-  public SWIGTYPE_p_DataArrayT_ExecRpt_t get_execution_reports() {
+  public ExecRptDataArray get_execution_reports() {
     long cPtr = gmsdkJNI.Strategy_get_execution_reports__SWIG_1(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_ExecRpt_t(cPtr, false);
+    return (cPtr == 0) ? null : new ExecRptDataArray(cPtr, false);
   }
 
-  public SWIGTYPE_p_DataArrayT_Cash_t get_cash(String accounts) {
+  public CashDataArray get_cash(String accounts) {
     long cPtr = gmsdkJNI.Strategy_get_cash__SWIG_0(swigCPtr, this, accounts);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Cash_t(cPtr, false);
+    return (cPtr == 0) ? null : new CashDataArray(cPtr, false);
   }
 
-  public SWIGTYPE_p_DataArrayT_Cash_t get_cash() {
+  public CashDataArray get_cash() {
     long cPtr = gmsdkJNI.Strategy_get_cash__SWIG_1(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Cash_t(cPtr, false);
+    return (cPtr == 0) ? null : new CashDataArray(cPtr, false);
   }
 
-  public SWIGTYPE_p_DataArrayT_Position_t get_position(String account) {
+  public PositionDataArray get_position(String account) {
     long cPtr = gmsdkJNI.Strategy_get_position__SWIG_0(swigCPtr, this, account);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Position_t(cPtr, false);
+    return (cPtr == 0) ? null : new PositionDataArray(cPtr, false);
   }
 
-  public SWIGTYPE_p_DataArrayT_Position_t get_position() {
+  public PositionDataArray get_position() {
     long cPtr = gmsdkJNI.Strategy_get_position__SWIG_1(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Position_t(cPtr, false);
+    return (cPtr == 0) ? null : new PositionDataArray(cPtr, false);
   }
 
   public int add_parameters(Parameter params, int count) {
@@ -284,18 +284,18 @@ public class Strategy {
     return gmsdkJNI.Strategy_set_parameters(swigCPtr, this, Parameter.getCPtr(params), params, count);
   }
 
-  public SWIGTYPE_p_DataArrayT_Parameter_t get_parameters() {
+  public ParameterDataArray get_parameters() {
     long cPtr = gmsdkJNI.Strategy_get_parameters(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Parameter_t(cPtr, false);
+    return (cPtr == 0) ? null : new ParameterDataArray(cPtr, false);
   }
 
   public int set_symbols(String symbols) {
     return gmsdkJNI.Strategy_set_symbols(swigCPtr, this, symbols);
   }
 
-  public SWIGTYPE_p_DataArrayT_char_aLEN_SYMBOLA_t get_symbols() {
+  public SymbolDataArray get_symbols() {
     long cPtr = gmsdkJNI.Strategy_get_symbols(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_char_aLEN_SYMBOLA_t(cPtr, false);
+    return (cPtr == 0) ? null : new SymbolDataArray(cPtr, false);
   }
 
   public void on_init() {

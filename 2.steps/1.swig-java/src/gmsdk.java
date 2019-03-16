@@ -21,119 +21,119 @@ public class gmsdk implements gmsdkConstants {
     gmsdkJNI.set_serv_addr(addr);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Tick_t current(String symbols) {
+  public static TickDataArray current(String symbols) {
     long cPtr = gmsdkJNI.current(symbols);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Tick_t(cPtr, false);
+    return (cPtr == 0) ? null : new TickDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Tick_t history_ticks(String symbols, String start_time, String end_time, int adjust, String adjust_end_time, boolean skip_suspended, String fill_missing) {
+  public static TickDataArray history_ticks(String symbols, String start_time, String end_time, int adjust, String adjust_end_time, boolean skip_suspended, String fill_missing) {
     long cPtr = gmsdkJNI.history_ticks__SWIG_0(symbols, start_time, end_time, adjust, adjust_end_time, skip_suspended, fill_missing);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Tick_t(cPtr, false);
+    return (cPtr == 0) ? null : new TickDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Tick_t history_ticks(String symbols, String start_time, String end_time, int adjust, String adjust_end_time, boolean skip_suspended) {
+  public static TickDataArray history_ticks(String symbols, String start_time, String end_time, int adjust, String adjust_end_time, boolean skip_suspended) {
     long cPtr = gmsdkJNI.history_ticks__SWIG_1(symbols, start_time, end_time, adjust, adjust_end_time, skip_suspended);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Tick_t(cPtr, false);
+    return (cPtr == 0) ? null : new TickDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Tick_t history_ticks(String symbols, String start_time, String end_time, int adjust, String adjust_end_time) {
+  public static TickDataArray history_ticks(String symbols, String start_time, String end_time, int adjust, String adjust_end_time) {
     long cPtr = gmsdkJNI.history_ticks__SWIG_2(symbols, start_time, end_time, adjust, adjust_end_time);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Tick_t(cPtr, false);
+    return (cPtr == 0) ? null : new TickDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Tick_t history_ticks(String symbols, String start_time, String end_time, int adjust) {
+  public static TickDataArray history_ticks(String symbols, String start_time, String end_time, int adjust) {
     long cPtr = gmsdkJNI.history_ticks__SWIG_3(symbols, start_time, end_time, adjust);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Tick_t(cPtr, false);
+    return (cPtr == 0) ? null : new TickDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Tick_t history_ticks(String symbols, String start_time, String end_time) {
+  public static TickDataArray history_ticks(String symbols, String start_time, String end_time) {
     long cPtr = gmsdkJNI.history_ticks__SWIG_4(symbols, start_time, end_time);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Tick_t(cPtr, false);
+    return (cPtr == 0) ? null : new TickDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Bar_t history_bars(String symbols, String frequency, String start_time, String end_time, int adjust, String adjust_end_time, boolean skip_suspended, String fill_missing) {
+  public static BarDataArray history_bars(String symbols, String frequency, String start_time, String end_time, int adjust, String adjust_end_time, boolean skip_suspended, String fill_missing) {
     long cPtr = gmsdkJNI.history_bars__SWIG_0(symbols, frequency, start_time, end_time, adjust, adjust_end_time, skip_suspended, fill_missing);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Bar_t(cPtr, false);
+    return (cPtr == 0) ? null : new BarDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Bar_t history_bars(String symbols, String frequency, String start_time, String end_time, int adjust, String adjust_end_time, boolean skip_suspended) {
+  public static BarDataArray history_bars(String symbols, String frequency, String start_time, String end_time, int adjust, String adjust_end_time, boolean skip_suspended) {
     long cPtr = gmsdkJNI.history_bars__SWIG_1(symbols, frequency, start_time, end_time, adjust, adjust_end_time, skip_suspended);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Bar_t(cPtr, false);
+    return (cPtr == 0) ? null : new BarDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Bar_t history_bars(String symbols, String frequency, String start_time, String end_time, int adjust, String adjust_end_time) {
+  public static BarDataArray history_bars(String symbols, String frequency, String start_time, String end_time, int adjust, String adjust_end_time) {
     long cPtr = gmsdkJNI.history_bars__SWIG_2(symbols, frequency, start_time, end_time, adjust, adjust_end_time);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Bar_t(cPtr, false);
+    return (cPtr == 0) ? null : new BarDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Bar_t history_bars(String symbols, String frequency, String start_time, String end_time, int adjust) {
+  public static BarDataArray history_bars(String symbols, String frequency, String start_time, String end_time, int adjust) {
     long cPtr = gmsdkJNI.history_bars__SWIG_3(symbols, frequency, start_time, end_time, adjust);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Bar_t(cPtr, false);
+    return (cPtr == 0) ? null : new BarDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Bar_t history_bars(String symbols, String frequency, String start_time, String end_time) {
+  public static BarDataArray history_bars(String symbols, String frequency, String start_time, String end_time) {
     long cPtr = gmsdkJNI.history_bars__SWIG_4(symbols, frequency, start_time, end_time);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Bar_t(cPtr, false);
+    return (cPtr == 0) ? null : new BarDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Tick_t history_ticks_n(String symbols, int n, String end_time, int adjust, String adjust_end_time, boolean skip_suspended, String fill_missing) {
+  public static TickDataArray history_ticks_n(String symbols, int n, String end_time, int adjust, String adjust_end_time, boolean skip_suspended, String fill_missing) {
     long cPtr = gmsdkJNI.history_ticks_n__SWIG_0(symbols, n, end_time, adjust, adjust_end_time, skip_suspended, fill_missing);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Tick_t(cPtr, false);
+    return (cPtr == 0) ? null : new TickDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Tick_t history_ticks_n(String symbols, int n, String end_time, int adjust, String adjust_end_time, boolean skip_suspended) {
+  public static TickDataArray history_ticks_n(String symbols, int n, String end_time, int adjust, String adjust_end_time, boolean skip_suspended) {
     long cPtr = gmsdkJNI.history_ticks_n__SWIG_1(symbols, n, end_time, adjust, adjust_end_time, skip_suspended);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Tick_t(cPtr, false);
+    return (cPtr == 0) ? null : new TickDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Tick_t history_ticks_n(String symbols, int n, String end_time, int adjust, String adjust_end_time) {
+  public static TickDataArray history_ticks_n(String symbols, int n, String end_time, int adjust, String adjust_end_time) {
     long cPtr = gmsdkJNI.history_ticks_n__SWIG_2(symbols, n, end_time, adjust, adjust_end_time);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Tick_t(cPtr, false);
+    return (cPtr == 0) ? null : new TickDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Tick_t history_ticks_n(String symbols, int n, String end_time, int adjust) {
+  public static TickDataArray history_ticks_n(String symbols, int n, String end_time, int adjust) {
     long cPtr = gmsdkJNI.history_ticks_n__SWIG_3(symbols, n, end_time, adjust);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Tick_t(cPtr, false);
+    return (cPtr == 0) ? null : new TickDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Tick_t history_ticks_n(String symbols, int n, String end_time) {
+  public static TickDataArray history_ticks_n(String symbols, int n, String end_time) {
     long cPtr = gmsdkJNI.history_ticks_n__SWIG_4(symbols, n, end_time);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Tick_t(cPtr, false);
+    return (cPtr == 0) ? null : new TickDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Tick_t history_ticks_n(String symbols, int n) {
+  public static TickDataArray history_ticks_n(String symbols, int n) {
     long cPtr = gmsdkJNI.history_ticks_n__SWIG_5(symbols, n);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Tick_t(cPtr, false);
+    return (cPtr == 0) ? null : new TickDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Bar_t history_bars_n(String symbols, String frequency, int n, String end_time, int adjust, String adjust_end_time, boolean skip_suspended, String fill_missing) {
+  public static BarDataArray history_bars_n(String symbols, String frequency, int n, String end_time, int adjust, String adjust_end_time, boolean skip_suspended, String fill_missing) {
     long cPtr = gmsdkJNI.history_bars_n__SWIG_0(symbols, frequency, n, end_time, adjust, adjust_end_time, skip_suspended, fill_missing);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Bar_t(cPtr, false);
+    return (cPtr == 0) ? null : new BarDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Bar_t history_bars_n(String symbols, String frequency, int n, String end_time, int adjust, String adjust_end_time, boolean skip_suspended) {
+  public static BarDataArray history_bars_n(String symbols, String frequency, int n, String end_time, int adjust, String adjust_end_time, boolean skip_suspended) {
     long cPtr = gmsdkJNI.history_bars_n__SWIG_1(symbols, frequency, n, end_time, adjust, adjust_end_time, skip_suspended);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Bar_t(cPtr, false);
+    return (cPtr == 0) ? null : new BarDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Bar_t history_bars_n(String symbols, String frequency, int n, String end_time, int adjust, String adjust_end_time) {
+  public static BarDataArray history_bars_n(String symbols, String frequency, int n, String end_time, int adjust, String adjust_end_time) {
     long cPtr = gmsdkJNI.history_bars_n__SWIG_2(symbols, frequency, n, end_time, adjust, adjust_end_time);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Bar_t(cPtr, false);
+    return (cPtr == 0) ? null : new BarDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Bar_t history_bars_n(String symbols, String frequency, int n, String end_time, int adjust) {
+  public static BarDataArray history_bars_n(String symbols, String frequency, int n, String end_time, int adjust) {
     long cPtr = gmsdkJNI.history_bars_n__SWIG_3(symbols, frequency, n, end_time, adjust);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Bar_t(cPtr, false);
+    return (cPtr == 0) ? null : new BarDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Bar_t history_bars_n(String symbols, String frequency, int n, String end_time) {
+  public static BarDataArray history_bars_n(String symbols, String frequency, int n, String end_time) {
     long cPtr = gmsdkJNI.history_bars_n__SWIG_4(symbols, frequency, n, end_time);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Bar_t(cPtr, false);
+    return (cPtr == 0) ? null : new BarDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_Bar_t history_bars_n(String symbols, String frequency, int n) {
+  public static BarDataArray history_bars_n(String symbols, String frequency, int n) {
     long cPtr = gmsdkJNI.history_bars_n__SWIG_5(symbols, frequency, n);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_Bar_t(cPtr, false);
+    return (cPtr == 0) ? null : new BarDataArray(cPtr, false);
   }
 
   public static DataSet get_fundamentals(String table, String symbols, String start_date, String end_date, String fields, String filter, String order_by, int limit) {
@@ -246,19 +246,19 @@ public class gmsdk implements gmsdkConstants {
     return (cPtr == 0) ? null : new DataSet(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_char_aLEN_SYMBOLA_t get_industry(String code) {
+  public static SymbolDataArray get_industry(String code) {
     long cPtr = gmsdkJNI.get_industry(code);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_char_aLEN_SYMBOLA_t(cPtr, false);
+    return (cPtr == 0) ? null : new SymbolDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_char_aLEN_SYMBOLA_t get_concept(String code) {
+  public static SymbolDataArray get_concept(String code) {
     long cPtr = gmsdkJNI.get_concept(code);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_char_aLEN_SYMBOLA_t(cPtr, false);
+    return (cPtr == 0) ? null : new SymbolDataArray(cPtr, false);
   }
 
-  public static SWIGTYPE_p_DataArrayT_char_aLEN_ISO_DATATIMEA_t get_trading_dates(String exchange, String start_date, String end_date) {
+  public static TradingDateDataArray get_trading_dates(String exchange, String start_date, String end_date) {
     long cPtr = gmsdkJNI.get_trading_dates(exchange, start_date, end_date);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_DataArrayT_char_aLEN_ISO_DATATIMEA_t(cPtr, false);
+    return (cPtr == 0) ? null : new TradingDateDataArray(cPtr, false);
   }
 
   public static int get_previous_trading_date(String exchange, String date, String output_date) {
