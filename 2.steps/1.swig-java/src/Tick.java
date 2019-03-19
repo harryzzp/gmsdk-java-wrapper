@@ -140,6 +140,10 @@ public class Tick {
     return (cPtr == 0) ? null : new Quote(cPtr, false);
   }
 
+  public Quote getQuoteAt(int index) {
+    return new Quote(gmsdkJNI.Tick_getQuoteAt(swigCPtr, this, index), true);
+  }
+
   public Tick() {
     this(gmsdkJNI.new_Tick(), true);
   }

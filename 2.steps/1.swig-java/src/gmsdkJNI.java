@@ -264,6 +264,7 @@ public class gmsdkJNI {
   public final static native int Tick_trade_type_get(long jarg1, Tick jarg1_);
   public final static native void Tick_quotes_set(long jarg1, Tick jarg1_, long jarg2, Quote jarg2_);
   public final static native long Tick_quotes_get(long jarg1, Tick jarg1_);
+  public final static native long Tick_getQuoteAt(long jarg1, Tick jarg1_, int jarg2);
   public final static native long new_Tick();
   public final static native void delete_Tick(long jarg1);
   public final static native void Order_strategy_id_set(long jarg1, Order jarg1_, String jarg2);

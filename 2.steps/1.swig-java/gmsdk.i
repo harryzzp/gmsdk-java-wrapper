@@ -24,3 +24,11 @@
 %template(SymbolDataArray) DataArray<Symbol>;
 %template(TickDataArray) DataArray<Tick>;
 %template(TradingDateDataArray) DataArray<TradingDate>;
+
+%include <carrays.i>
+%extend Tick { 
+	Quote getQuoteAt(int index) 
+	{
+		return self->quotes[index];
+	}
+}

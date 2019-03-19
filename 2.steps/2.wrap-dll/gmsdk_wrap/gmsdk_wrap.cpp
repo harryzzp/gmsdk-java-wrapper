@@ -668,6 +668,9 @@ namespace Swig {
 /* i文件中（例如变量类型）使用到的头文件 */
 #include "strategy.h"
 
+SWIGINTERN Quote Tick_getQuoteAt(Tick *self,int index){
+		return self->quotes[index];
+	}
 
 
 /* ---------------------------------------------------
@@ -5715,6 +5718,23 @@ SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1quotes_1get(JNIEnv *je
   arg1 = *(Tick **)&jarg1; 
   result = (Quote *)(Quote *) ((arg1)->quotes);
   *(Quote **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Tick_1getQuoteAt(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  Tick *arg1 = (Tick *) 0 ;
+  int arg2 ;
+  Quote result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Tick **)&jarg1; 
+  arg2 = (int)jarg2; 
+  result = Tick_getQuoteAt(arg1,arg2);
+  *(Quote **)&jresult = new Quote((const Quote &)result); 
   return jresult;
 }
 

@@ -60,6 +60,13 @@
 %template(TickDataArray) DataArray<Tick>;
 %template(TradingDateDataArray) DataArray<TradingDate>;
 
+%include <carrays.i>
+%extend Tick { 
+	Quote getQuoteAt(int index) 
+	{
+		return self->quotes[index];
+	}
+}
 
 ```
 5. 在1.swig-java目录打开PowerShell，运行SWIG生成Java文件到预先创建的src目录
