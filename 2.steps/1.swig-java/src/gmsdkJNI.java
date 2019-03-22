@@ -544,7 +544,7 @@ public class gmsdkJNI {
   public final static native void Strategy_set_token(long jarg1, Strategy jarg1_, String jarg2);
   public final static native void Strategy_set_mode(long jarg1, Strategy jarg1_, int jarg2);
   public final static native int Strategy_schedule(long jarg1, Strategy jarg1_, String jarg2, String jarg3);
-  public final static native long Strategy_now(long jarg1, Strategy jarg1_);
+  public final static native double Strategy_now(long jarg1, Strategy jarg1_);
   public final static native int Strategy_set_backtest_config__SWIG_0(long jarg1, Strategy jarg1_, String jarg2, String jarg3, double jarg4, double jarg5, double jarg6, double jarg7, int jarg8, int jarg9);
   public final static native int Strategy_set_backtest_config__SWIG_1(long jarg1, Strategy jarg1_, String jarg2, String jarg3, double jarg4, double jarg5, double jarg6, double jarg7, int jarg8);
   public final static native int Strategy_set_backtest_config__SWIG_2(long jarg1, Strategy jarg1_, String jarg2, String jarg3, double jarg4, double jarg5, double jarg6, double jarg7);
@@ -578,6 +578,12 @@ public class gmsdkJNI {
   public final static native int Strategy_order_cancel__SWIG_0(long jarg1, Strategy jarg1_, String jarg2, String jarg3);
   public final static native int Strategy_order_cancel__SWIG_1(long jarg1, Strategy jarg1_, String jarg2);
   public final static native int Strategy_order_cancel_all(long jarg1, Strategy jarg1_);
+  public final static native long Strategy_place_order__SWIG_0(long jarg1, Strategy jarg1_, String jarg2, int jarg3, int jarg4, int jarg5, int jarg6, double jarg7, int jarg8, int jarg9, double jarg10, String jarg11);
+  public final static native long Strategy_place_order__SWIG_1(long jarg1, Strategy jarg1_, String jarg2, int jarg3, int jarg4, int jarg5, int jarg6, double jarg7, int jarg8, int jarg9, double jarg10);
+  public final static native long Strategy_place_order__SWIG_2(long jarg1, Strategy jarg1_, String jarg2, int jarg3, int jarg4, int jarg5, int jarg6, double jarg7, int jarg8, int jarg9);
+  public final static native long Strategy_place_order__SWIG_3(long jarg1, Strategy jarg1_, String jarg2, int jarg3, int jarg4, int jarg5, int jarg6, double jarg7, int jarg8);
+  public final static native long Strategy_place_order__SWIG_4(long jarg1, Strategy jarg1_, String jarg2, int jarg3, int jarg4, int jarg5, int jarg6, double jarg7);
+  public final static native long Strategy_place_order__SWIG_5(long jarg1, Strategy jarg1_, String jarg2, int jarg3, int jarg4, int jarg5, int jarg6);
   public final static native long Strategy_get_orders__SWIG_0(long jarg1, Strategy jarg1_, String jarg2);
   public final static native long Strategy_get_orders__SWIG_1(long jarg1, Strategy jarg1_);
   public final static native long Strategy_get_unfinished_orders__SWIG_0(long jarg1, Strategy jarg1_, String jarg2);

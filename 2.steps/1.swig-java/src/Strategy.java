@@ -84,7 +84,7 @@ public class Strategy {
     return gmsdkJNI.Strategy_schedule(swigCPtr, this, data_rule, time_rule);
   }
 
-  public long now() {
+  public double now() {
     return gmsdkJNI.Strategy_now(swigCPtr, this);
   }
 
@@ -220,6 +220,30 @@ public class Strategy {
 
   public int order_cancel_all() {
     return gmsdkJNI.Strategy_order_cancel_all(swigCPtr, this);
+  }
+
+  public Order place_order(String symbol, int volume, int side, int order_type, int position_effect, double price, int order_duration, int order_qualifier, double stop_price, String account) {
+    return new Order(gmsdkJNI.Strategy_place_order__SWIG_0(swigCPtr, this, symbol, volume, side, order_type, position_effect, price, order_duration, order_qualifier, stop_price, account), true);
+  }
+
+  public Order place_order(String symbol, int volume, int side, int order_type, int position_effect, double price, int order_duration, int order_qualifier, double stop_price) {
+    return new Order(gmsdkJNI.Strategy_place_order__SWIG_1(swigCPtr, this, symbol, volume, side, order_type, position_effect, price, order_duration, order_qualifier, stop_price), true);
+  }
+
+  public Order place_order(String symbol, int volume, int side, int order_type, int position_effect, double price, int order_duration, int order_qualifier) {
+    return new Order(gmsdkJNI.Strategy_place_order__SWIG_2(swigCPtr, this, symbol, volume, side, order_type, position_effect, price, order_duration, order_qualifier), true);
+  }
+
+  public Order place_order(String symbol, int volume, int side, int order_type, int position_effect, double price, int order_duration) {
+    return new Order(gmsdkJNI.Strategy_place_order__SWIG_3(swigCPtr, this, symbol, volume, side, order_type, position_effect, price, order_duration), true);
+  }
+
+  public Order place_order(String symbol, int volume, int side, int order_type, int position_effect, double price) {
+    return new Order(gmsdkJNI.Strategy_place_order__SWIG_4(swigCPtr, this, symbol, volume, side, order_type, position_effect, price), true);
+  }
+
+  public Order place_order(String symbol, int volume, int side, int order_type, int position_effect) {
+    return new Order(gmsdkJNI.Strategy_place_order__SWIG_5(swigCPtr, this, symbol, volume, side, order_type, position_effect), true);
   }
 
   public OrderDataArray get_orders(String account) {

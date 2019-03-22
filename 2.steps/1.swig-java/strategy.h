@@ -33,7 +33,7 @@ public: //基础函数
 	int schedule(const char *data_rule, const char *time_rule);
 
 	//当前时间
-	long long now();
+	double now();
 
 	//设置回测参数
 	int set_backtest_config(
@@ -87,6 +87,9 @@ public: //交易函数
 
 	//撤销所有委托
 	int order_cancel_all();
+
+	//委托下单
+	Order place_order(const char *symbol, int volume, int side, int order_type, int position_effect, double price = 0, int order_duration = 0, int order_qualifier = 0, double stop_price = 0, const char *account = NULL);
 
 	//查询委托
 	DataArray<Order>* get_orders(const char *account = NULL);

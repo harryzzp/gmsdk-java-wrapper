@@ -10087,17 +10087,17 @@ SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1schedule(JNIEnv *je
 }
 
 
-SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1now(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT jdouble JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1now(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jdouble jresult = 0 ;
   Strategy *arg1 = (Strategy *) 0 ;
-  long long result;
+  double result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(Strategy **)&jarg1; 
-  result = (long long)(arg1)->now();
-  jresult = (jlong)result; 
+  result = (double)(arg1)->now();
+  jresult = (jdouble)result; 
   return jresult;
 }
 
@@ -11116,6 +11116,221 @@ SWIGEXPORT jint JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1order_1cancel_1all(
   arg1 = *(Strategy **)&jarg1; 
   result = (int)(arg1)->order_cancel_all();
   jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1place_1order_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jint jarg3, jint jarg4, jint jarg5, jint jarg6, jdouble jarg7, jint jarg8, jint jarg9, jdouble jarg10, jstring jarg11) {
+  jlong jresult = 0 ;
+  Strategy *arg1 = (Strategy *) 0 ;
+  char *arg2 = (char *) 0 ;
+  int arg3 ;
+  int arg4 ;
+  int arg5 ;
+  int arg6 ;
+  double arg7 ;
+  int arg8 ;
+  int arg9 ;
+  double arg10 ;
+  char *arg11 = (char *) 0 ;
+  Order result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Strategy **)&jarg1; 
+  arg2 = 0;
+  if (jarg2) {
+    arg2 = (char *)jenv->GetStringUTFChars(jarg2, 0);
+    if (!arg2) return 0;
+  }
+  arg3 = (int)jarg3; 
+  arg4 = (int)jarg4; 
+  arg5 = (int)jarg5; 
+  arg6 = (int)jarg6; 
+  arg7 = (double)jarg7; 
+  arg8 = (int)jarg8; 
+  arg9 = (int)jarg9; 
+  arg10 = (double)jarg10; 
+  arg11 = 0;
+  if (jarg11) {
+    arg11 = (char *)jenv->GetStringUTFChars(jarg11, 0);
+    if (!arg11) return 0;
+  }
+  result = (arg1)->place_order((char const *)arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,(char const *)arg11);
+  *(Order **)&jresult = new Order((const Order &)result); 
+  if (arg2) jenv->ReleaseStringUTFChars(jarg2, (const char *)arg2);
+  if (arg11) jenv->ReleaseStringUTFChars(jarg11, (const char *)arg11);
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1place_1order_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jint jarg3, jint jarg4, jint jarg5, jint jarg6, jdouble jarg7, jint jarg8, jint jarg9, jdouble jarg10) {
+  jlong jresult = 0 ;
+  Strategy *arg1 = (Strategy *) 0 ;
+  char *arg2 = (char *) 0 ;
+  int arg3 ;
+  int arg4 ;
+  int arg5 ;
+  int arg6 ;
+  double arg7 ;
+  int arg8 ;
+  int arg9 ;
+  double arg10 ;
+  Order result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Strategy **)&jarg1; 
+  arg2 = 0;
+  if (jarg2) {
+    arg2 = (char *)jenv->GetStringUTFChars(jarg2, 0);
+    if (!arg2) return 0;
+  }
+  arg3 = (int)jarg3; 
+  arg4 = (int)jarg4; 
+  arg5 = (int)jarg5; 
+  arg6 = (int)jarg6; 
+  arg7 = (double)jarg7; 
+  arg8 = (int)jarg8; 
+  arg9 = (int)jarg9; 
+  arg10 = (double)jarg10; 
+  result = (arg1)->place_order((char const *)arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10);
+  *(Order **)&jresult = new Order((const Order &)result); 
+  if (arg2) jenv->ReleaseStringUTFChars(jarg2, (const char *)arg2);
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1place_1order_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jint jarg3, jint jarg4, jint jarg5, jint jarg6, jdouble jarg7, jint jarg8, jint jarg9) {
+  jlong jresult = 0 ;
+  Strategy *arg1 = (Strategy *) 0 ;
+  char *arg2 = (char *) 0 ;
+  int arg3 ;
+  int arg4 ;
+  int arg5 ;
+  int arg6 ;
+  double arg7 ;
+  int arg8 ;
+  int arg9 ;
+  Order result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Strategy **)&jarg1; 
+  arg2 = 0;
+  if (jarg2) {
+    arg2 = (char *)jenv->GetStringUTFChars(jarg2, 0);
+    if (!arg2) return 0;
+  }
+  arg3 = (int)jarg3; 
+  arg4 = (int)jarg4; 
+  arg5 = (int)jarg5; 
+  arg6 = (int)jarg6; 
+  arg7 = (double)jarg7; 
+  arg8 = (int)jarg8; 
+  arg9 = (int)jarg9; 
+  result = (arg1)->place_order((char const *)arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9);
+  *(Order **)&jresult = new Order((const Order &)result); 
+  if (arg2) jenv->ReleaseStringUTFChars(jarg2, (const char *)arg2);
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1place_1order_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jint jarg3, jint jarg4, jint jarg5, jint jarg6, jdouble jarg7, jint jarg8) {
+  jlong jresult = 0 ;
+  Strategy *arg1 = (Strategy *) 0 ;
+  char *arg2 = (char *) 0 ;
+  int arg3 ;
+  int arg4 ;
+  int arg5 ;
+  int arg6 ;
+  double arg7 ;
+  int arg8 ;
+  Order result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Strategy **)&jarg1; 
+  arg2 = 0;
+  if (jarg2) {
+    arg2 = (char *)jenv->GetStringUTFChars(jarg2, 0);
+    if (!arg2) return 0;
+  }
+  arg3 = (int)jarg3; 
+  arg4 = (int)jarg4; 
+  arg5 = (int)jarg5; 
+  arg6 = (int)jarg6; 
+  arg7 = (double)jarg7; 
+  arg8 = (int)jarg8; 
+  result = (arg1)->place_order((char const *)arg2,arg3,arg4,arg5,arg6,arg7,arg8);
+  *(Order **)&jresult = new Order((const Order &)result); 
+  if (arg2) jenv->ReleaseStringUTFChars(jarg2, (const char *)arg2);
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1place_1order_1_1SWIG_14(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jint jarg3, jint jarg4, jint jarg5, jint jarg6, jdouble jarg7) {
+  jlong jresult = 0 ;
+  Strategy *arg1 = (Strategy *) 0 ;
+  char *arg2 = (char *) 0 ;
+  int arg3 ;
+  int arg4 ;
+  int arg5 ;
+  int arg6 ;
+  double arg7 ;
+  Order result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Strategy **)&jarg1; 
+  arg2 = 0;
+  if (jarg2) {
+    arg2 = (char *)jenv->GetStringUTFChars(jarg2, 0);
+    if (!arg2) return 0;
+  }
+  arg3 = (int)jarg3; 
+  arg4 = (int)jarg4; 
+  arg5 = (int)jarg5; 
+  arg6 = (int)jarg6; 
+  arg7 = (double)jarg7; 
+  result = (arg1)->place_order((char const *)arg2,arg3,arg4,arg5,arg6,arg7);
+  *(Order **)&jresult = new Order((const Order &)result); 
+  if (arg2) jenv->ReleaseStringUTFChars(jarg2, (const char *)arg2);
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_gmsdkJNI_Strategy_1place_1order_1_1SWIG_15(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jint jarg3, jint jarg4, jint jarg5, jint jarg6) {
+  jlong jresult = 0 ;
+  Strategy *arg1 = (Strategy *) 0 ;
+  char *arg2 = (char *) 0 ;
+  int arg3 ;
+  int arg4 ;
+  int arg5 ;
+  int arg6 ;
+  Order result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Strategy **)&jarg1; 
+  arg2 = 0;
+  if (jarg2) {
+    arg2 = (char *)jenv->GetStringUTFChars(jarg2, 0);
+    if (!arg2) return 0;
+  }
+  arg3 = (int)jarg3; 
+  arg4 = (int)jarg4; 
+  arg5 = (int)jarg5; 
+  arg6 = (int)jarg6; 
+  result = (arg1)->place_order((char const *)arg2,arg3,arg4,arg5,arg6);
+  *(Order **)&jresult = new Order((const Order &)result); 
+  if (arg2) jenv->ReleaseStringUTFChars(jarg2, (const char *)arg2);
   return jresult;
 }
 
