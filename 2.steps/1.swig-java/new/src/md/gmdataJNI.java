@@ -152,10 +152,17 @@ public class gmdataJNI {
   public final static native long Data_get_dividend(long jarg1, Data jarg1_, String jarg2, String jarg3, String jarg4);
   public final static native long Data_get_continuous_contracts(long jarg1, Data jarg1_, String jarg2, String jarg3, String jarg4);
   public final static native void Data_on_tick(long jarg1, Data jarg1_, long jarg2, Tick jarg2_);
+  public final static native void Data_on_tickSwigExplicitData(long jarg1, Data jarg1_, long jarg2, Tick jarg2_);
   public final static native void Data_on_bar(long jarg1, Data jarg1_, long jarg2, Bar jarg2_);
+  public final static native void Data_on_barSwigExplicitData(long jarg1, Data jarg1_, long jarg2, Bar jarg2_);
   public final static native void Data_on_error(long jarg1, Data jarg1_, int jarg2, String jarg3);
+  public final static native void Data_on_errorSwigExplicitData(long jarg1, Data jarg1_, int jarg2, String jarg3);
   public final static native void Data_on_market_data_connected(long jarg1, Data jarg1_);
+  public final static native void Data_on_market_data_connectedSwigExplicitData(long jarg1, Data jarg1_);
   public final static native void Data_on_market_data_disconnected(long jarg1, Data jarg1_);
+  public final static native void Data_on_market_data_disconnectedSwigExplicitData(long jarg1, Data jarg1_);
+  public final static native void Data_director_connect(Data obj, long cptr, boolean mem_own, boolean weak_global);
+  public final static native void Data_change_ownership(Data obj, long cptr, boolean take_or_release);
   public final static native int BarDataArray_status(long jarg1, BarDataArray jarg1_);
   public final static native long BarDataArray_data(long jarg1, BarDataArray jarg1_);
   public final static native int BarDataArray_count(long jarg1, BarDataArray jarg1_);
@@ -180,4 +187,25 @@ public class gmdataJNI {
   public final static native long TradingDateDataArray_at(long jarg1, TradingDateDataArray jarg1_, int jarg2);
   public final static native void TradingDateDataArray_release(long jarg1, TradingDateDataArray jarg1_);
   public final static native void delete_TradingDateDataArray(long jarg1);
+
+  public static void SwigDirector_Data_on_tick(Data jself, long tick) {
+    jself.on_tick((tick == 0) ? null : new Tick(tick, false));
+  }
+  public static void SwigDirector_Data_on_bar(Data jself, long bar) {
+    jself.on_bar((bar == 0) ? null : new Bar(bar, false));
+  }
+  public static void SwigDirector_Data_on_error(Data jself, int error_code, String error_msg) {
+    jself.on_error(error_code, error_msg);
+  }
+  public static void SwigDirector_Data_on_market_data_connected(Data jself) {
+    jself.on_market_data_connected();
+  }
+  public static void SwigDirector_Data_on_market_data_disconnected(Data jself) {
+    jself.on_market_data_disconnected();
+  }
+
+  private final static native void swig_module_init();
+  static {
+    swig_module_init();
+  }
 }

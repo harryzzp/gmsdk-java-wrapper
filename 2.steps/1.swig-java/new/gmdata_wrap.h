@@ -11,5 +11,25 @@
 #ifndef SWIG_gmdata_WRAP_H_
 #define SWIG_gmdata_WRAP_H_
 
+class SwigDirector_Data : public gmdata::Data, public Swig::Director {
+
+public:
+    void swig_connect_director(JNIEnv *jenv, jobject jself, jclass jcls, bool swig_mem_own, bool weak_global);
+    SwigDirector_Data(JNIEnv *jenv, char const *token);
+    SwigDirector_Data(JNIEnv *jenv);
+    virtual ~SwigDirector_Data();
+    virtual void on_tick(Tick *tick);
+    virtual void on_bar(Bar *bar);
+    virtual void on_error(int error_code, char const *error_msg);
+    virtual void on_market_data_connected();
+    virtual void on_market_data_disconnected();
+public:
+    bool swig_overrides(int n) {
+      return (n < 5 ? swig_override[n] : false);
+    }
+protected:
+    Swig::BoolArray<5> swig_override;
+};
+
 
 #endif

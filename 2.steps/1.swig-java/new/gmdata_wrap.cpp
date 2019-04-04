@@ -658,6 +658,12 @@ namespace Swig {
   }
 }
 
+namespace Swig {
+  namespace {
+    jclass jclass_gmdataJNI = NULL;
+    jmethodID director_method_ids[5];
+  }
+}
 
 /* i文件中（例如变量类型）使用到的头文件 */
 #include "gmdata.h"
@@ -672,6 +678,198 @@ SWIGINTERN Quote Tick_getQuoteAt(Tick *self,int index){
  * --------------------------------------------------- */
 
 #include "gmdata_wrap.h"
+
+SwigDirector_Data::SwigDirector_Data(JNIEnv *jenv, char const *token) : gmdata::Data(token), Swig::Director(jenv) {
+}
+
+SwigDirector_Data::SwigDirector_Data(JNIEnv *jenv) : gmdata::Data(), Swig::Director(jenv) {
+}
+
+SwigDirector_Data::~SwigDirector_Data() {
+  swig_disconnect_director_self("swigDirectorDisconnect");
+}
+
+
+void SwigDirector_Data::on_tick(Tick *tick) {
+  JNIEnvWrapper swigjnienv(this) ;
+  JNIEnv * jenv = swigjnienv.getJNIEnv() ;
+  jobject swigjobj = (jobject) NULL ;
+  jlong jtick = 0 ;
+  
+  if (!swig_override[0]) {
+    gmdata::Data::on_tick(tick);
+    return;
+  }
+  swigjobj = swig_get_self(jenv);
+  if (swigjobj && jenv->IsSameObject(swigjobj, NULL) == JNI_FALSE) {
+    *((Tick **)&jtick) = (Tick *) tick; 
+    jenv->CallStaticVoidMethod(Swig::jclass_gmdataJNI, Swig::director_method_ids[0], swigjobj, jtick);
+    jthrowable swigerror = jenv->ExceptionOccurred();
+    if (swigerror) {
+      jenv->ExceptionClear();
+      throw Swig::DirectorException(jenv, swigerror);
+    }
+    
+  } else {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null upcall object in gmdata::Data::on_tick ");
+  }
+  if (swigjobj) jenv->DeleteLocalRef(swigjobj);
+}
+
+void SwigDirector_Data::on_bar(Bar *bar) {
+  JNIEnvWrapper swigjnienv(this) ;
+  JNIEnv * jenv = swigjnienv.getJNIEnv() ;
+  jobject swigjobj = (jobject) NULL ;
+  jlong jbar = 0 ;
+  
+  if (!swig_override[1]) {
+    gmdata::Data::on_bar(bar);
+    return;
+  }
+  swigjobj = swig_get_self(jenv);
+  if (swigjobj && jenv->IsSameObject(swigjobj, NULL) == JNI_FALSE) {
+    *((Bar **)&jbar) = (Bar *) bar; 
+    jenv->CallStaticVoidMethod(Swig::jclass_gmdataJNI, Swig::director_method_ids[1], swigjobj, jbar);
+    jthrowable swigerror = jenv->ExceptionOccurred();
+    if (swigerror) {
+      jenv->ExceptionClear();
+      throw Swig::DirectorException(jenv, swigerror);
+    }
+    
+  } else {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null upcall object in gmdata::Data::on_bar ");
+  }
+  if (swigjobj) jenv->DeleteLocalRef(swigjobj);
+}
+
+void SwigDirector_Data::on_error(int error_code, char const *error_msg) {
+  JNIEnvWrapper swigjnienv(this) ;
+  JNIEnv * jenv = swigjnienv.getJNIEnv() ;
+  jobject swigjobj = (jobject) NULL ;
+  jint jerror_code  ;
+  jstring jerror_msg = 0 ;
+  
+  if (!swig_override[2]) {
+    gmdata::Data::on_error(error_code,error_msg);
+    return;
+  }
+  swigjobj = swig_get_self(jenv);
+  if (swigjobj && jenv->IsSameObject(swigjobj, NULL) == JNI_FALSE) {
+    jerror_code = (jint) error_code;
+    jerror_msg = 0;
+    if (error_msg) {
+      jerror_msg = jenv->NewStringUTF((const char *)error_msg);
+      if (!jerror_msg) return ;
+    }
+    Swig::LocalRefGuard error_msg_refguard(jenv, jerror_msg);
+    jenv->CallStaticVoidMethod(Swig::jclass_gmdataJNI, Swig::director_method_ids[2], swigjobj, jerror_code, jerror_msg);
+    jthrowable swigerror = jenv->ExceptionOccurred();
+    if (swigerror) {
+      jenv->ExceptionClear();
+      throw Swig::DirectorException(jenv, swigerror);
+    }
+    
+  } else {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null upcall object in gmdata::Data::on_error ");
+  }
+  if (swigjobj) jenv->DeleteLocalRef(swigjobj);
+}
+
+void SwigDirector_Data::on_market_data_connected() {
+  JNIEnvWrapper swigjnienv(this) ;
+  JNIEnv * jenv = swigjnienv.getJNIEnv() ;
+  jobject swigjobj = (jobject) NULL ;
+  
+  if (!swig_override[3]) {
+    gmdata::Data::on_market_data_connected();
+    return;
+  }
+  swigjobj = swig_get_self(jenv);
+  if (swigjobj && jenv->IsSameObject(swigjobj, NULL) == JNI_FALSE) {
+    jenv->CallStaticVoidMethod(Swig::jclass_gmdataJNI, Swig::director_method_ids[3], swigjobj);
+    jthrowable swigerror = jenv->ExceptionOccurred();
+    if (swigerror) {
+      jenv->ExceptionClear();
+      throw Swig::DirectorException(jenv, swigerror);
+    }
+    
+  } else {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null upcall object in gmdata::Data::on_market_data_connected ");
+  }
+  if (swigjobj) jenv->DeleteLocalRef(swigjobj);
+}
+
+void SwigDirector_Data::on_market_data_disconnected() {
+  JNIEnvWrapper swigjnienv(this) ;
+  JNIEnv * jenv = swigjnienv.getJNIEnv() ;
+  jobject swigjobj = (jobject) NULL ;
+  
+  if (!swig_override[4]) {
+    gmdata::Data::on_market_data_disconnected();
+    return;
+  }
+  swigjobj = swig_get_self(jenv);
+  if (swigjobj && jenv->IsSameObject(swigjobj, NULL) == JNI_FALSE) {
+    jenv->CallStaticVoidMethod(Swig::jclass_gmdataJNI, Swig::director_method_ids[4], swigjobj);
+    jthrowable swigerror = jenv->ExceptionOccurred();
+    if (swigerror) {
+      jenv->ExceptionClear();
+      throw Swig::DirectorException(jenv, swigerror);
+    }
+    
+  } else {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "null upcall object in gmdata::Data::on_market_data_disconnected ");
+  }
+  if (swigjobj) jenv->DeleteLocalRef(swigjobj);
+}
+
+void SwigDirector_Data::swig_connect_director(JNIEnv *jenv, jobject jself, jclass jcls, bool swig_mem_own, bool weak_global) {
+  static struct {
+    const char *mname;
+    const char *mdesc;
+    jmethodID base_methid;
+  } methods[] = {
+    {
+      "on_tick", "(Lio/ft/api/gm/md/Tick;)V", NULL 
+    },
+    {
+      "on_bar", "(Lio/ft/api/gm/md/Bar;)V", NULL 
+    },
+    {
+      "on_error", "(ILjava/lang/String;)V", NULL 
+    },
+    {
+      "on_market_data_connected", "()V", NULL 
+    },
+    {
+      "on_market_data_disconnected", "()V", NULL 
+    }
+  };
+  
+  static jclass baseclass = 0 ;
+  
+  if (swig_set_self(jenv, jself, swig_mem_own, weak_global)) {
+    if (!baseclass) {
+      baseclass = jenv->FindClass("io/ft/api/gm/md/Data");
+      if (!baseclass) return;
+      baseclass = (jclass) jenv->NewGlobalRef(baseclass);
+    }
+    bool derived = (jenv->IsSameObject(baseclass, jcls) ? false : true);
+    for (int i = 0; i < 5; ++i) {
+      if (!methods[i].base_methid) {
+        methods[i].base_methid = jenv->GetMethodID(baseclass, methods[i].mname, methods[i].mdesc);
+        if (!methods[i].base_methid) return;
+      }
+      swig_override[i] = false;
+      if (derived) {
+        jmethodID methid = jenv->GetMethodID(jcls, methods[i].mname, methods[i].mdesc);
+        swig_override[i] = (methid != methods[i].base_methid);
+        jenv->ExceptionClear();
+      }
+    }
+  }
+}
+
 
 
 #ifdef __cplusplus
@@ -1855,7 +2053,7 @@ SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_md_gmdataJNI_new_1Data_1_1SWIG_10(JNI
     arg1 = (char *)jenv->GetStringUTFChars(jarg1, 0);
     if (!arg1) return 0;
   }
-  result = (gmdata::Data *)new gmdata::Data((char const *)arg1);
+  result = (gmdata::Data *)new SwigDirector_Data(jenv,(char const *)arg1);
   *(gmdata::Data **)&jresult = result; 
   if (arg1) jenv->ReleaseStringUTFChars(jarg1, (const char *)arg1);
   return jresult;
@@ -1868,7 +2066,7 @@ SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_md_gmdataJNI_new_1Data_1_1SWIG_11(JNI
   
   (void)jenv;
   (void)jcls;
-  result = (gmdata::Data *)new gmdata::Data();
+  result = (gmdata::Data *)new SwigDirector_Data(jenv);
   *(gmdata::Data **)&jresult = result; 
   return jresult;
 }
@@ -4113,6 +4311,20 @@ SWIGEXPORT void JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1on_1tick(JNIEnv *je
 }
 
 
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1on_1tickSwigExplicitData(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  gmdata::Data *arg1 = (gmdata::Data *) 0 ;
+  Tick *arg2 = (Tick *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(gmdata::Data **)&jarg1; 
+  arg2 = *(Tick **)&jarg2; 
+  (arg1)->gmdata::Data::on_tick(arg2);
+}
+
+
 SWIGEXPORT void JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1on_1bar(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   gmdata::Data *arg1 = (gmdata::Data *) 0 ;
   Bar *arg2 = (Bar *) 0 ;
@@ -4124,6 +4336,20 @@ SWIGEXPORT void JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1on_1bar(JNIEnv *jen
   arg1 = *(gmdata::Data **)&jarg1; 
   arg2 = *(Bar **)&jarg2; 
   (arg1)->on_bar(arg2);
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1on_1barSwigExplicitData(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  gmdata::Data *arg1 = (gmdata::Data *) 0 ;
+  Bar *arg2 = (Bar *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(gmdata::Data **)&jarg1; 
+  arg2 = *(Bar **)&jarg2; 
+  (arg1)->gmdata::Data::on_bar(arg2);
 }
 
 
@@ -4147,6 +4373,26 @@ SWIGEXPORT void JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1on_1error(JNIEnv *j
 }
 
 
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1on_1errorSwigExplicitData(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jstring jarg3) {
+  gmdata::Data *arg1 = (gmdata::Data *) 0 ;
+  int arg2 ;
+  char *arg3 = (char *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(gmdata::Data **)&jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = 0;
+  if (jarg3) {
+    arg3 = (char *)jenv->GetStringUTFChars(jarg3, 0);
+    if (!arg3) return ;
+  }
+  (arg1)->gmdata::Data::on_error(arg2,(char const *)arg3);
+  if (arg3) jenv->ReleaseStringUTFChars(jarg3, (const char *)arg3);
+}
+
+
 SWIGEXPORT void JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1on_1market_1data_1connected(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   gmdata::Data *arg1 = (gmdata::Data *) 0 ;
   
@@ -4158,6 +4404,17 @@ SWIGEXPORT void JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1on_1market_1data_1c
 }
 
 
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1on_1market_1data_1connectedSwigExplicitData(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  gmdata::Data *arg1 = (gmdata::Data *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(gmdata::Data **)&jarg1; 
+  (arg1)->gmdata::Data::on_market_data_connected();
+}
+
+
 SWIGEXPORT void JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1on_1market_1data_1disconnected(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   gmdata::Data *arg1 = (gmdata::Data *) 0 ;
   
@@ -4166,6 +4423,37 @@ SWIGEXPORT void JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1on_1market_1data_1d
   (void)jarg1_;
   arg1 = *(gmdata::Data **)&jarg1; 
   (arg1)->on_market_data_disconnected();
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1on_1market_1data_1disconnectedSwigExplicitData(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  gmdata::Data *arg1 = (gmdata::Data *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(gmdata::Data **)&jarg1; 
+  (arg1)->gmdata::Data::on_market_data_disconnected();
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1director_1connect(JNIEnv *jenv, jclass jcls, jobject jself, jlong objarg, jboolean jswig_mem_own, jboolean jweak_global) {
+  gmdata::Data *obj = *((gmdata::Data **)&objarg);
+  (void)jcls;
+  SwigDirector_Data *director = dynamic_cast<SwigDirector_Data *>(obj);
+  if (director) {
+    director->swig_connect_director(jenv, jself, jenv->GetObjectClass(jself), (jswig_mem_own == JNI_TRUE), (jweak_global == JNI_TRUE));
+  }
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1change_1ownership(JNIEnv *jenv, jclass jcls, jobject jself, jlong objarg, jboolean jtake_or_release) {
+  gmdata::Data *obj = *((gmdata::Data **)&objarg);
+  SwigDirector_Data *director = dynamic_cast<SwigDirector_Data *>(obj);
+  (void)jcls;
+  if (director) {
+    director->swig_java_change_ownership(jenv, jself, jtake_or_release ? true : false);
+  }
 }
 
 
@@ -4498,6 +4786,38 @@ SWIGEXPORT void JNICALL Java_io_ft_api_gm_md_gmdataJNI_delete_1TradingDateDataAr
   (void)jcls;
   arg1 = *(gmdata::DataArray< TradingDate > **)&jarg1; 
   delete arg1;
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_md_gmdataJNI_swig_1module_1init(JNIEnv *jenv, jclass jcls) {
+  int i;
+  
+  static struct {
+    const char *method;
+    const char *signature;
+  } methods[5] = {
+    {
+      "SwigDirector_Data_on_tick", "(Lio/ft/api/gm/md/Data;J)V" 
+    },
+    {
+      "SwigDirector_Data_on_bar", "(Lio/ft/api/gm/md/Data;J)V" 
+    },
+    {
+      "SwigDirector_Data_on_error", "(Lio/ft/api/gm/md/Data;ILjava/lang/String;)V" 
+    },
+    {
+      "SwigDirector_Data_on_market_data_connected", "(Lio/ft/api/gm/md/Data;)V" 
+    },
+    {
+      "SwigDirector_Data_on_market_data_disconnected", "(Lio/ft/api/gm/md/Data;)V" 
+    }
+  };
+  Swig::jclass_gmdataJNI = (jclass) jenv->NewGlobalRef(jcls);
+  if (!Swig::jclass_gmdataJNI) return;
+  for (i = 0; i < (int) (sizeof(methods)/sizeof(methods[0])); ++i) {
+    Swig::director_method_ids[i] = jenv->GetStaticMethodID(jcls, methods[i].method, methods[i].signature);
+    if (!Swig::director_method_ids[i]) return;
+  }
 }
 
 

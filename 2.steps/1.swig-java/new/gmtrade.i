@@ -6,7 +6,7 @@
 %}
 
 /* SWIG要解析的头文件 */
-%feature("director") GmTrade;
+%feature("director") Trade;
 %include "gmtrade_def.h"
 %include "gmtrade.h"
 

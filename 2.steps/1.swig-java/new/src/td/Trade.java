@@ -35,12 +35,29 @@ public class Trade {
     }
   }
 
+  protected void swigDirectorDisconnect() {
+    swigCMemOwn = false;
+    delete();
+  }
+
+  public void swigReleaseOwnership() {
+    swigCMemOwn = false;
+    gmtradeJNI.Trade_change_ownership(this, swigCPtr, false);
+  }
+
+  public void swigTakeOwnership() {
+    swigCMemOwn = true;
+    gmtradeJNI.Trade_change_ownership(this, swigCPtr, true);
+  }
+
   public Trade(String token) {
     this(gmtradeJNI.new_Trade__SWIG_0(token), true);
+    gmtradeJNI.Trade_director_connect(this, swigCPtr, swigCMemOwn, true);
   }
 
   public Trade() {
     this(gmtradeJNI.new_Trade__SWIG_1(), true);
+    gmtradeJNI.Trade_director_connect(this, swigCPtr, swigCMemOwn, true);
   }
 
   public int start() {
@@ -225,27 +242,27 @@ public class Trade {
   }
 
   public void on_order_status(Order order) {
-    gmtradeJNI.Trade_on_order_status(swigCPtr, this, Order.getCPtr(order), order);
+    if (getClass() == Trade.class) gmtradeJNI.Trade_on_order_status(swigCPtr, this, Order.getCPtr(order), order); else gmtradeJNI.Trade_on_order_statusSwigExplicitTrade(swigCPtr, this, Order.getCPtr(order), order);
   }
 
   public void on_execution_report(ExecRpt rpt) {
-    gmtradeJNI.Trade_on_execution_report(swigCPtr, this, ExecRpt.getCPtr(rpt), rpt);
+    if (getClass() == Trade.class) gmtradeJNI.Trade_on_execution_report(swigCPtr, this, ExecRpt.getCPtr(rpt), rpt); else gmtradeJNI.Trade_on_execution_reportSwigExplicitTrade(swigCPtr, this, ExecRpt.getCPtr(rpt), rpt);
   }
 
   public void on_account_status(AccountStatus account_status) {
-    gmtradeJNI.Trade_on_account_status(swigCPtr, this, AccountStatus.getCPtr(account_status), account_status);
+    if (getClass() == Trade.class) gmtradeJNI.Trade_on_account_status(swigCPtr, this, AccountStatus.getCPtr(account_status), account_status); else gmtradeJNI.Trade_on_account_statusSwigExplicitTrade(swigCPtr, this, AccountStatus.getCPtr(account_status), account_status);
   }
 
   public void on_error(int error_code, String error_msg) {
-    gmtradeJNI.Trade_on_error(swigCPtr, this, error_code, error_msg);
+    if (getClass() == Trade.class) gmtradeJNI.Trade_on_error(swigCPtr, this, error_code, error_msg); else gmtradeJNI.Trade_on_errorSwigExplicitTrade(swigCPtr, this, error_code, error_msg);
   }
 
   public void on_trade_data_connected() {
-    gmtradeJNI.Trade_on_trade_data_connected(swigCPtr, this);
+    if (getClass() == Trade.class) gmtradeJNI.Trade_on_trade_data_connected(swigCPtr, this); else gmtradeJNI.Trade_on_trade_data_connectedSwigExplicitTrade(swigCPtr, this);
   }
 
   public void on_trade_data_disconnected() {
-    gmtradeJNI.Trade_on_trade_data_disconnected(swigCPtr, this);
+    if (getClass() == Trade.class) gmtradeJNI.Trade_on_trade_data_disconnected(swigCPtr, this); else gmtradeJNI.Trade_on_trade_data_disconnectedSwigExplicitTrade(swigCPtr, this);
   }
 
 }

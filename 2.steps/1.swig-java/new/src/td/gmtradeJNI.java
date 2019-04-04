@@ -375,11 +375,19 @@ public class gmtradeJNI {
   public final static native long Trade_get_position__SWIG_0(long jarg1, Trade jarg1_, String jarg2);
   public final static native long Trade_get_position__SWIG_1(long jarg1, Trade jarg1_);
   public final static native void Trade_on_order_status(long jarg1, Trade jarg1_, long jarg2, Order jarg2_);
+  public final static native void Trade_on_order_statusSwigExplicitTrade(long jarg1, Trade jarg1_, long jarg2, Order jarg2_);
   public final static native void Trade_on_execution_report(long jarg1, Trade jarg1_, long jarg2, ExecRpt jarg2_);
+  public final static native void Trade_on_execution_reportSwigExplicitTrade(long jarg1, Trade jarg1_, long jarg2, ExecRpt jarg2_);
   public final static native void Trade_on_account_status(long jarg1, Trade jarg1_, long jarg2, AccountStatus jarg2_);
+  public final static native void Trade_on_account_statusSwigExplicitTrade(long jarg1, Trade jarg1_, long jarg2, AccountStatus jarg2_);
   public final static native void Trade_on_error(long jarg1, Trade jarg1_, int jarg2, String jarg3);
+  public final static native void Trade_on_errorSwigExplicitTrade(long jarg1, Trade jarg1_, int jarg2, String jarg3);
   public final static native void Trade_on_trade_data_connected(long jarg1, Trade jarg1_);
+  public final static native void Trade_on_trade_data_connectedSwigExplicitTrade(long jarg1, Trade jarg1_);
   public final static native void Trade_on_trade_data_disconnected(long jarg1, Trade jarg1_);
+  public final static native void Trade_on_trade_data_disconnectedSwigExplicitTrade(long jarg1, Trade jarg1_);
+  public final static native void Trade_director_connect(Trade obj, long cptr, boolean mem_own, boolean weak_global);
+  public final static native void Trade_change_ownership(Trade obj, long cptr, boolean take_or_release);
   public final static native int ExecRptDataArray_status(long jarg1, ExecRptDataArray jarg1_);
   public final static native long ExecRptDataArray_data(long jarg1, ExecRptDataArray jarg1_);
   public final static native int ExecRptDataArray_count(long jarg1, ExecRptDataArray jarg1_);
@@ -398,4 +406,28 @@ public class gmtradeJNI {
   public final static native long PositionDataArray_at(long jarg1, PositionDataArray jarg1_, int jarg2);
   public final static native void PositionDataArray_release(long jarg1, PositionDataArray jarg1_);
   public final static native void delete_PositionDataArray(long jarg1);
+
+  public static void SwigDirector_Trade_on_order_status(Trade jself, long order) {
+    jself.on_order_status((order == 0) ? null : new Order(order, false));
+  }
+  public static void SwigDirector_Trade_on_execution_report(Trade jself, long rpt) {
+    jself.on_execution_report((rpt == 0) ? null : new ExecRpt(rpt, false));
+  }
+  public static void SwigDirector_Trade_on_account_status(Trade jself, long account_status) {
+    jself.on_account_status((account_status == 0) ? null : new AccountStatus(account_status, false));
+  }
+  public static void SwigDirector_Trade_on_error(Trade jself, int error_code, String error_msg) {
+    jself.on_error(error_code, error_msg);
+  }
+  public static void SwigDirector_Trade_on_trade_data_connected(Trade jself) {
+    jself.on_trade_data_connected();
+  }
+  public static void SwigDirector_Trade_on_trade_data_disconnected(Trade jself) {
+    jself.on_trade_data_disconnected();
+  }
+
+  private final static native void swig_module_init();
+  static {
+    swig_module_init();
+  }
 }

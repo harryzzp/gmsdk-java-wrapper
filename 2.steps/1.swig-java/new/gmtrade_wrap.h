@@ -11,5 +11,26 @@
 #ifndef SWIG_gmtrade_WRAP_H_
 #define SWIG_gmtrade_WRAP_H_
 
+class SwigDirector_Trade : public gmtrade::Trade, public Swig::Director {
+
+public:
+    void swig_connect_director(JNIEnv *jenv, jobject jself, jclass jcls, bool swig_mem_own, bool weak_global);
+    SwigDirector_Trade(JNIEnv *jenv, char const *token);
+    SwigDirector_Trade(JNIEnv *jenv);
+    virtual ~SwigDirector_Trade();
+    virtual void on_order_status(Order *order);
+    virtual void on_execution_report(ExecRpt *rpt);
+    virtual void on_account_status(AccountStatus *account_status);
+    virtual void on_error(int error_code, char const *error_msg);
+    virtual void on_trade_data_connected();
+    virtual void on_trade_data_disconnected();
+public:
+    bool swig_overrides(int n) {
+      return (n < 6 ? swig_override[n] : false);
+    }
+protected:
+    Swig::BoolArray<6> swig_override;
+};
+
 
 #endif

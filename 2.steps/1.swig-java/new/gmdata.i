@@ -6,7 +6,7 @@
 %}
 
 /* SWIG要解析的头文件 */
-%feature("director") GmData;
+%feature("director") Data;
 %include "gmdata_def.h"
 %include "gmdata.h"
 

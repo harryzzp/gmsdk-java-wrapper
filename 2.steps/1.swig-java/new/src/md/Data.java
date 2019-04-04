@@ -35,12 +35,29 @@ public class Data {
     }
   }
 
+  protected void swigDirectorDisconnect() {
+    swigCMemOwn = false;
+    delete();
+  }
+
+  public void swigReleaseOwnership() {
+    swigCMemOwn = false;
+    gmdataJNI.Data_change_ownership(this, swigCPtr, false);
+  }
+
+  public void swigTakeOwnership() {
+    swigCMemOwn = true;
+    gmdataJNI.Data_change_ownership(this, swigCPtr, true);
+  }
+
   public Data(String token) {
     this(gmdataJNI.new_Data__SWIG_0(token), true);
+    gmdataJNI.Data_director_connect(this, swigCPtr, swigCMemOwn, true);
   }
 
   public Data() {
     this(gmdataJNI.new_Data__SWIG_1(), true);
+    gmdataJNI.Data_director_connect(this, swigCPtr, swigCMemOwn, true);
   }
 
   public void set_token(String token) {
@@ -330,23 +347,23 @@ public class Data {
   }
 
   public void on_tick(Tick tick) {
-    gmdataJNI.Data_on_tick(swigCPtr, this, Tick.getCPtr(tick), tick);
+    if (getClass() == Data.class) gmdataJNI.Data_on_tick(swigCPtr, this, Tick.getCPtr(tick), tick); else gmdataJNI.Data_on_tickSwigExplicitData(swigCPtr, this, Tick.getCPtr(tick), tick);
   }
 
   public void on_bar(Bar bar) {
-    gmdataJNI.Data_on_bar(swigCPtr, this, Bar.getCPtr(bar), bar);
+    if (getClass() == Data.class) gmdataJNI.Data_on_bar(swigCPtr, this, Bar.getCPtr(bar), bar); else gmdataJNI.Data_on_barSwigExplicitData(swigCPtr, this, Bar.getCPtr(bar), bar);
   }
 
   public void on_error(int error_code, String error_msg) {
-    gmdataJNI.Data_on_error(swigCPtr, this, error_code, error_msg);
+    if (getClass() == Data.class) gmdataJNI.Data_on_error(swigCPtr, this, error_code, error_msg); else gmdataJNI.Data_on_errorSwigExplicitData(swigCPtr, this, error_code, error_msg);
   }
 
   public void on_market_data_connected() {
-    gmdataJNI.Data_on_market_data_connected(swigCPtr, this);
+    if (getClass() == Data.class) gmdataJNI.Data_on_market_data_connected(swigCPtr, this); else gmdataJNI.Data_on_market_data_connectedSwigExplicitData(swigCPtr, this);
   }
 
   public void on_market_data_disconnected() {
-    gmdataJNI.Data_on_market_data_disconnected(swigCPtr, this);
+    if (getClass() == Data.class) gmdataJNI.Data_on_market_data_disconnected(swigCPtr, this); else gmdataJNI.Data_on_market_data_disconnectedSwigExplicitData(swigCPtr, this);
   }
 
 }
