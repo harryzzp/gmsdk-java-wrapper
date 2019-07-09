@@ -329,11 +329,11 @@ public class Data {
   }
 
   public int get_previous_trading_date(String exchange, String date, String output_date) {
-    return gmdataJNI.Data_get_previous_trading_date(swigCPtr, this, exchange, date, output_date);
+    return gmdataJNI.Data_get_previous_trading_date__SWIG_0(swigCPtr, this, exchange, date, output_date);
   }
 
   public int get_next_trading_date(String exchange, String date, String output_date) {
-    return gmdataJNI.Data_get_next_trading_date(swigCPtr, this, exchange, date, output_date);
+    return gmdataJNI.Data_get_next_trading_date__SWIG_0(swigCPtr, this, exchange, date, output_date);
   }
 
   public DataSet get_dividend(String symbol, String start_date, String end_date) {
@@ -364,6 +364,14 @@ public class Data {
 
   public void on_market_data_disconnected() {
     if (getClass() == Data.class) gmdataJNI.Data_on_market_data_disconnected(swigCPtr, this); else gmdataJNI.Data_on_market_data_disconnectedSwigExplicitData(swigCPtr, this);
+  }
+
+  public int get_previous_trading_date(String exchange, String date) {
+    return gmdataJNI.Data_get_previous_trading_date__SWIG_1(swigCPtr, this, exchange, date);
+  }
+
+  public int get_next_trading_date(String exchange, String date) {
+    return gmdataJNI.Data_get_next_trading_date__SWIG_1(swigCPtr, this, exchange, date);
   }
 
 }

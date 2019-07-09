@@ -27,6 +27,9 @@
     <ClInclude Include="gmtrade_wrap.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="gmtrade_csdk.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

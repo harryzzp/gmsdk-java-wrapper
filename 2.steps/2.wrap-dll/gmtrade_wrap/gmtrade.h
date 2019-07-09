@@ -43,6 +43,12 @@ namespace gmtrade
 
 		int login(const char *account_ids);
 
+		//查询指定交易账号状态
+		int get_account_status(const char *account, AccountStatus &as);
+
+		//查询所有交易账号状态
+		DataArray<AccountStatus>* get_all_account_status();
+
 		//按指定量委托
 		Order order_volume(const char *symbol, int volume, int side, int order_type, int position_effect, double price = 0, const char *account = NULL);
 

@@ -153,6 +153,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="gmtrade.h" />
+    <ClInclude Include="gmtrade_csdk.h" />
     <ClInclude Include="gmtrade_def.h" />
     <ClInclude Include="gmtrade_wrap.h" />
     <ClInclude Include="pch.h" />

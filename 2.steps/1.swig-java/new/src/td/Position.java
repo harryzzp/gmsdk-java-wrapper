@@ -155,6 +155,14 @@ public class Position {
     return gmtradeJNI.Position_available_today_get(swigCPtr, this);
   }
 
+  public void setAvailable_now(long value) {
+    gmtradeJNI.Position_available_now_set(swigCPtr, this, value);
+  }
+
+  public long getAvailable_now() {
+    return gmtradeJNI.Position_available_now_get(swigCPtr, this);
+  }
+
   public void setLast_price(double value) {
     gmtradeJNI.Position_last_price_set(swigCPtr, this, value);
   }

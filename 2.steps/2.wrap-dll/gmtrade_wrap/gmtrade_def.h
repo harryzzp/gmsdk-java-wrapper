@@ -280,8 +280,9 @@ struct Position
 	double               cost;                            //持仓成本(vwap*volume*multiplier*margin_ratio)                                                    
 	long long            order_frozen;                    //挂单冻结仓位                                                                                     
 	long long            order_frozen_today;              //挂单冻结今仓仓位                                                                                 
-	long long            available;                       //可平总仓位(volume-order_frozen); 可平昨仓位(available-available_today)                           
-	long long            available_today;                 //可平今仓位(volume_today-order_frozen_today)                                                      
+	long long            available;                       //可用总仓位(volume-order_frozen); 可用昨仓位(available-available_today)                           
+	long long            available_today;                 //可用今仓位(volume_today-order_frozen_today)
+	long long            available_now;                   //当前可平仓位                                                   
 
 	double               last_price;                      //上一次成交价                                                                                     
 	long long            last_volume;                     //上一次成交量                                                                                     

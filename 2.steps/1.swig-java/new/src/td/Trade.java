@@ -80,6 +80,15 @@ public class Trade {
     return gmtradeJNI.Trade_login(swigCPtr, this, account_ids);
   }
 
+  public int get_account_status(String account, AccountStatus as) {
+    return gmtradeJNI.Trade_get_account_status(swigCPtr, this, account, AccountStatus.getCPtr(as), as);
+  }
+
+  public AccountStatusDataArray get_all_account_status() {
+    long cPtr = gmtradeJNI.Trade_get_all_account_status(swigCPtr, this);
+    return (cPtr == 0) ? null : new AccountStatusDataArray(cPtr, false);
+  }
+
   public Order order_volume(String symbol, int volume, int side, int order_type, int position_effect, double price, String account) {
     return new Order(gmtradeJNI.Trade_order_volume__SWIG_0(swigCPtr, this, symbol, volume, side, order_type, position_effect, price, account), true);
   }

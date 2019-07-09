@@ -671,6 +671,58 @@ namespace Swig {
 SWIGINTERN Quote Tick_getQuoteAt(Tick *self,int index){
 		return self->quotes[index];
 	}
+SWIGINTERN int gmdata_Data_get_previous_trading_date__SWIG_1(gmdata::Data *self,char const *exchange,char const *date){
+		char output_date[32] = {0};
+		int ret = self->get_previous_trading_date(exchange, date, output_date);
+		if(0 == ret)
+		{
+			char tmp[32] = { 0 };
+			int result = 0;
+
+			memcpy(tmp, output_date, 4);
+			result += atoi(tmp) * 10000;
+
+			memset(tmp, 0, 32);
+			memcpy(tmp, output_date + 5, 2);
+			result += atoi(tmp) * 100;
+
+			memset(tmp, 0, 32);
+			memcpy(tmp, output_date + 8, 2);
+			result += atoi(tmp);
+
+			return result;
+		}
+		else
+		{
+			return 0;
+		}
+	}
+SWIGINTERN int gmdata_Data_get_next_trading_date__SWIG_1(gmdata::Data *self,char const *exchange,char const *date){
+		char output_date[32] = {0};
+		int ret = self->get_next_trading_date(exchange, date, output_date);
+		if(0 == ret)
+		{
+			char tmp[32] = { 0 };
+			int result = 0;
+
+			memcpy(tmp, output_date, 4);
+			result += atoi(tmp) * 10000;
+
+			memset(tmp, 0, 32);
+			memcpy(tmp, output_date + 5, 2);
+			result += atoi(tmp) * 100;
+
+			memset(tmp, 0, 32);
+			memcpy(tmp, output_date + 8, 2);
+			result += atoi(tmp);
+
+			return result;
+		}
+		else
+		{
+			return 0;
+		}
+	}
 
 
 /* ---------------------------------------------------
@@ -4153,7 +4205,7 @@ SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1get_1trading_1date
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1get_1previous_1trading_1date(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3, jstring jarg4) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1get_1previous_1trading_1date_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3, jstring jarg4) {
   jint jresult = 0 ;
   gmdata::Data *arg1 = (gmdata::Data *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -4189,7 +4241,7 @@ SWIGEXPORT jint JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1get_1previous_1trad
 }
 
 
-SWIGEXPORT jint JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1get_1next_1trading_1date(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3, jstring jarg4) {
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1get_1next_1trading_1date_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3, jstring jarg4) {
   jint jresult = 0 ;
   gmdata::Data *arg1 = (gmdata::Data *) 0 ;
   char *arg2 = (char *) 0 ;
@@ -4434,6 +4486,64 @@ SWIGEXPORT void JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1on_1market_1data_1d
   (void)jarg1_;
   arg1 = *(gmdata::Data **)&jarg1; 
   (arg1)->gmdata::Data::on_market_data_disconnected();
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1get_1previous_1trading_1date_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3) {
+  jint jresult = 0 ;
+  gmdata::Data *arg1 = (gmdata::Data *) 0 ;
+  char *arg2 = (char *) 0 ;
+  char *arg3 = (char *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(gmdata::Data **)&jarg1; 
+  arg2 = 0;
+  if (jarg2) {
+    arg2 = (char *)jenv->GetStringUTFChars(jarg2, 0);
+    if (!arg2) return 0;
+  }
+  arg3 = 0;
+  if (jarg3) {
+    arg3 = (char *)jenv->GetStringUTFChars(jarg3, 0);
+    if (!arg3) return 0;
+  }
+  result = (int)gmdata_Data_get_previous_trading_date__SWIG_1(arg1,(char const *)arg2,(char const *)arg3);
+  jresult = (jint)result; 
+  if (arg2) jenv->ReleaseStringUTFChars(jarg2, (const char *)arg2);
+  if (arg3) jenv->ReleaseStringUTFChars(jarg3, (const char *)arg3);
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_md_gmdataJNI_Data_1get_1next_1trading_1date_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jstring jarg3) {
+  jint jresult = 0 ;
+  gmdata::Data *arg1 = (gmdata::Data *) 0 ;
+  char *arg2 = (char *) 0 ;
+  char *arg3 = (char *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(gmdata::Data **)&jarg1; 
+  arg2 = 0;
+  if (jarg2) {
+    arg2 = (char *)jenv->GetStringUTFChars(jarg2, 0);
+    if (!arg2) return 0;
+  }
+  arg3 = 0;
+  if (jarg3) {
+    arg3 = (char *)jenv->GetStringUTFChars(jarg3, 0);
+    if (!arg3) return 0;
+  }
+  result = (int)gmdata_Data_get_next_trading_date__SWIG_1(arg1,(char const *)arg2,(char const *)arg3);
+  jresult = (jint)result; 
+  if (arg2) jenv->ReleaseStringUTFChars(jarg2, (const char *)arg2);
+  if (arg3) jenv->ReleaseStringUTFChars(jarg3, (const char *)arg3);
+  return jresult;
 }
 
 

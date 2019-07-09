@@ -147,8 +147,8 @@ public class gmdataJNI {
   public final static native long Data_get_industry(long jarg1, Data jarg1_, String jarg2);
   public final static native long Data_get_concept(long jarg1, Data jarg1_, String jarg2);
   public final static native long Data_get_trading_dates(long jarg1, Data jarg1_, String jarg2, String jarg3, String jarg4);
-  public final static native int Data_get_previous_trading_date(long jarg1, Data jarg1_, String jarg2, String jarg3, String jarg4);
-  public final static native int Data_get_next_trading_date(long jarg1, Data jarg1_, String jarg2, String jarg3, String jarg4);
+  public final static native int Data_get_previous_trading_date__SWIG_0(long jarg1, Data jarg1_, String jarg2, String jarg3, String jarg4);
+  public final static native int Data_get_next_trading_date__SWIG_0(long jarg1, Data jarg1_, String jarg2, String jarg3, String jarg4);
   public final static native long Data_get_dividend(long jarg1, Data jarg1_, String jarg2, String jarg3, String jarg4);
   public final static native long Data_get_continuous_contracts(long jarg1, Data jarg1_, String jarg2, String jarg3, String jarg4);
   public final static native void Data_on_tick(long jarg1, Data jarg1_, long jarg2, Tick jarg2_);
@@ -161,6 +161,8 @@ public class gmdataJNI {
   public final static native void Data_on_market_data_connectedSwigExplicitData(long jarg1, Data jarg1_);
   public final static native void Data_on_market_data_disconnected(long jarg1, Data jarg1_);
   public final static native void Data_on_market_data_disconnectedSwigExplicitData(long jarg1, Data jarg1_);
+  public final static native int Data_get_previous_trading_date__SWIG_1(long jarg1, Data jarg1_, String jarg2, String jarg3);
+  public final static native int Data_get_next_trading_date__SWIG_1(long jarg1, Data jarg1_, String jarg2, String jarg3);
   public final static native void Data_director_connect(Data obj, long cptr, boolean mem_own, boolean weak_global);
   public final static native void Data_change_ownership(Data obj, long cptr, boolean take_or_release);
   public final static native int BarDataArray_status(long jarg1, BarDataArray jarg1_);

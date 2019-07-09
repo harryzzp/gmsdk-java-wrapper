@@ -11,10 +11,8 @@
 %include "gmtrade.h"
 
 namespace gmtrade {
-/* %template(AccountDataArray) DataArray<Account>; */
-/* %template(CashDataArray) DataArray<Cash>; */
+%template(AccountStatusDataArray) DataArray<AccountStatus>;
 %template(ExecRptDataArray) DataArray<ExecRpt>;
 %template(OrderDataArray) DataArray<Order>;
-/* %template(ParameterDataArray) DataArray<Parameter>; */
 %template(PositionDataArray) DataArray<Position>;
 }

@@ -4854,6 +4854,34 @@ SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_td_gmtradeJNI_Position_1available_1to
 }
 
 
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_td_gmtradeJNI_Position_1available_1now_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  Position *arg1 = (Position *) 0 ;
+  long long arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Position **)&jarg1; 
+  arg2 = (long long)jarg2; 
+  if (arg1) (arg1)->available_now = arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_td_gmtradeJNI_Position_1available_1now_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  Position *arg1 = (Position *) 0 ;
+  long long result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(Position **)&jarg1; 
+  result = (long long) ((arg1)->available_now);
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void JNICALL Java_io_ft_api_gm_td_gmtradeJNI_Position_1last_1price_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   Position *arg1 = (Position *) 0 ;
   double arg2 ;
@@ -5662,6 +5690,50 @@ SWIGEXPORT jint JNICALL Java_io_ft_api_gm_td_gmtradeJNI_Trade_1login(JNIEnv *jen
   result = (int)(arg1)->login((char const *)arg2);
   jresult = (jint)result; 
   if (arg2) jenv->ReleaseStringUTFChars(jarg2, (const char *)arg2);
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_td_gmtradeJNI_Trade_1get_1account_1status(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jstring jarg2, jlong jarg3, jobject jarg3_) {
+  jint jresult = 0 ;
+  gmtrade::Trade *arg1 = (gmtrade::Trade *) 0 ;
+  char *arg2 = (char *) 0 ;
+  AccountStatus *arg3 = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg3_;
+  arg1 = *(gmtrade::Trade **)&jarg1; 
+  arg2 = 0;
+  if (jarg2) {
+    arg2 = (char *)jenv->GetStringUTFChars(jarg2, 0);
+    if (!arg2) return 0;
+  }
+  arg3 = *(AccountStatus **)&jarg3;
+  if (!arg3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "AccountStatus & reference is null");
+    return 0;
+  } 
+  result = (int)(arg1)->get_account_status((char const *)arg2,*arg3);
+  jresult = (jint)result; 
+  if (arg2) jenv->ReleaseStringUTFChars(jarg2, (const char *)arg2);
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_td_gmtradeJNI_Trade_1get_1all_1account_1status(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  gmtrade::Trade *arg1 = (gmtrade::Trade *) 0 ;
+  gmtrade::DataArray< AccountStatus > *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(gmtrade::Trade **)&jarg1; 
+  result = (gmtrade::DataArray< AccountStatus > *)(arg1)->get_all_account_status();
+  *(gmtrade::DataArray< AccountStatus > **)&jresult = result; 
   return jresult;
 }
 
@@ -6934,6 +7006,89 @@ SWIGEXPORT void JNICALL Java_io_ft_api_gm_td_gmtradeJNI_Trade_1change_1ownership
   if (director) {
     director->swig_java_change_ownership(jenv, jself, jtake_or_release ? true : false);
   }
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_td_gmtradeJNI_AccountStatusDataArray_1status(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  gmtrade::DataArray< AccountStatus > *arg1 = (gmtrade::DataArray< AccountStatus > *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(gmtrade::DataArray< AccountStatus > **)&jarg1; 
+  result = (int)(arg1)->status();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_td_gmtradeJNI_AccountStatusDataArray_1data(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  gmtrade::DataArray< AccountStatus > *arg1 = (gmtrade::DataArray< AccountStatus > *) 0 ;
+  AccountStatus *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(gmtrade::DataArray< AccountStatus > **)&jarg1; 
+  result = (AccountStatus *)(arg1)->data();
+  *(AccountStatus **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_io_ft_api_gm_td_gmtradeJNI_AccountStatusDataArray_1count(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  gmtrade::DataArray< AccountStatus > *arg1 = (gmtrade::DataArray< AccountStatus > *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(gmtrade::DataArray< AccountStatus > **)&jarg1; 
+  result = (int)(arg1)->count();
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_io_ft_api_gm_td_gmtradeJNI_AccountStatusDataArray_1at(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jlong jresult = 0 ;
+  gmtrade::DataArray< AccountStatus > *arg1 = (gmtrade::DataArray< AccountStatus > *) 0 ;
+  int arg2 ;
+  AccountStatus *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(gmtrade::DataArray< AccountStatus > **)&jarg1; 
+  arg2 = (int)jarg2; 
+  result = (AccountStatus *) &(arg1)->at(arg2);
+  *(AccountStatus **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_td_gmtradeJNI_AccountStatusDataArray_1release(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  gmtrade::DataArray< AccountStatus > *arg1 = (gmtrade::DataArray< AccountStatus > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(gmtrade::DataArray< AccountStatus > **)&jarg1; 
+  (arg1)->release();
+}
+
+
+SWIGEXPORT void JNICALL Java_io_ft_api_gm_td_gmtradeJNI_delete_1AccountStatusDataArray(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  gmtrade::DataArray< AccountStatus > *arg1 = (gmtrade::DataArray< AccountStatus > *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(gmtrade::DataArray< AccountStatus > **)&jarg1; 
+  delete arg1;
 }
 
 

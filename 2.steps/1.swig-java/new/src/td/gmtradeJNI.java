@@ -286,6 +286,8 @@ public class gmtradeJNI {
   public final static native long Position_available_get(long jarg1, Position jarg1_);
   public final static native void Position_available_today_set(long jarg1, Position jarg1_, long jarg2);
   public final static native long Position_available_today_get(long jarg1, Position jarg1_);
+  public final static native void Position_available_now_set(long jarg1, Position jarg1_, long jarg2);
+  public final static native long Position_available_now_get(long jarg1, Position jarg1_);
   public final static native void Position_last_price_set(long jarg1, Position jarg1_, double jarg2);
   public final static native double Position_last_price_get(long jarg1, Position jarg1_);
   public final static native void Position_last_volume_set(long jarg1, Position jarg1_, long jarg2);
@@ -336,6 +338,8 @@ public class gmtradeJNI {
   public final static native void Trade_set_token(long jarg1, Trade jarg1_, String jarg2);
   public final static native void Trade_set_endpoint(long jarg1, Trade jarg1_, String jarg2);
   public final static native int Trade_login(long jarg1, Trade jarg1_, String jarg2);
+  public final static native int Trade_get_account_status(long jarg1, Trade jarg1_, String jarg2, long jarg3, AccountStatus jarg3_);
+  public final static native long Trade_get_all_account_status(long jarg1, Trade jarg1_);
   public final static native long Trade_order_volume__SWIG_0(long jarg1, Trade jarg1_, String jarg2, int jarg3, int jarg4, int jarg5, int jarg6, double jarg7, String jarg8);
   public final static native long Trade_order_volume__SWIG_1(long jarg1, Trade jarg1_, String jarg2, int jarg3, int jarg4, int jarg5, int jarg6, double jarg7);
   public final static native long Trade_order_volume__SWIG_2(long jarg1, Trade jarg1_, String jarg2, int jarg3, int jarg4, int jarg5, int jarg6);
@@ -388,6 +392,12 @@ public class gmtradeJNI {
   public final static native void Trade_on_trade_data_disconnectedSwigExplicitTrade(long jarg1, Trade jarg1_);
   public final static native void Trade_director_connect(Trade obj, long cptr, boolean mem_own, boolean weak_global);
   public final static native void Trade_change_ownership(Trade obj, long cptr, boolean take_or_release);
+  public final static native int AccountStatusDataArray_status(long jarg1, AccountStatusDataArray jarg1_);
+  public final static native long AccountStatusDataArray_data(long jarg1, AccountStatusDataArray jarg1_);
+  public final static native int AccountStatusDataArray_count(long jarg1, AccountStatusDataArray jarg1_);
+  public final static native long AccountStatusDataArray_at(long jarg1, AccountStatusDataArray jarg1_, int jarg2);
+  public final static native void AccountStatusDataArray_release(long jarg1, AccountStatusDataArray jarg1_);
+  public final static native void delete_AccountStatusDataArray(long jarg1);
   public final static native int ExecRptDataArray_status(long jarg1, ExecRptDataArray jarg1_);
   public final static native long ExecRptDataArray_data(long jarg1, ExecRptDataArray jarg1_);
   public final static native int ExecRptDataArray_count(long jarg1, ExecRptDataArray jarg1_);
